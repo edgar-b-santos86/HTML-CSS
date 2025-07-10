@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+    <h1>Trabalhando com Listas</h1>
+    <h2>Listas Ordenadas</h2>
+    <ol type="1">
+        <li>Acordar</li>
+        <li>Escovar os dentes</li>
+        <li>Passar a roupa</li>
+        <li>Orar</li>
+        <li>Ungir minha esposa e o bebê</li>
+        <li>Pegar a marmita</li>
+        <li>Ir trabalhar</li>
+    </ol>
+    <p>Em listas ordenadas criamos primeiro a lista com a tag &lt;ol&gt; &lt;/ol&gt;, e depois incluímos os ítens da lista com a tag &lt;li&gt;.</p>
+    <p>As próprias tags levam os nomes aqui citados &lt;ol&gt; Ordered List ou Lista Ordenada, e &lt;li&gt; Item List ou Item de Lista.</p>
+    <p>A partir do HTML5 o fechamento da tag &lt;li&gt; com &lt;/li&gt; é opcional, entretanto, o <em><abbr title="Visual Studio Code">VSC</abbr></em> faz o fechamento da tag automáticamente.</p>
+    <p>Para personalizar a lista ordenada, podemos incluir um parâmetro na abertura da taag &lt;ol&gt;, o <em>type</em>.</p>
+    <p>O parâmentro <em>type</em>, tem três tipos de marcadores para as listas, os númericos, os iniciados em letras, e os que utilzam os algarísmos romanos.</p>
+    <p>A abertura da tag fica dessa forma
+    &lt;ol type="1"&gt;, para marcadores com números:
+        <ol type="1">
+            <li>Acordar</li>
+            <li>Escovar os dentes</li>
+            <li>Passar a roupa</li>
+        </ol>
+    </p>
+    <p>
+        &lt;ol type="A"&gt;, para marcadores com letas maiúsculas:
+        <ol type="A">
+            <li>Acordar</li>
+            <li>Escovar os dentes</li>
+            <li>Passar a roupa</li>
+        </ol>
+    </p>
+    <p>
+        &lt;ol type="a"&gt;, para marcadores com letas minúsculas:
+        <ol type="a">
+            <li>Acordar</li>
+            <li>Escovar os dentes</li>
+            <li>Passar a roupa</li>
+        </ol>
+    </p>
+    <p>&lt;ol type="I"&gt;, para marcadores com algarísmos romanos maiúsculos:
+        <ol type="I">
+            <li>Acordar</li>
+            <li>Escovar os dentes</li>
+            <li>Passar a roupa</li>
+        </ol>
+    </p>
+    <p>&lt;ol type="i"&gt;, para marcadores com algarísmos romanos minúsculas:
+        <ol type="i">
+            <li>Acordar</li>
+            <li>Escovar os dentes</li>
+            <li>Passar a roupa</li>
+        </ol>
+    </p>
+    <h2>Listas não ordenadas</h2>
+    <p>Da mesma forma que criamos as listas ordenadas, também criamos as não ordenas, porém, usando as tags &lt;ul&gt; &lt;/ul&gt; e depois incluímos os ítens nas tags &lt;il&gt;</p>
+    <p>Estas, entretanto, são listas que a ordem dos ítens não fara diferença para a sua criação, como uma lista de supermercado por exemplo.</p>
+    <p>Exemplo de Lista não ordenada:
+        <p>Lista de Supermercado</p>
+        <ul>
+            <li>Pão</li>
+            <li>Leite</li>
+            <li>Açucar</li>
+            <li>Arroz</li>
+            <li>Feijão</li>
+            <li>Carne</li>
+            <li>Tomate</li>
+            <li>Alface</li>
+            <li>Coentro</li>
+            <li>Alho</li>
+            <li>Cebola</li>
+        </ul>
+    </p>
+    <p>Também podemos editar o tipo de marcador das listas não ordenadas, e o parâmetro <em>type</em>, e temos três tipos de símbolos, círculo, disco, e quadrado.
+     </p>
+     <p>A abertura da tag fica dessa forma &lt;ul type="circle"&gt;, para cículo:
+        <ul type="circle">
+            <li>Pão</li>
+            <li>Leite</li>
+            <li>Açucar</li>
+        </ul>
+     </p>
+     <p>A abertura da tag fica dessa forma &lt;ul type="disc"&gt;, para disco:
+        <ul type="disc">
+            <li>Pão</li>
+            <li>Leite</li>
+            <li>Açucar</li>
+        </ul>
+     </p>
+     <p>A abertura da tag fica dessa forma &lt;ul type="square"&gt;, para quadrado:
+        <ul type="square">
+            <li>Pão</li>
+            <li>Leite</li>
+            <li>Açucar</li>
+        </ul>
+     </p>
+
+     <h2>Misturando listas</h2>
+     <ol>
+         <li>Antigas</li>
+         <ol type="a">
+             <li>Clipper</li>
+             <li>Visula Basic</li>
+             <li>Fortran</li>
+             <li>Delphi</li>
+         </ol>
+         <li>Novas</li>
+         <ol type="a">
+             <li>PHP</li>
+             <li>Python</li>
+             <li>JavaScript</li>
+         </ol>
+     </ol>
+     <p>É possível colocar uma lista ordenada dentro de outra lista ordenada, conforme foi feito acima, o código para que isso aconteça fica da seguinte forma:</p>
+     <p>
+        <pre>
+            &lt;ol&gt;
+                &lt;li&gt;Antigas&lt;/li&gt;
+                &lt;ol type="a"&gt;
+                    &lt;li&gt;Clipper&lt;/li&gt;
+                    &lt;li&gt;Visula Basic&lt;/li&gt;
+                    &lt;li&gt;Fortran&lt;/li&gt;
+                    &lt;li&gt;Delphilt;/li&gt;
+                &lt;/ol&gt;
+                &lt;li&gt;Novas&lt;/li&gt;
+                &lt;ol type="a"&gt;
+                    &lt;li&gt;PHP&lt;/li&gt;
+                    &lt;li&gt;Python&lt;/li&gt;
+                    &lt;li&gt;JavaScript&lt;/li&gt;
+                &lt;/ol&gt;
+            &lt;/ol&gt;
+        </pre>
+    </p>
+    <p>
+        Também é possível dar continuidade na contagem de uma lista para outra conforma esta lista abaixo:
+    </p>
+    <p>
+        <ol>
+            <li>Antigas</li>
+            <ol type="a">
+                <li>Clipper</li>
+                <li>Visual Basic</li>
+                <li>Fortran</li>
+                <li>Delphi</li>
+            </ol>
+            <li>Novas</li>
+            <ol type="a" start="5">
+                <li>PHP</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+            </ol>
+        </ol>
+    </p>
+    <p>Para que possamos fazer a contagem de lista apartir de um número ou letra específica, usamos o parâmetro <em>start</em> e o inicio da tag fica assim &lt;ol type="a" start="5"&gt;</p>
+    <p>Sempre usaremos números no parâmetro <em>start</em> até porque a contagem da lista é númerica, mesmo se estivermos usando letras para organiza-las, e o código fica da seguinte forma:</p>
+    <p>
+        <pre>
+            &lt;ol&gt;
+                &lt;li&gt;Antigas&lt;/li&gt;
+                &lt;ol type="a"&gt;
+                    &lt;li&gt;Clipper&lt;/li&gt;
+                    &lt;li&gt;Visula Basic&lt;/li&gt;
+                    &lt;li&gt;Fortran&lt;/li&gt;
+                    &lt;li&gt;Delphilt;/li&gt;
+                &lt;/ol&gt;
+                &lt;li&gt;Novas&lt;/li&gt;
+                <em><strong>&lt;ol type="a" start="5"&gt;</strong></em>
+                    &lt;li&gt;PHP&lt;/li&gt;
+                    &lt;li&gt;Python&lt;/li&gt;
+                    &lt;li&gt;JavaScript&lt;/li&gt;
+                &lt;/ol&gt;
+            &lt;/ol&gt;
+        </pre>
+    </p>
+    <h2>Mistura de Listas Ordenadas com Não Ordenadas</h2>
+    <h3>Meu Video Games e Games Favoritos</h3>
+    <p>
+        <ol>
+            <li>Super Nintendo</li>
+            <ul type="square">
+                <li>Mario World</li>
+                <li>DonkenKong</li>
+            </ul type="square">
+            <li>Nintendo 64</li>
+            <ul type="square">
+                <li>Mario 64</li>
+                <li>Mario Kart</li>
+            </ul type="square">
+            <li>PlayStation 1</li>
+            <ul type="square">
+                <li>GranTurismo</li>
+                <li>Resident Evil</li>
+            </ul type="square">
+            <li>PlayStation 3</li>
+            <ul type="square">
+                <li>God of War</li>
+                <li>God of War 2</li>
+                <li>GranTurismo</li>
+            </ul type="square">
+        </ol>
+    </p>
+    <p>A Mistura de listas ordenas com não ordenadas é bem simples, colocamos dentro da lista (&lt;ol&gt; &lt;/ol&gt;), os itens de lista (&lt;il&gt; &lt;/il&gt;), e dentro dos itens de lista colocamos as listas não ordenadas (&lt;ul&gt; &lt;/ul&gt;).</p>
+    <p>No exemplo acima o código ficou da seguinte forma:
+       <pre>
+           &lt;ol&gt;
+                &lt;li&gt;Super Nintendo&lt;/li&gt;
+                &lt;ul type="square"&gt;
+                    &lt;li&gt;Mario World&lt;/li&gt;
+                    &lt;li&gt;DonkenKong&lt;/li&gt;
+                &lt;/ul type="square"&gt;
+                &lt;li&gt;Nintendo 64&lt;/li&gt;
+                &lt;ul type="square"&gt;
+                    &lt;li&gt;Mario 64&lt;/li&gt;
+                    &lt;li&gt;Mario Kart&lt;/li&gt;
+                &lt;/ul type="square"&gt;
+                &lt;li&gt;PlayStation 1&lt;/li&gt;
+                &lt;ul type="square"&gt;
+                    &lt;li&gt;GranTurismo&lt;/li&gt;
+                    &lt;li&gt;Resident Evil&lt;/li&gt;
+                &lt;/ul type="square"&gt;
+                &lt;li&gt;PlayStation 3&lt;/li&gt;
+                &lt;ul type="square"&gt;
+                    &lt;li&gt;God of War&lt;/li&gt;
+                    &lt;li&gt;God of War 2&lt;/li&gt;
+                    &lt;li&gt;GranTurismo&lt;/li&gt;
+                &lt;/ul type="square"&gt;
+            &lt;/ol&gt;
+       </pre> 
+    </p>
+    <p>Podemos colocar vários níveis de lista como no exemplo abaixo e poderíamos alterar por exemplo a lista de God of War:</p>
+    <p>
+        <ol>
+            <li>PlayStation 3</li>
+            <ul type="square">
+                <li>God of War</li>
+                <ul type="circle">
+                    <li>God of War I</li>
+                    <li>God of War II</li>
+                    <li>God of War - Chains of Olympus</li>
+                    <li>God of War - Ghost of Sparta</li>
+                    <li>God of War III</li>
+                    <li>God of War - Ascension</li>
+                </ul>
+                <li>GranTurismo</li>
+            </ul type="square">
+        </ol>
+    </p>
+    <p>Para chegar no resultado acima o código ficou da seguinte forma:</p>
+    <p>
+        <pre>
+            &lt;ol&gt;
+                &lt;li&gt;PlayStation 3&lt;/li&gt;
+                &lt;ul type="square"&gt;
+                    &lt;li&gt;God of War&lt;/li&gt;
+                    &lt;ul type="circle"&gt;
+                        &lt;li&gt;God of War I&lt;/li&gt;
+                        &lt;li&gt;God of War II&lt;/li&gt;
+                        &lt;li&gt;God of War - Chains of Olympus&lt;/li&gt;
+                        &lt;li&gt;God of War - Ghost of Sparta&lt;/li&gt;
+                        &lt;li&gt;God of War III&lt;/li&gt;
+                        &lt;li&gt;God of War - Ascension&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;li&gt;GranTurismo&lt;/li&gt;
+                &lt;/ul type="square"&gt;
+            &lt;/ol&gt;
+        </pre>
+    </p>
+    <h2>Lista de definições</h2>
+    <p>As lista de definições são compostas por três tags, a principal para criar a lista, como o próprio nome diz <em>"Definition List"</em> a tag &lt;dl&gt; &lt;/dl&gt;, o primeiro item é inserido pela tag &lt;dt&gt; &lt;/dt&gt;, que é o termo, e a seguinte que é a definição usando a tag &lt;dd&gt; &lt;/dd&gt;</p>
+    <p>Abaixo um exemplo de lista de definição</p>
+    <p>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Linguagem de marcação para criação de sites</dd>
+            <dt>CSS</dt>
+            <dd>Linguagem de marcação para a criação de desing do site</dd>
+            <dt>JavaScript</dt>
+            <dd>Linguagem de programação para a criação de interatividade de um site</dd>
+        </dl>
+    </p>
+    <p>Para chegarmos ao resultado acima o código ficou da seguinte forma:</p>
+    <p>
+        <pre>
+            &lt;dl&gt;
+                &lt;dt&gt;HTML&lt;/dt&gt;
+                &lt;dd&gt;Linguagem de marcação para criação de sites&lt;/dd&gt;
+                &lt;dt&gt;CSS&lt;/dt&gt;
+                &lt;dd&gt;Linguagem de marcação para a criação de desing do site&lt;/dd&gt;
+                &lt;dt&gt;JavaScript&lt;/dt&gt;
+                &lt;dd&gt;Linguagem de programação para a criação de interatividade de um site&lt;/dd&gt;
+            &lt;/dl&gt;
+        </pre>
+    </p>
+    <p>Tudo isso pode ser personalizado com CSS.</p>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Fontes</h1>
+    <h2>Tamanhos e medidas de fontes</h2>
+    <p>Existem doi tipos de medidas, as absolutas e as relativas, e vamos relacionar elas agora.</p>
+    <h3>Medidas Absolutas</h3>
+    <li>Medidas Absolutas:</li>
+            <ul type="disc">
+                <li><em>cm</em> - centimetro;</li>
+                <li><em>mm</em> - milimetro;</li>
+                <li><em>in</em> - polegada;</li>
+                <li><em>px</em> - pixel;</li>
+                <li><em>pt</em> - ponto;</li>
+                <li><em>pc</em> - paica.</li>
+            </ul>
+    <p>Como o próprio nome diz, midadas absolutas são de fato absolutas ou seja, um centimetro é um centimetro, um milimetro é um milimetro, porém, podemos ter um grande problema pois o navegador não consegue mostrar de fato 1cm pois existem telas de tamanhos diferente, e ai numa teve de 50 polegadas pode ser que seja mostrado do tamanho diferente do que vai aparecer em uma celular, o site vai ser mostrado no tamanho real que você colocou, mas, na representação em tela pode ficar diferente.</p>
+    <p>No caso de pixel também podemos ter o mesmo problema pois existem telas como as alta resolução em que para formar o pixel são usados quatro pixels, as telas de retina por exemplo são usados apenas 1/4 de pixel para formar um.</p>
+    <p>Ponto e Paica, são da tipografia, e são utilizados no papel e esses não se recomendam utilizar em que serão consumidos ou reproduzidos em telas.</p>
+    <h3>Medidas Relativas</h3>
+    <p>
+         <li>Medidas Relativas</li>
+            <ul>
+                <li><em>em</em> - Relativo ao tamanho atual de uma fonte (Altura M maiúsculo de uma fonte);</li>
+                <li><em>ex</em> - Relativo a altura x, de uma fonte (altura x minúsculo de uma fonte);</li>
+                <li><em>rem</em> - Relativo ao root (font configurada no body);</li>
+                <li><em>vw (view width)</em> - Relativo a largura da tela;</li>
+                <li><em>vh (view height)</em> - Relativo a altura da tela;</li>
+                <li><em>%</em> - Relativo a porcentagem da visualização.</li>
+            </ul>
+    </p>
+    <p>Tecnicamente a viewport é o tamanho da tela que você está utilizando, seja ela grande ou pequena, o <em>view widht</em> refere-se a largura, e o <em>view heigth</em> refere-se a altura, tudo isso em percentual.</p>
+    <p>Existem ainda outras medidas relativas mas no curso (pelo menos até aqui), somente essas foram abordadas, e vamos verificar quais são as recomendadas pela <em>W3C</em>.</p>
+    <h3>Medidas recomentadas pela <em>W3C</em> e como usa-las.</h3>
+    <p>A <em>W3C</em> indica basicamente que seja utilizado <em><abbr title="Pixel">px</abbr></em> e o <em><abbr title="Altura M maiúsculo de uma fonte, ou, altura atual da fonte.">em.</abbr></em>.</p>
+    <p>Geralmente os navegadores usam 16px (pixels) como tamanho padrão da fonte para visualização de sites.</p>
+    <p>Geralmente 16px é igual a 1em, e o em representa o tamanho normal da fonte padrão ou natural utilizada pelo navegador, então se colocamos o 1em, o tamanho da fonte no site será igual ao padrão, se colocamos 2em, ai neste caso será o dobro do que está configurado como padrão no navegador.</p>
+    <h2>Peso, estilo e shorthand font</h2>
+    <p>O peso da fonte vai depender do se ela tem uma família tipografica grande e nem todas elas como vimos antes tem.</p>
+    <p>O peso da fonte é aplicado através da declaração CSS <em>font-weight</em>, e para que não façamos confusão, vamos colocar as seguintes declarações abaixo:
+        <ul>
+            <li>weight = peso</li>
+            <li>width = largura</li>
+            <li>height = aktura</li>
+        </ul>
+    </p>
+    <p>Existem as seguintes variações de peso para fonte em delcarações com nomenclatura:
+        <ul>
+            <li>lighter</li>
+            <li>normal</li>
+            <li>bold</li>
+            <li>bolder</li>
+        </ul>
+    </p>
+    <p>Também podemos usar as váriações de peso númericas que vão do 100 ao 900, inserindo elas sempre de 100 em 100.</p>
+    <p>Abaixo as declarações que provavelmente mais usaremos no dia a dia, na construção de sites:
+        <ul>
+            <li>font-style - muda o estilo da fonte incluindo por exemplo o </li>
+            <li>font-variant</li>
+            <li>font-weight</li>
+            <li>font-size</li>
+            <li>line-height</li>
+            <li>font-family</li>            
+        </ul>
+    </p>
+    Podemos ainda usar uma declaração que vai condensar todas essas declarações em uma só, e ela é uma declaração <em>shorthand</em>, e a ordem de declaração é a seguinte:
+    <p><code>font: [<em>font-style</em>] <abbr title="ainda não vimos">[<em>font-variant</em>]</abbr> [<em>font-weight</em>] [<em>font-size</em>] <abbr title="ainda não vimos">[<em>line-height</em>]</abbr> [<em>font-family</em>];</code></p>
+    <p>Podemos também utilizar a declaração <em>text-decoration</em> para o sublinhado.</p>
+</body>
+</html>

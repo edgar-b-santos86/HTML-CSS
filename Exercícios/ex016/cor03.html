@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Site de Exemplo</title>
+</head>
+<body>
+    <main>
+        <h1>Site de Exemplo</h1>
+        <h2>Título 1</h2>
+        <p>Desta vez faremos nosso modelo de site e colaramos um básico das CSS, mas que já vai mudar e muito nosso site, e isso com o que aprendemos até agora e mais algumas coisinhas para deixar ele mais interessante.</p>
+        <p>Colocaremos a tag <em>&lt;main&gt; &lt;/main&gt;</em> no nosso html, apenas para dizer que o conteúdo dentro da área <em>&lt;body&gt; &lt;/body&gt;</em>, é o conteúdo principal</p>
+        <p>Vamos usar as CSS no estilo externo, e veja abaixo como ficou nosso arquivo:</p>
+        <p>
+                <pre>
+                    <code>
+                        @charset "UTF-8";
+                        * {
+                            font-family: Arial, Helvetica, sans-serif;
+                        }
+                        body {
+                            background-image: linear-gradient(to top, #E3D4FF, #AC80FF);
+                        }
+                        main {
+                            background-color: white;
+                            border-radius: 10px;
+                            box-shadow: 5px 5px 15px #24153f86;
+                            width: 600px;
+                            padding: 10px;
+                            margin: auto;
+                        }
+                        h1 {
+                            color: #24153F;
+                            text-align: center;
+                            text-shadow: 1px 1px 2px #150c25ab;
+                        }
+                        h2 {
+                            color: #301269;
+                        }
+                        p {
+                            text-align: justify;
+                        }
+                    </code>
+                </pre>
+        </p>
+        <p> Vamos relacionar item por item para sabermos o que cada um fez em nosso código:
+            <ul type="square">
+                <li>@chaset "UTF-8" - Essa é nossa regra para que não tenhamos problemas com caracteres especiais;</li>
+                <li><em>*</em> - Aqui colocamos nossas configurações globais;</li>
+                <li><em>background-image</em> - Nesta declaração criamos o nosso gradiente no site;</li>
+                <li><em>background-color</em> - Aqui colocamos a cor de fundo do nosso conteúdo;</li>
+                <li><em>border-radius</em> - Esta arredonda as bordars onde colocamos nosso conteúdo;</li>
+                <li><em>box-shadow</em> - aqui colocamos o sombreamento da caixa onde inserimos o nosso conteúdo;</li>
+                <li><em>width</em> - determinamos o tamanho da área main;</li>
+                <li><em>padding</em> - aqui definimos o acolchoamento do conteúdo, ou seja, o espaço ficará entre o conteúdo e a área delimitada para ele;</li>
+                <li><em>margin</em> - aqui determinamos conteúdo seja centralizado mesmo que a página seja minimizada e maximizada, o alinhamento do conteúdo não será afetado;</li>
+                <li><em>text-align</em> - para o alinhamento do texto;</li>
+                <li><em>text-shadow</em> - para incluir sombreamento no texto.</li>
+                <li><em>*, body, main, h1, h2, p</em> - esses foram os seletores utilizados.</li>
+            </ul>
+        </p>
+    </main>
+</body>
+</html>

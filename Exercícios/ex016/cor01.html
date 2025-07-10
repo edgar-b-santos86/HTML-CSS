@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cores em CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Representação por nomes -->
+    <h2 style="background-color: blue; color: white;">Exemplo de Cores</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ipsum assumenda nemo maiores temporibus nostrum magnam obcaecati modi, illum, deserunt facilis nulla soluta porro similique laborum iste provident natus corrupti.</p>
+    <h2>Explicação</h2>
+    <p>No exemplo do <em>Lorem</em> acima, inserimos para iniciar, a CSS in line no <abbr title="h2, ou título de 2ª hierarquia">título</abbr>, porém, valores da declarção neste caso o background-color e o color, nos colocamos o nome das cores (que devem sempre estar em inglês), entretanto isso é muito limitado porque em algum momento pelo nome os exemplos de cores vão "acabar", pois pelo nome não temos todas as 65 milhões de cores disponíveis.</p>
+    <p>Fizemos aqui a representação das cores por seus nomes.</p>
+    <p>
+        O cósigo no <abbr title="h2, ou título de 2ª hierarquia">h2</abbr> ficou assim:
+        <pre>&lt;h2 style="background-color: blue; color: white;"&gt;Exemplo de Cores&lt;/h2&gt;</pre>
+    </p>
+
+    <!-- Representação por códigos Hexadecimais -->
+    <!-- Decimal: 0 1 2 3 4 5 6 7 8 9 -->
+    <!-- Hexadecimal: 0 1 2 3 4 5 6 7 8 9 A B C D E F-->
+    <h2 style="background-color: #0000ff; color: #ffffff;">Exemplo de Cores</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ipsum assumenda nemo maiores temporibus nostrum magnam obcaecati modi, illum, deserunt facilis nulla soluta porro similique laborum iste provident natus corrupti.</p>
+    <h2>Explicação</h2>
+    <p>Uma das coisas que temos que lembras é que as combinações de cores basicamente provem da mistura de vermelho(red), verde(green) e azul(blue)</p> 
+    <p>Como repesentamos as cores aqui em números hexadecimais nós as inserimós pelos códigos com 6 algarismos.</p>
+    <p>
+        Neste caso eles vão de #000000 a #ffffff veja abaixo nosso exemplo do segundo h2:
+        <pre>&lt;h2 style="background-color: #0000ff; color: #ffffff;"&gt;Exemplo de Cores&lt;/h2&gt;</pre>
+    </p>
+    <p>O fundo do texto está azul e o texto está azul corresto? Como dizemos anteriormente a formação das cores é uma mistura de vermelho (red), verde (green) e azul (blue) certo?! Vamos entender onde essas cores são representadas em seus códigos:</p>
+    <p>
+        O código para o fundo azul foi #0000ff logo:
+        <ul>
+            <li><em>#</em> - para abrir o código;</li>
+            <li><em>00</em> - representam o vermelhor, e neste caso usamos 00 de vermelho;</li>
+            <li><em>00</em> - representam o verde, e não usamos pois colocamos 00 de verde;</li>
+            <li><em>ff</em> - representam o azul, e aqui usamos o máximo possível de azul;</li>
+        </ul>
+    </p>
+    <p>Os valores dentro do código vão de 0 a 255, utilizando os códigos hexadecimais.</p>
+
+    <!-- Representação do RGB (Red, Green, Blue) -->
+    <h2 style=" background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);">Exemplo de Cores</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi ipsum assumenda nemo maiores temporibus nostrum magnam obcaecati modi, illum, deserunt facilis nulla soluta porro similique laborum iste provident natus corrupti.</p>
+    <h2>Explicação</h2>
+    <p>A terceira forma de representar as cores é utilizando justamente o <abbr title="Red, Green, Blue">RGB</abbr>, e as escalas dele vão de 0 à 255, veja como ficou nosso código após a aplicação do <abbr title="Red, Green, Blue">RGB</abbr>.</p>
+    <p>
+        <pre>&lt;h2 style=" background-color: rgb(0, 0, 255); color: rgb(255, 255, 255);"&gt;Exemplo de Cores&lt;/h2&gt;</pre>
+    </p>
+    <p>Neste caso, para formarmos as cores utilizando a função <abbr title="Red, Green, Blue">RGB</abbr> o que fazemos é usar as combinações onde colocamos o nível de cores entre 0 e 255 para cada cor principal.</p>
+
+    <!-- Representação por HSL (Hue, Saturation, Luminosity) -->
+    <h2 style=" background-color: hsl(240, 100%, 50%); color: hsl(0, 0%, 100%);">Exemplo de Cores</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eum voluptatum placeat illum laudantium ipsam ex facere perspiciatis doloremque, nostrum culpa quaerat, dicta iusto necessitatibus officiis, praesentium adipisci pariatur ducimus.</p>
+    <h2>Explicação</h2>
+    <p>Temos ainda uma outra maneira de fazer a representação de cores, utilizando as caracteristicas das cores, como fazemos isso?</p>
+    <p>No lugar de usarmos da função RGB, usamos a função <abbr title="Matiz (Hue), Saturação (Saturation), e Luminosidade (Luminosity)">HSL</abbr>, e ai nosso código vai ficar assim:</p>
+    <p>
+        <pre>
+            &lt;h2 style=" background-color: hsl(240, 100%, 50%); color: hsl(0, 0%, 100%);"&gt;Exemplo de Cores&lt;/h2gt;
+        </pre>
+    </p>
+    <p>
+        E a representação nesta função ficou assim para o background-color:
+        <ul>
+            <li><em>h(matiz)</em> - 240;</li>
+            <li><em>s(saturação)</em> - 100%;</li>
+            <li><em>l(luminosidade)</em> - 50%</li>
+        </ul>
+    </p>
+    <p>E assim teremos o azul.</p>
+    <p>
+        E a representação nesta função ficou assim para o color:
+        <ul>
+            <li><em>h(matiz)</em> - 0;</li>
+            <li><em>s(saturação)</em> - 0%;</li>
+            <li><em>l(luminosidade)</em> - 100%</li>
+        </ul>
+    </p>
+    <p>E dessa forma temos o branco.</p>
+
+    <h2 style=" background-color: rgba(2, 2, 104, 0.568); color: rgb(255, 255, 255);">Exemplo de Cores</h2>
+    <h3>Explicação</h3>
+    <p>Ainda temos ajuda do <abbr title="Visual Stuudio Code">VSC</abbr> nos ajuda ainda mais, no lugar de colocarmos funções como hexadecimal, RGB, ou HSL, colocamos apenas o nome da cor aproximada que queremos e ao passarmos o mouse em cima desta cor,e assim conseguimos mudar a cor, a tonalidade, a transparencia, e o metodo de representação.</p>
+    <p>Se mexermos na transparência as funções mudam para <abbr title="Red, Green, Blue, Alfa">RGBA</abbr> ou <abbr title="Hue, Saturation, Luminosity, Alfa">HSLA</abbr>.</p>
+    <p>
+        <pre>&lt;h2 style=" background-color: rgba(2, 2, 104, 0.568); color: rgb(255, 255, 255);"&gt;Exemplo de Cores&lt;/h2&gt;</pre>
+    </p>
+
+</body>
+</html>

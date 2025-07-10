@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em CSS</title>
+    <style>
+        *{ /*Configurações globais em CSS*/
+            height: auto
+        }
+        body{
+            background-image: linear-gradient(to right, rgb(201, 170, 170), rgb(156, 105, 105), rgb(143, 61, 61));
+            background-attachment: fixed;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testando Gradiente</h1>
+    <p>Para criamos a cor de fundo gradiente, temos que utilizar a seguinte declaração em CSS:</p>
+    <p>
+        <pre>
+        &lt;style&gt;
+        body{
+            background-image: linear-gradient(to right, #70E0CD, #70E0A7, #71E181,#B9E070);
+        }
+        &lt;/style&gt;
+        </pre>
+    </p>
+    <p>Neste exemplo estamos utilizando CSS local, e como podemos perceber não estamos utilizando a <em>backgroundcolor</em>, neste caso para criar o gradiente usamos <em>background-image</em> e inserímos aí a propriedade <em>linear-gradient</em> e os valores que incluímos nela são a direção e as cores que requemos usar no nosso gradiente.</p>
+    <p>Se colocarmos a direção do gradiente ele vai ficar zebrado, isso porque não configuramos o tamanho do fundo, e neste caso temos que fazer uma configuração global da CSS.</p>
+    <p>Criamos uma configuração global em CSS quando criamos um seleto utilizando o "*".</p>
+    <p>
+        <pre>
+        *{ /*Configurações globais em CSS*/
+            height: 100%;
+        }
+        &lt;style&gt;
+        body{
+            babackground-image: linear-gradient(to right, #70E0CD, #70E0A7, #71E181,#B9E070);
+            background-attachment: fixed;
+        }
+        &lt;/style&gt;
+        </pre>
+    </p>
+    <p>Além disso incluimos o <em>"background-attachment: fixed"</em> para fixar o plano de fundo.</p>
+    <p>No caso da direção podemos colocar em graus ao invés de colocar to right ou to left, e o gradiente pode ser alterado também para não ficar só no linear.</p>
+</body>
+</html>

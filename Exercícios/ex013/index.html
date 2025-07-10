@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Estilos Inline</title>
+</head>
+<body style="background-color:lightblue; font-family: Arial, Helvetica, sans-serif; font-size: 14px;" >
+    <h1>Iniciando Estudo das CSS.</h1>
+    <h2>Vamos primeiro mostrar o jeito de como não se deve fazer a aplicação das CSS.</h2>
+    <p>Existe um jeito (antigo) de se fazer a inclusão das que pode ser que funcionem, que pe colocando os estilos direto nos paragrafos, porém, os parâmetros não estarão mais de acordo com o que funciona atualmente, darei o exemplo abaixo.</p>
+    <p> 
+        <pre>
+            &lt;body bgcolor="red"&gt;
+            &lt;h1&gt; Olá, mundo!&/h1&gt;
+            &lt;p&gt;&lt;font color="white"&gt;Oi!&lt;/font&gt;&lt;/p&gt;
+        </pre>
+    </p>
+    <p>O uso do parâmetro, da propriedade, do valor, da tag, está erra pois é um método usando em HTML 4.</p>
+    <h1 style="color: brown;">Capítulo 1</h1>
+    <h2 style="color: darkred;">Capítulo 1.1</h2>
+    <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit accusamus cumque voluptatem laborum totam suscipit expedita consectetur, iste, eum ipsam tempore eligendi veritatis quibusdam enim nihil ratione! Nam, voluptatem perferendis?</p>
+    <h2 style="color: darkred;">Capítulo 1.2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente a aperiam unde corporis perspiciatis tenetur ipsum, vel mollitia necessitatibus, eaque hic impedit dicta exercitationem velit enim illum praesentium assumenda id.</p>
+    <h1 style="color: brown;">Capítulo 2</h1>
+    <h2 style="color: darkred;">Capítulo 2.1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, minima laborum ea laboriosam non ullam iste culpa, esse voluptas alias blanditiis, perferendis exercitationem. Dolores praesentium modi ab reiciendis nulla molestiae?</p>
+    <h1>Explicação</h1>
+    <p>Neste exemplo incluímos as CSS pelo método inline, utilizando as palavras do professor Gustavo Guanabara: <em>"esse é o método/estilo mais franquinho"</em>, onde incluímos o parametro do estilo dentro da tag da área <mark><em>&lt;body&gt; &lt;/body&gt;</em></mark>, por exemplo para mudar a cor de fundo da página, ou para mudar a cor da fonte do título temos que colocar o parâmetro na tag <mark>
+    <me>&lt;h1&gt;&lt;/h1&gt;</me></mark></p>
+    <p>Como o próprio nome diz, o parâmetro que usamos para isso é o <mark><em>style</em></mark>, e atravês dele podemos alterar o estilo diretamente na tag de corpo, título ou parágrafo do código. abaixo colocaremos o exemplo de como alteramos os estilos dessa página.</p>
+    <p>
+    <pre>
+        &lt;body style="background-color:lightblue; font-family: Arial, Helvetica, sans-serif; font-size: 16px;"&gt;
+            &lt;h1 style="color: brown;"&gt;Capítulo 1&lt;/h1&gt;
+            &lt;h2 style="color: darkred;"&gt;Capítulo 1.1&lt;/h2&gt;
+            &lt;p style="text-align: justify;"&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit accusamus cumque voluptatem laborum totam suscipit expedita consectetur, iste, eum ipsam tempore eligendi veritatis quibusdam enim nihil ratione! Nam, voluptatem perferendis?&lt;/p&gt;
+        &lt;/body&gt;
+    </pre>
+    </p>    
+    <p>Como vimos a alteração aqui ficaria muito trabalhosa, e como foi esplicada não tem sentido/semântica, é apenas estilo, e não que devâmos desmerecer isso pois o usuário não ficará em um site que não é bonito, pois o HTML vai dar significado ao coteúdo.</p>
+    <p>Este estilo das CSS não é prático, e como o próprio nome diz <em>"Inline'</em>, ele é feito diretamente na linha do código, ou seja, ele serve apenas para alterações pontuais, pois pense bem, se em algum momento o seu cliente disser que i site ficou ótimo, entretanto, em um período de festas ele quer que o fundo da página mude e as letras fiquem de outra cor, neste caso teríamos que fazer isso linha a linha em que o estilo foi incluído.</p>
+    <p>Não é uma boa técnica, não é recomendado, o código ficará extremamente confuso, e muito misturado do que é estilo e conteúdo.</p>
+</body>
+</html>

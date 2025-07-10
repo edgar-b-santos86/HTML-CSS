@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras Formatações</title>
+</head>
+<body>
+    <h1>Outras Formatações</h1>
+    <h2>Código Fonte e Pré Formatado</h2>
+    <p>O comando <code>document.getElementById</code> ('teste') é escrito em linguagem JavaScript.</p>
+    <p>
+        <pre>
+        <code>
+        num = int(input('Digite um número'))
+        if num % 2 == 0:
+            print(f'O número (num) é Par')
+        else:
+            print(f'O número (num) é Impar')
+        print('Fim do Programa')
+        </code>
+        </pre>
+    </p>
+    <h2>Citações Simples</h2>
+    <p>Como diria o pai de um amigo, <q>o computador é um burro muito rápido</q> para a citação simples usamos a tag &lt;q&gt; ou &lt;Q&gt;.</p>
+    <h2>Citações completas</h2>
+    <p>Segundo Jeff Nuble HTML para leigos:</p>
+    <blockquote cite="https://www.google.com.br/books/edition/HTML_XHTML_e_CSS_Para_Leigos/E8ZtDwAAQBAJ?hl=pt-BR&gbpv=1&dq=html+para+leigos&printsec=frontcover">
+        Embora o uso do HTML 4.01 Frameset ainda seja uma maneira perfeitamente válida para criar sua declaração DOCTYPE, os frameset não são mais considerados uma das melhores práticas, portanto, tenha cuidado antes de decidir usá-los.
+    </blockquote>
+    <p>A citação completa usa a tag &lt;blockquote&gt;, que dá a frase uma que de paragráfo mais à direita.</p>
+    <h2>Abreviações</h2>
+    <p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>, estou amando.</p>
+    <p>A tag para apreviações é a &lt;abbr&gt;, ela faz com que as abreviações na página tenha um leve destaque e ao passarmos o mouse em cima deste texto ele informa o que seria essa abreviação, nome completo ou significado dela.</p>
+    <h2>Texto Invertido</h2>
+    <p><bdo dir="ltr">Estou aprendendo a desenvolver em HTML e CSS.</bdo></p>
+    <p><bdo dir="rtl">Estou aprendendo a desenvolver em HTML e CSS.</bdo></p>
+    <p>AS frases acima, na verdade são a mesma frase, entrentanto na segunda nós usamos a tag &lt;bdo&gt; que inverte o texto, e pelo meno no <em><abbr title="Visua Studio Code">VSC</abbr></em>, ele pede para que você selecione a direção que o texto deve ficar, l <em>(left to right)</em> ou r <em>(right to left)</em> e no caso da esquerda para direita fica normal, e da direita para esquerda ele inverte a frase.</p>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 007 - Imagem Dinâmica</title>
+</head>
+<body>
+    <h1>Imagem Dinâmica</h1>
+    <p>Neste desáfio devemos inserir uma imagem dinâmica que se abe ou diminue de acordo com o tamanho da página.</p>
+    <p>Abaixo nossa imagem:</p>
+    <picture>
+        <source media="(max-width: 424px)" srcset="imagens/praia-p.png" type="image/png">
+        <source media="(max-width: 720px)" srcset="imagens/praia-m.png" type="image/png">
+        <img src="imagens/praia-g.png" alt="Imagem Flexível">
+    </picture>
+</body>
+</html>

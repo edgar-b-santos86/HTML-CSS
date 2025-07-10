@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Estilos Externos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Iniciando Estudo das CSS.</h1>
+    <h2>Vamos primeiro mostrar o jeito de como não se deve fazer a aplicação das CSS.</h2>
+    <p>Existe um jeito (antigo) de se fazer a inclusão das que pode ser que funcionem, que pe colocando os estilos direto nos paragrafos, porém, os parâmetros não estarão mais de acordo com o que funciona atualmente, darei o exemplo abaixo.</p>
+    <p> 
+        &lt;body bgcolor="red"&gt; <br>
+        &lt;h1&gt; Olá, mundo!&/h1&gt; <br>
+        &lt;p&gt;&lt;font color="white"&gt;Oi!&lt;/font&gt;&lt;/p&gt;
+    </p>
+    <p>O uso do parâmetro, da propriedade, do valor, da tag, está erra pois é um método usando em HTML 4.</p>
+    <h1>Capítulo 1</h1>
+    <h2>Capítulo 1.1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit accusamus cumque voluptatem laborum totam suscipit expedita consectetur, iste, eum ipsam tempore eligendi veritatis quibusdam enim nihil ratione! Nam, voluptatem perferendis?</p>
+    <h2>Capítulo 1.2</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente a aperiam unde corporis perspiciatis tenetur ipsum, vel mollitia necessitatibus, eaque hic impedit dicta exercitationem velit enim illum praesentium assumenda id.</p>
+    <h1>Capítulo 2</h1>
+    <h2>Capítulo 2.1</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, minima laborum ea laboriosam non ullam iste culpa, esse voluptas alias blanditiis, perferendis exercitationem. Dolores praesentium modi ab reiciendis nulla molestiae?</p>
+    <h1>Explicação</h1>
+    <h2>Aplicando as CSS Externos.</h2>
+    <p>Neste exercícios estamos utilizando as <em>CSS Externas</em>, o que fazemos é criar um arquivo em .css, nele nos colocamos apenas declarações de estilo que queremos, e também colocamos as regras necessárias.</p>
+    <p>Já na área <em>head</em> do nosso código criamos um link para o arquivo que neste caso chamamos de style.css, e ao inves de fazermos a alteração do estilo página por página, inserimos o link e alteramos todo o estilo das CSS no arquivo que foi criado, assim conseguimos fazer a alteração em todas as páginas que tem o link para o arquivo.</p>
+    <p>A área <em>head</em> ficou assim:</p>
+    <p>
+    <pre>
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;CSS - Estilos Externos&lt;/title&gt;
+            <mark>&lt;link rel="stylesheet" href="style.css"&gt;</mark>
+        &lt;/head&gt;
+    </pre>
+    </p>
+    <p>
+        O arquivo <em>style.css</em>, ficou com o seguinte código:
+    </p>
+       <p>
+           <pre>
+               @charset "UTF-8";
+                body {
+                    background-color: lightgoldenrodyellow;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-size: 16px;
+                    }
+                h1 {
+                    color: darkblue;
+                    }
+                h2 {
+                    color:brown;
+                    }
+                p {
+                    text-align: justify;
+                    }
+           </pre>
+       </p>
+    <p>O arquivo <em>style.css</em> como falamos anteriormente leva apenas os <abbr title="exemplo: body, h1, h2, p">seletores</abbr> e dentro de cada seletor nós colocamos as declaração entre <em>"{ }" (chaves)</em>, lembrando que declarações são o conjunto de <abbr title="color, text-align, font-family">propriedades</abbr> e <abbr title="darkblue, justify, Courier New, Courier monospace">valores</abbr>, a diferença aqui é que também configuramos regras, e elas sempre são configuradas no inicio do arquivo .css, a aplicada aqui foi <em>"@charset "UTF-8";"</em>, mas veremos sobre regras em outro momento.</p>
+    <p>Inclusive podemos colocar mais de um link para chamar mais de um estilo para o site, além de podermos misturarmos as css inlines, internos e externos.</p>
+    <p>Devemos lembrar também que existe uma hierarquia nas css, sendo que sempre termos prioridade nesta mesma ordem, inline, interno ou local, externo por último.</p>
+    <p style="text-align: right;"><a href="pagina02.html" target="_self" rel="next">Ir para página 2</a></p>   
+</body>
+</html>

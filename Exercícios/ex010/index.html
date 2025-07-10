@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Links (HyperLink)</title>
+</head>
+<body>
+    <h1>Trabalhando com Links Externos</h1>
+    <p>Para Criar um link externo devemos a tag <strong>&lt;a href=""&gt; &lt;/a&gt;</strong>, a tag <strong>&lt;a&gt;</strong> vem de âncora e dentro do do parâmento <strong>href=""</strong> da tag, devemos inserir o link completo do site que queremos acessar conforme os exemplos abaixos:</p>
+    <p>Acesse o meu canal no Youtube clicando <strong><a href="https://www.youtube.com/@edgarbarbosadossantos1237">aqui</a></strong></p>
+    <p>Acesse também o site do <strong><a href="https://www.cursoemvideo.com/">Curso em Vídeo</a></strong> e o Canal do <strong><a href="https://www.youtube.com/@CursoemVideo">YouTube do Curso em Vídeo</a></strong></p>
+    <p>Por sinal esse conteudo está sendo criado enquanto faço os cursos do <strong><a href="https://www.cursoemvideo.com/" target="_blank" rel="external">Curso em Vídeo</a></strong> se inscreva lá!!!</p>
+    <p>No exemplo acima o resultado será esse:<br>
+    <pre>
+        Acesse o meu canal no Youtube clicando <strong>&lt;a href="https://www.youtube.com/@edgarbarbosadossantos1237"&gt;aqui&lt;/a&gt</strong>;
+        Acesse também o site do <strong>&lt;a href="https://www.cursoemvideo.com/login/"&gt;</strong>Curso em Vídeo<strong>&lt;/a&gt;</strong> o Canal do 
+        <strong>&lt;a href="https://www.youtube.com/@CursoemVideo"&gt;</strong>YouTube do Curso em Vídeo<strong>&lt;/a&gt;</strong>
+    </pre>
+    </p>
+    <p>Fazendo o código acima, quando o visitante clicar o texto com HyperLink, ele será direcionado para o site indicado, entretanto, isso fará com que o link clicado carregue sobre sua página e talvez esse usuário não volte a entrar no seu site.</p>
+    <p>Para sanar este problema usamos os seguintes parâmetros na tag <strong>&lt;a&gt;</strong>, o <strong>target</strong> que significa alvo e o <strong>rel</strong> de relacionado.
+    <p>Dentro do parâmetro <strong>target</strong> podemos inserir o target<strong>="_blank"</strong>, target<strong>="_self"</strong>, target<strong>="_top"</strong> e  target<strong>="_parent"</strong>  sendo eles para:</p>
+        <dl>
+            <dt><strong>target="_blank"</strong>:</dtt>
+            <dd>Irá abrir a página do link em uma janela ou aba em branco.</dd>
+            <dt><strong>target="_self"</strong>:</dt>
+            <dd>Irá abrir a página na janela ou aba atual.</dd>
+            <dt><strong>target="_top"</strong>:</dt>
+            <dd>vai desfazer todos os frames e abrir o link destino no navegador completo.</dd>
+        </dl>
+    <p>Dentro do parâmetro <strong>rel</strong> podemos colocar rel<strong>="external"</strong>, rel<strong>="next"</strong> e rel<strong>="prev"</strong>, sendo cada um servido para o seguinte propósito:</p>
+    <dl>
+        <dt><strong>rel="external"</strong>:</dt>
+        <dd>Indica que o é de um site externo que não fa parte do site que está.</dd>
+        <dt><strong>rel="next"</strong>:</dt>
+        <dd>Indica que o link é para a próxima parte do documento atual.</dd>
+        <dt><strong>rel="prev"</strong>:</dt>
+        <dd>Indica que o link é para a parte anterior do documenti atual.</dd>
+    </dl>
+    <p>Temos bastante conteúdo acima mas, vamos ao exemplo de como fazer para que a página não seja carregada sobre a sua.</p>
+    <p>Tente acessar agora os links abaixo, parecem ser o mesmo mas o comportamento de abrir a página será diferente:</p>
+    <p>Acesse o meu canal no Youtube clicando <strong><a href="https://www.youtube.com/@edgarbarbosadossantos1237" target="_blank" rel="external">aqui</a></strong></p>
+    <p>Acesse também o site do <strong><a href="https://www.cursoemvideo.com/" target="_blank" rel="external">Curso em Vídeo</a></strong> e o Canal do <strong><a href="https://www.youtube.com/@CursoemVideo" target="_blank" rel="external">YouTube do Curso em Vídeo</a></strong></p>
+    <p>Agora que foi solucionado o problema e o link externo abri em outra aba ou janela, veja abaixo como ficou o código:</p>
+    <pre>
+        Acesse o meu canal no Youtube clicando <strong>&lt;a href="https://www.youtube.com/@edgarbarbosadossantos1237" target="_blank" rel="external"&gt;aqui.&lt;/a&gt</strong>;
+        Acesse também o site do <strong>&lt;a href="https://www.cursoemvideo.com/" target="_blank" rel="external"&gt;Curso em Vídeo&lt;/a&gt;</strong>
+        e o Canal do <strong>&lt;a href="https://www.youtube.com/@CursoemVideo" target="_blank" rel="external"&gt;YouTube do Curso em Vídeo&lt;/a&gt;</strong>.
+    </pre>
+    <p>O parâmetro <strong>rel</strong> é importante pois ele indica para os buscadores de internet como o google, algumas informações que não serão apresentadas para o usuário.</p>
+    <p>Não falomos sobre os as propriedades do rel<strong>="nofollow"</strong>, rel<strong>="dofollow"</strong> e rel<strong>="author"</strong>, então segue abaixo:</p>
+    <dl>
+            <dt><strong>rel="nofollow"</strong>:</dt>
+            <dd>Indica que é um link para um site externo, patrocinado, entrentato, que eu não quero que tenha relevância nos sites de busca, ou seja, quando alguém fizer uma busca sobre o site que estamos indicando, ele não será relevante nos resultados do buscador, é um <em>não siga</em> em tradução direta.</dd>
+            <dt><strong>rel="dofollow"</strong>:</dt>
+            <dd>Indica que é um link para um site externo, patrocinado, e que diferente do <strong>"nofollow"</strong> ele indica o link nos sites de busca, em tradução direta seria um <em>siga</em>.</dd>
+            <dt><strong>rel="author"</strong>:</dt>
+            <dd>Indica que é um link para o site do autor do artigo atual.</dd>
+    </dl>
+    <h1>Links Internos</h1>
+    <p>Aprender a criar links é importante pois, ao criar um site você precisará muito de links para que o usuário possa navegar entre as páginas dele.</p>
+    <p>Veremos dois meios de criar links internos, abaixo o primeiro exemplo:</p>
+    <p>Clique no <strong><a href="pag002.html">aqui</a></strong> para acessar a segunda página do nosso site.</p>
+    <p>clicou no link, entrou na nossa segunda página e voltou?<br>Se você fez isso então segue abaixo o modo de como ficou o código:</p>
+    <pre>
+        Clique no <strong>&lt;a href="pag002.html"&gt;aqui&lt;/a&gt;</strong> para acessar a segunda página do nosso site.
+    </pre>
+    <p>No metodo de criação de link interno que vimos acima, não foi preciso o URL ou endereço dentro da tag <strong>&lt;a href=""&gt;</strong>, isso porque o arquivo da segunda página está localizado dentro da mesma pasta que o arquivo da página index, que a nossa página principal.</p>
+    <p>Dica importante, no Visual Studio Code ou VSCode, quando você está com o cursos dentro da tag <strong>&lt;a href=""&gt;</strong>, basta apertar <strong>CTRL + ESPAÇO</strong>, ele já te mostra quais os arquivos de página estão na mesma pasta da página que você está trabalhando.</p>
+    <p>Mais acima falamos sobre os parâmetros <strong>target</strong> e <strong>rel</strong>, inclusive sobre o <strong>rel="external"</strong>, quando fazemos referência de que um link é de uma página externa, entretanto, não existe o <strong>rel="internal"</strong>, colocaremos abaixo novamente o link para a segunda página, porém, mais completo.</p>
+    <p>Então <strong><a href="pag002.html" rel="next">Clique Aqui</a></strong> para acessar nossa segunda página novamente.</p>
+    <p>E ai clicou? Bom se clicou viu que o resultado foi o mesmo né!?</p>
+    <p>A diferença está no código que ficou conforme demonstrado abaixo:</p>
+    <pre>
+        <strong>&lt;a href="pag002.html" rel="next"&gt;Clique Aqui&lt;/a&gt;</strong> para acessar nossa segunda página novamente.
+    </pre>
+    <p>Notou a diferença no código? Usamos o <strong>rel="next"</strong>, para informar que o link está relacionado a próxima página de navegação, e no link <strong>voltar</strong> da página 02 usamos o <strong>rel="prev"</strong> de <em>previous</em> ou <em>anterior</em>.</p>
+    <p>Acredito que nessa altura você possa estar se perguntando, e o que aconteceu com o parâmentro <strong>target</strong>? Pois é, não colocamos, porém, não esquecemos dele.</p>
+    <p>Quando falamos de links internos, se não colocarmos o parâmetro <strong>target</strong> o link que clicarmos vai abrir na mesma aba ou janela, porém, o código não fica completo, neste caso, devemos usar o parâmetro <strong>target="_self"</strong> no nosso link.</p>
+    <p>Clique <strong><a href="pag002.html" target="_self" rel="next">aqui</a></strong>, para acessar nossa segunda página novamente.</p>
+    <p>Vistou nossa segunda página novamente? Notou alguma diferença? Acredito que não, porém, a diferença está no código, que agora sim está completo, você consegue verificar como ele ficou conforme abaixo:</p>
+    <pre>
+        Clique <strong>&lt;a href="pag002.html" target="_self" rel="next"&gt;aqui&lt;/a&gt;</strong>, 
+        para acessar nossa segunda página novamente.
+    </pre>
+    <p>Neste caso usamos o <strong>target="_self"</strong> para que o link fosse aberto na mesma página, diferente do que fazemos com links externos, onde queremos que a página abra em uma janela ou aba diferente e usamos <strong>target="_blank"</strong>.</p>
+    <p>O segundo modo de criar um link interno é parecido com a criação de links externos, sendo necessário inserir todo o caminho ou a URL de onde está a página.</p>
+    <p>Bom, <strong><a href="EX010_2/pag003.html" target="_self" rel="next">clique aqui</a></strong> para acessar a terceira página.</p>
+    </body>
+    <p>Para esse link, mesmo sendo de uma página interna do nosso site, foi necessário digitar o caminho ou URL, conforme falamos acima, pois o arquivo está em uma pasta diferente, veja como o link ficou abaixo:</p>
+    <pre>
+        Bom, <strong>&lt;a href="EX010_2/pag003.html" target="_self" rel="next"&gt;clique aqui&lt;/a&gt;</strong>
+        para acessar a terceira página.
+    </pre>
+    <p>A dica que demos anteriormente de, apertar <strong>CTRL + ESPAÇO</strong>, e o VSCode mostra o endereço ou o arquivo html que queremos vincular no link continua valendo, porém, para voltar da página três para a principal, o metodo é diferente.</p>
+    <p>Dentro da tag <strong>&lt;a href=""&gt;</strong>, devemos digitar <strong>".."</strong>, isso mesmo dois pontos seguidos, assim o VSCode vai entender que o arquivo que queremos vincular o link está em uma pasta num nível anterior.</p>
+    <p>O código na página três para voltar para a principal ficou assim:</p>
+    <pre>
+        <strong>&lt;a href="../index.html" target="_self" rel="prev"&gt;Clique aqui&lt;/a&gt;</strong> para voltar a página principal.
+    </pre>
+    <p>Se o arquivo ou página que queremos vincular no link está mais de um nível ou pasta acima digitamos <strong>"..."</strong>, e almentamos o número de pontos de acordo com o nível ou número de pastas acima que o arquivo que queremos está.</p>
+    <h1>Links para Download.</h1>
+    <p>Nesta no Curso em Vídeo, iremos fazer aprender a fazer links para downloads de arquivos, para isso na mesma pasta do exercício 10, uma outra pasta e colocaremos alguns arquivos, eu coloquei alguns PDFs de livros de programação.</p>
+    <p>Cada livro foi baixado e compactado, e mantivemos os PDFs, abaixo criaremos a lista de arquivos para Download.</p>
+    <ul>
+        <li><a href="Livros/algoritmos-e-programacao-ii.pdf" download="algoritmos-e-programacao-ii.pdf" type="application/pdf">Algoritimos e Programação em PDF.</a></li>
+        <li><a href="Livros/algoritmos-e-programacao-ii.zip" download="algoritmos-e-programacao-ii.pdf" type="application/zip">Algoritimos e Programação em ZIP.</a></li>
+        <li><a href="Livros/apostila-html-css-javascript.pdf" download="apostila-html-css-javascript.pdf" type="application/pdf">Apostila de HTML, CSS e JavaScript em PDF</a></li>
+        <li><a href="Livros/apostila-html-css-javascript.zip" download="apostila-html-css-javascript.zip" type="application/zip">Apostila de HTML, CSS e JavaScript em ZIP</a></li>
+        <li><a href="Livros/apostila-java-orientacao-objetos.pdf" download="apostila-java-orientacao-objetos.pdf" type="application/pdf">Apostila de Java e Orientação a Objetos em PDF.</a></li>
+        <li><a href="Livros/apostila-java-orientacao-objetos.zip" download="apostila-java-orientacao-objetos.zip" type="application/pdf">Apostila de Java e Orientação a Objetos em ZIP.</a></li>
+        <li><a href="Livros/ebook-logica-de-programacao-para-iniciantes.pdf" download="ebook-logica-de-programacao-para-iniciantes.pdf" type="application/pdf">Lógica de Programação para Iniciantes em PDF.</a></li>
+        <li><a href="Livros/ebook-logica-de-programacao-para-iniciantes.zip" download="ebook-logica-de-programacao-para-iniciantes.zip" type="application/zip">Lógica de Programação para Iniciantes em ZIP.</a></li>
+        <li><a href="Livros/java_basico_e_orientacao_a_objetos.pdf" download="java_basico_e_orientacao_a_objetos.pdf" type="application/pdf">Java Básico e Orientação a Objetos em PDF.</a></li>
+        <li><a href="Livros/java_basico_e_orientacao_a_objetos.zip" download="java_basico_e_orientacao_a_objetos.zip" type="application/zip">Java Básico e Orientação a Objetos em ZIP.</a></li>
+    </ul>
+    <p>A criação de links de download funciona basicamente igual ao link interno a diferença é que selecionamos o arquivo que desejamos baixar, e além disso usamos os parâmetros <em>download=""</em> e entre as aspas colocamos o nome do arquivo, e <em>type=""</em> onde informamos o tipo de mídea.</p>
+    <p>Podemos verificar <em>médea types</em> no site <a href="http://iana.org" target="_blank" rel="external">http://iana.org</a>, esse site tem todos os media types existentes.</p>
+    <p>Podemos verificar como ficaram os links para download conforme abaixo:</p>
+    <pre>
+        &lt;li&gt;&lt;a href="Livros/algoritmos-e-programacao-ii.pdf" download="algoritmos-e-programacao-ii.pdf" type="application/pdf"&gt;Algoritimos e Programação em PDF.&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="Livros/algoritmos-e-programacao-ii.zip" download="algoritmos-e-programacao-ii.pdf" type="application/zip"&gt;Algoritimos e Programação em ZIP.&lt;/a&gt;&lt;/li&gt;
+    </pre>
+    <p>Outra dica que deixo aqui e foi dada pelo Professor Gustavo Guanabara é o <em>envelopar</em> os textos para incluir as tags e para isso, selecionamos o texto e apertamos <em>CTRl+Shift+P</em>, selecionar abreviatura <em>abb</em> e inserir a teg que queremos colocar para aquele texto.</p>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes e Pseudo-Elementos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Pseudo-Classes e Pseudo-Elementos</h1>
+    <h2>Pseudo-Classes</h2>
+    <p>As pseudo-classes são palavras-chaves adicionadas as declarações de um seletor em CSS usadas para definir o estado especial de um elemento. Elas são precedidas por dois pontos (:).</p>
+    <ul>
+        <li><code>:hover</code> - Aplica estilos quando o mouse passa sobre o elemento.</li>
+        <li><code>:active</code> - Aplica estilos quando o elemento está sendo clicado.</li>
+        <li><code>:focus</code> - Aplica estilos quando o elemento recebe foco, como um campo de entrada.</li>
+        <li><code>:visited</code> - Aplica estilos a links que já foram visitados.</li>
+        <li><code>:first-child</code> - Seleciona o primeiro filho de um elemento pai.</li>
+        <li><code>:last-child</code> - Seleciona o último filho de um elemento pai.</li>
+    </ul>
+    <h2>Pseudo-Elementos</h2>
+    <p>Já os pseudo-elementos em CSS são palavras-chaves adicionadas a declaração de um seletor e permitem que você formate um pedaço específico de um elemento referenciado. Eles são precedidos por dois sinais de dois pontos (::).</p>
+    <ul>
+        <li><code>::before</code> - Insere conteúdo antes do conteúdo de um elemento.</li>
+        <li><code>::after</code> - Insere conteúdo após o conteúdo de um elemento.</li>
+        <li><code>::first-line</code> - Aplica estilos à primeira linha de um bloco de texto.</li>
+        <li><code>::first-letter</code> - Aplica estilos à primeira letra de um bloco de texto.</li>
+    </ul>
+    <h2>Exemplo de Pseudo-Classes e Pseudo-Elementos</h2>
+    <p>Vamos começar criando exemplos simples de pseudo-classes e pseudo-elementos.</p>
+    <p>Para aprender mais sobre HTML5 e CSS3, acesso o <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">GitHub do professor Gustavo Guanabara</a>.</p>
+    <p>Se quiser conhecer mais sobre os padrões, visite o site do Escritório do <a href="https://www.w3c.br/" target="_blank" rel="external">W3C no Brasil</a>.</p>
+    <p>Para acompanhar os cursos, acesse o Canal do <a href="https://www.youtube.com/cursoemvideo" target="_blank" rel="external">Curso Em Vídeo.</a></p>
+    <p>Nos links acima não fizemos ainda nenhuma declaração específica de pseudo-classes ou pseudo-elementos, e o código está assim:
+        <pre>
+            <code>&lt;p&gt;Para aprender mais sobre HTML5 e CSS3, acesso o &lt;a href="https://gustavoguanabara.github.io/" target="_blank" rel="external"&gt;GitHub do professor Gustavo Guanabara&lt;/a&gt;.&lt;/p&gt;
+            &lt;p&gt;Se quiser conhecer mais sobre os padrões, visite o site do Escritório do &lt;a href="https://www.w3c.br/" target="_blank" rel="external"&gt;W3C no Brasil&lt;/a&gt;.&lt;/p&gt;
+            &lt;p&gt;Para acompanhar os cursos, acesse o Canal do &lt;a href="https://www.youtube.com/cursoemvideo" target="_blank" rel="external"&gt;Curso Em Vídeo.&lt;/a&gt;.&lt;/p&gt;</code>
+        </pre>
+    </p>
+    <p>Agora nos exemplos abaixo você vai ver um pouco das aplicações das pseudo-classes e pseudo-elementos:</p>
+    <p>Para aprender mais sobre HTML5 e CSS3, acesso o <a class="exemplo" href="https://gustavoguanabara.github.io/" target="_blank" rel="external">GitHub do professor Gustavo Guanabara</a>.</p>
+    <p>Se quiser conhecer mais sobre os padrões, visite o site do Escritório do <a class="exemplo" href="https://www.w3c.br/" target="_blank" rel="external">W3C no Brasil</a>.</p>
+    <p>Para acompanhar os cursos, acesse o Canal do <a class="especial" href="https://www.youtube.com/cursoemvideo" target="_blank" rel="external">Curso Em Vídeo</a>.</p>
+    <p>Criamos as classes exemplo e especial, a primeira aplicamos para os dois primeiros links, e a classe especial aplicamos apenas para o segundo link você notou a diferença?</p>
+    <p>Neste caso as nossas declarações para a classe especial, foram para fazer com que a fonte ficasse em negreto <em>(bold)</em>, a cor para links não visitados ficassem em vermelho, e para que ao passarmos o mouse sobre o link, o sublinhado aparecesse, além disso, nos links visitados a cor mudaria para vermelho escuro.</p>
+    <p>
+        <pre>
+            <code>
+                .exemplo {
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: #ff0000;
+                }
+                .exemplo:visited {
+                    color: #700000;
+                }
+                .exemplo:hover {
+                    text-decoration: underline;
+                }
+            </code>
+        </pre>
+        Essas foram as pseudo-classes que utilizamos para nossos dois primeiros exemplos de links.
+    </p>
+    <p>Já para a classe especial utilizamos uma pseudo-classe para que ao passar o mouse em cima do link a letra ficaria branca, o fundo ficaria preto, e o sublinhado sairia, também colocamos pseudo-elementos antes e depois do link.</p>
+    <p>
+        <pre>
+            <code>
+                .especial:hover {
+                    color: #ffffff;
+                    background-color: #000000;
+                    text-decoration: none;
+                }
+                .especial::before {
+                    content: '>>';
+                    font-weight: lighter;
+                }
+                .especial::after {
+                    content:'<<';
+                    font-weight: lighter;
+                }
+            </code>
+        </pre>
+    </p>
+    <h2>Conteúdo Especial</h2>
+    <p>Vamos criar mais um exemplo, e neste nós usaremos um bloco especial com uma <em>&lt;div&gt;</em>, e uma vantagem das divs é que podemos incluir outras tags dentro delas.</p>
+    <div>
+        Passe o mouse aqui. <br>
+        <p>SURPRESAAAAAA!!!</p>
+        Veja o conteúdo oculto aparecendo!
+    </div>
+    <p> A tag acima ficou assim:
+        <pre>
+            <code>
+                &lt;div&gt;
+                    Passe o mouse aqui.
+                    &lt;p&gt;SURPRESAAAAAA!!!&lt;/p&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </p>
+    <p>E para que ela funcione corretamente nós incluímos um estilo CSS para a div e seus elementos internos.</p>
+    <p>
+        <pre>
+            <code>
+                div > p {
+                    display: none;
+                }
+                div:hover > p {
+                    display: block;
+                    background-color: #ffff00;
+                }
+            </code>
+        </pre>
+    </p>
+    <h2>Exemplo do Vídeo</h2>
+    <div class="video">01</div>
+    <div class="video">02</div>
+    <div class="video">03</div>
+    <p>Neste exemplo que fizemos parecido com o da aula no vídeo, utilizamos as divs e nelas incluímos a pseudo-classe <em>":hover"</em> para alterar a cor de fundo do bloco ao passar o mouse, e ficou parecido com o que fizemos com a frase dentro da <em>"div"</em> anterior.</p>
+    <p>E lembrando, os sinais que vimos até agora nas últimas aulas:
+       <ul>
+        <li># = id</li>
+        <li>. = class</li>
+        <li>: = pseudo-classe</li>
+        <li>:: = pseudo-elemento</li>
+        <li>&lt; = seletor de filho</li>
+        <li>&gt; = seletor de descendente</li>
+        <li>* = universal</li>
+       </ul>
+       Estes são nossos seletores personalizados.
+    </p>
+</body>
+</html>

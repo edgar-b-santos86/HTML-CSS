@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Seletores Personalizados</title>
+</head>
+<body>
+    <main>
+        <h1 id="principal">Id (identificadores) e Classes</h1>
+        <h1 class="secundarios">Seletores</h1>
+        <h2 class="terciarios">Trabalhando com seletores</h2>
+        <p>Como já vimos, fazemos as formatações (de forma semântica) para o nosso site por meio de seletores que indicam nas CSS, as tag que queremos "configurar" para os elementos do HTML, porém, as vezes queremos fazer diferentes formatações para dois elementos que fazem parte do mesmo grupo de seletores. Vamos ver mais a frente como fazemos isso.</p>
+        <h1 class="secundarios">Id (identificadores)</h1>
+        <h2 class="terciarios">Seletores Personalizados.</h2>
+        <p>Neste exercício iremos incluir identificadores e faremos nossas CSS no estilo externo para que possamos ter uma melhor visualização.</p>
+        <p>Como falamos um pouco acima, faremos seletores personalizados pois normalmente as nossa CSS são assim:
+            <pre>
+                <code>@charset "UTF-8";
+                body {
+                    background-color: rgb(162, 238, 162);
+                    font-family: Arial, sans-serif;
+                    }
+                    h1 {
+                    color: rgb(133, 45, 45);
+                    }
+                    h2 {
+                    color: rgb(5, 82, 5)
+                    }
+                </code>
+            </pre>
+        </p>
+        <p>Vendo as declarações de <em>CSS</em> assima sabemos que o corpo do site terá a cor verde, a fonte será arial (ou outra não serifada), os títulos de hierarquia 1 (<em>h1</em>) terão a cor marrom e os títulos de hierarquia 2 (<em>h2</em>) terão a cor verde escuro.</p>
+        <p>O problema ai é que se eu quiser que o primeiro h1 tenha uma cor ou letra diferente eu não conseguiria fazer isso não é mesmo? Acontece que podemos fazer isso sim incluindo um identificador (<em>id</em>) no nosso HTML e referenciando ele na nossa <em>CSS</em>.</p>
+        <p>Neste caso colocamos um identificador no nosso primeiro h1 (no <em>HTML</em>) e ele ficou assim:
+            <pre>
+                <code>
+                    &lt;h1 <em>id</em>="principal"&gt;Id (identificadores) e Classes&lt;/h1&gt;
+                </code>
+            </pre>
+        E a aplicaçao nas <em>CSS</em> ficou assim:
+            <pre>
+                <code>
+                    h1#principal {
+                        text-align: center;
+                        color: black;
+                    }
+                </code>
+            </pre>
+        Assim nós conseguimos personalizar configurações ou formatações para determinados elementos do <em>HTML</em>, por meio das <em>CSS</em>, e o identificador no css não pode ter espaço.
+        </p>
+        <p>Também podemos fazer o uso do identidicador nas <em>CSS</em> sem a necessidade de indicar o <em>HTML</em>, e o código ficaria igual ao que consta abaixo:
+            <pre>
+                <code>
+                    #principal {
+                        text-align: center;
+                        color: black;
+                    }
+                </code>
+            </pre>
+        </p>
+        <p>Isso acontece porque todo identificador (<em>id)</em> em HTML é igual a "#" na CSS, e toda class em <em>HTML</em> é igual a "." na <em>CSS</em>. E já já falaremos sobre class.</p>
+        <p>Então lembre-se:
+            <pre>
+                id (HTML) = # (CSS)
+                class (HTML) = . (CSS)
+            </pre>
+        </p>
+         <h1 class="secundarios">Class (classes)</h1>
+        <h2 class="terciarios">Seletores Personalizados.</h2>
+        <p>Ok! Mas agora eu quero formatar meu segundo h1 com a mesma configuração do primeiro, posso usar o mesmo <em>id</em> para os dois? NÃO, se você fizer isso estará fazendo errado. O <em>W3C</em>, diz que não é permitido ter ids duplicados em um mesmo documento HTML, porém, temos uma solução pra isso: as classes ou <em>class</em>.</p>
+        <p>Assim como o <em>id</em> a <em>class</em> é aplicada no <em>HTML</em> da seguinte forma abaixo:
+            <pre>
+                <code>
+                    &lt;h1 class="secundarios"&gt;Class (classes)&lt;/h1&gt;
+                </code>
+            </pre>
+            <pre>
+                <code>
+                    .secundarios {
+                                background-color: rgba(226, 191, 103, 0.644);
+                                }
+                </code>
+            </pre>
+        </p>
+        <p>Podemos utilizar mais de uma classe no mesmo elemento apenas separando elas por espaço, e na tag ela ficaria assim:
+            <pre>
+                <code>
+                    &lt;h1 class="secundarios terciarios"&gt;Class (classes)&lt;/h1&gt;
+                </code>
+            </pre>
+        E assim conseguimos aplicar mais de uma formatação no mesmo elemento de <em>HTML</em>, e inclusive podemos aplicar classes nos textos específico do conteúdo do nosso HTML utilizando uma classe dentro da tag &lt;span&gt; &lt;/span&gt;.
+        </p>
+        
+    </main>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Vídeos</title>
+</head>
+<body>
+    <h1>Inserindo Vídeos no Site</h1>
+    <h2>Incorporação de Vídeos em Hospedagem Própria</h2>
+    <p>A inclusão de vídeos no site deve ser bem estudada pois, o carregamento de vídeo diretamente do seu site pode fazer com que o site fique muito pesado e como já estudamos, isso prejudica nossa página nos mecanismos de busca.</p>
+    <p>Vamos ver diversas maneiras de incluir vídeos no nosso site?!</p>
+    <p>Antes vamos falar sobre compatibilidade, no caso de navegadores os formatos mais compatíveis são:</p>
+    <ul>
+        <li>.MP4</li>
+        <li>.M4V</li>
+        <li>.WEBM</li>
+        <li>.OGV</li>
+    </ul>
+    <p>Caso o cliente ou você mesmo queira um vídeo hospedado no seu servidor do site, temos uma ferramenta para compressão e conversão de vídeo, caso este seja muito grande e incompatível para que rode em HTML, que é o <abbr title="https://handbrake.fr/"><a href="https://handbrake.fr/" target="_blank" rel="external">HANDBRAKE</a></abbr>, uma outra ferramenta gratuita assim como o <abbr title="https://www.gimp.org/"><a href="https://www.gimp.org/" target="_blank" rel="external">GIMP</a></abbr>.</p>
+    <p>Só uma obsevação, o <em>HandBrake não converte vídeos em .OGV.</em></p>
+    <p>E caso o vídeo não seja autoral e você precise de algo pronto ou até mesmo imagens gratuítas, podemos usar os vídeos e imagens do <abbr title="https://www.pexels.com/pt-br/"><a href="https://www.pexels.com/pt-br/" target="_blank" rel="external">PEXELS</a></abbr>.</p>
+    <p>É importante ter o vídeo em vários formatos pois, pode ocorrer de o vídeo funcionar em um navegador e não funcionar em outros navegadores.</p>
+    <p>Bom agora vamos utiliza as tags para incluir um vídeo que está hospedado localmente, ou seja, no servidor de hospedagem do site.</p>
+    <p>Vamos começar com o exemplo abaixo:</p>
+    <video src="midia/golfinhos.mp4" width="560" height="315" controls></video>
+    <p>E então deu certo? Muito bem, para isso tivemos que usar a tag video em sua maneira mais simples conforme está abaixo e esplicaremos alguns parâmetros que usamos para que o vídeo pudesse rodar normalmente.</p>
+    <p>A tag ficou da seguinte forma:</p>
+    <strong>&lt;video src="midia/golfinhos.mp4" width="560" height="315" controls&gt;&lt;/video&gt;</strong>
+    <p>Assim como com as imagens e também como com os áudios, foi necessário efetuar a inserção de alguns parâmetros para que tudo funcione corretamente, conforme mencionado abaixo:</p>
+    <ul>
+        <li><strong>&lt;video src=""&gt;&lt;/video&gt;</strong>, é a parte principal da tag, onde incluímos o local onde o vídeo está armazenado;</li>
+        <li><strong>width=""</strong> é o parâmetro para definirmos a largura de exibição do vídeo;</li>
+        <li><strong>height=""</strong> é o parâmetro para definirmos a altura de exibição do vídeo;</li>
+        <li><strong>controls</strong>, é o parâmetro para que os controles do vídeo sejam exibidos e possamos colocar o vídeo para rodar.</li>
+    </ul>
+    <p>Outra maneira de incluírmos vídeo também usando a tag video é a que aparecerá na exibição abaixo:</p>
+    <video width="560" height="315" controls>
+        <source src="midia/golfinhos.mp4" type="video/mp4">
+    </video>
+    <p>A tag para o vídeo acima fica dessa forma:</p>
+    <strong>
+        &lt;video width="560" height="315" controls&gt;<br>
+            &lt;source src="midia/golfinhos.mp4" type="video/mp4"&gt;<br>
+        &lt;/video&gt;
+    </strong>
+    <p>Dentro da tag, podemos disponibilizar todos os de arquivo de vídeo e de formatos compatíveis com todos os navegadores com o comando <strong>&lt;source src="" type=""&gt;</strong>.</p>
+    <p>Outra coisa que podemos colocar é uma thumbnail, pois quando carregamos a página o vídeo estará parado no primeiro frame dele.</p>
+    <p>O vídeo com a thumb ficará assim:</p>
+    <video width="560" height="315" poster="imagens/golfinhos_capa.png" controls>
+        <source src="midia/golfinhos.mp4" type="video/mp4">
+    </video>
+    <p>Legal né!? O código para deixar o vídeo com a thumb ficou desse jeito:</p>
+    <strong>
+        &lt;video width="560" height="315" poster="imagens/golfinhos_capa.png" controls&gt;<br>
+            &lt;source src="midia/golfinhos.mp4" type="video/mp4"&gt;<br>
+        &lt;/video&gt;
+    </strong>
+    <p>Essas são as maneiras de inserir vídeos no site com os vídeos hospedados no servidor do mesmo.<br>Este não é o meio mais indicado até porque o fluxo de banda de trafego no site fica gigantesto e isso pode gerar um custo enorme para você ou para seu cliente.<br>Aprenderemos uma maneira mais barata de incluir vídeos no site para o custo ficar menor.</p>
+    <h2>Incorporação de Vídeos Externos</h2>
+    <p>Chegamos a forma mais <em>"barata"</em> de incluir um vídeo no nosso site, que é adicionando vídeo de uma fonte externa, ou seja, de um local de hospedagem próprio de vídeos, e uma das fontes dos mais conhecidas é o YouTube.</p>
+    <p>Abaixo tem um belo exemplo de vídeo vindo direto do YouTube:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/oyteUQfhX3U?si=mmEeIBWTNILiAbCn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p>O que fizemos para incluir o vídeo acima foi muito simples, e vamos colocar o passo a passo abaixo:</p>
+    <ul>
+        <li>Entramos no YouTube;</li>
+        <li>Escolhemos o vídeo, e clicamos para executá-lo;</li>
+        <li>Clicamos em compartilhar e depois em incorporar;</li>
+        <li>Copiamos o código sem fazer alterações;</li>
+        <li>Colamos o código no <abbr title="Visual Stidio Code">VSC</abbr>.</li>
+    </ul>
+    <p>Simples né?! Melhor ainda se o cliente que você tem possuir um canal no YouTube, pois ao invés de hospedar o arquivo de vídeo no servido do site do cliente, o que pode gerar um custo absurdo como já falamos, podemos hospedá-lo na fonte externa e incorporá-lo ao nosso código.</p>
+    <p>Agora finalizamos a parte de mídia, com imagens, áudios e vídeos, então, vamos para os desafios.</p>    
+</body>
+</html>

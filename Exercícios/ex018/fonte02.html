@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <style>
+        @font-face {
+            font-family: 'Cap';
+            src: url('fonts/Capsmall.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'CursiveSerif-Book';
+            src: url('fonts/CursiveSerif-Book.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-family: 'Cap', sans-serif;
+            font-size: 3em;
+            font-weight: normal;
+        }
+
+        p {
+            font-family: 'CursiveSerif-Book', sans-serif;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Nesta aula iremos incluir arquivos de fontes dentro da pasta do nosso site, até porque as vezes o cliente já tem uma fonte pré-definida para utilizar no site ou em títulos específicos das páginas dele.</p>
+    <p>A primeira coisa que devemos fazer, não é instalar as fontes no nosso PC, nós vamos baixar a fonte e fazer um font type personalizado.</p>
+    <p>Primeiro vamos criar o nosso style local, e para baixar a fonte o professo Gustavo Guanabara indicou o site <a href="http://www.dafont.com/" target="_blank" rel="external">http://www.dafont.com/</a>, e devemos ter cuidado ao escolher a fonte pois algumas delas não tem acentuação.</p>
+    <p>Após baixar a fonte e savar ela em uma pasta dos aquivos do site que estamos criando para que está fonte seja carregada pois ela também deve estar no servidor.</p>
+    <p>Temos as seguintes extensões de arquivos de fontes:
+        <ul>
+            <li>TrueType (.ttf)</li>
+            <li>OpenType (.otf)</li>
+            <li>Web Open Font Format (.woff)</li>
+            <li>Embedded Open Type (.eot)</li>
+            <li>Scalable Vector Graphics (.svg)</li>
+            <li>truetype-aat</li>
+        </ul>
+    </p>
+    <p>para aplicar a fonte, devemos criar uma regra com um seletor especial conforme abaixo:
+        <pre>
+            <code>
+            &lt;style&gt;
+            @font-face {
+                font-family: 'Cap';
+                src: url('fonts/Capsmall.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+                }
+            @font-face {
+                font-family: 'CursiveSerif-Book';
+                src: url('fonts/CursiveSerif-Book.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+                }
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                }
+            h1 {
+                font-family: 'Cap', sans-serif;
+                font-size: 3em;
+                font-weight: normal;
+              }
+            p {
+                font-family: 'CursiveSerif-Book', sans-serif;
+                font-weight: normal;
+               }
+            &lt;/style&gt;
+            </code>
+        </pre>
+    </p>
+    <p>Quando colocamos uma fonte externa nas CSS podemos dar um nome a ela como vimos acima, neste caso usamos duas regras de fontes diferentes para o nosso exercício.</p>
+</body>
+</html>

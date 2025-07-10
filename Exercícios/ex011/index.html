@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento e Inserção de Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Tratamento e Inserção de Mídias</h1>
+    <p>Neste capítulo iremos iniciar o tratamento e a inserção de mídias em HTML5</p>
+
+    <h2>Imagens</h2>
+    <p>No caso de imagens temos que tomar cuidado com o tamanho do arquivo pois, um site com arquivos muito pesados tem o seu carregamento lento e com isso, não tem relevância na indicação das pesquisas no Google, neste caso temos compreender que arquivos de imagens com altas resoluções não são indicados para serem inseridos no seu site.</p>
+    <p>Vamos usar a ferramenta <abbr title="https://www.gimp.org/"><a href="https://www.gimp.org/" target="_blank" rel="external">GIMP</a></abbr>, que é open sorce (gratuita), para criar algumas imagens e tratar imagens de resolução muito grandes.</p>
+    <p>
+        <ol type="1">
+            <li>Abra o GIMP, em seguida clique no menu <strong>Arquivo</strong>, em seguida clique em <strong>Nova</strong></li>
+
+            <li>Após clicar em <strong>Nova</strong> a janela de criação de imagens irá abrir, para começar vamos alterar a largura da primeira imagem para 300, e aperte o tab, para alturar também a altura.</li>
+
+            <li>Agora Clique em opções avançadas para que possamos aterar a resolução da imagem. Vamos colocar a <strong>Resolução X</strong> em 80, depois é só apertar a tecla tab para alterar a <strong>Resolução Y</strong> para 80 também, e clique em ok para criar a imagem.</li>
+
+            <li>Com a imagem criada vamos criar outros duas com tamanhos diferentes, com a mesma resolução, porém, com tamanhos diferentes, uma com 700x700, e outra de 1000x1000, mantendo a resolução.</li>
+
+        </ol>
+    </p>
+    <p>Com as imagens criadas vamos colorir e colocar letras nelas, da menor para a maior, <strong>P, M e G</strong>, e vamos aplicar cores diferentes.</p>
+    <p>Para inserir as letrar nas imagens temos que seguir o passo a passo abaixo</p>
+    <ol type="1">
+        <li>Ainda no GIMP, do lado superior esquerdo clique na ferramenta de texto, identificada pela letra <strong>A</strong></li>
+
+        <li>As opções da ferramenta texto aparecerão no lado direito da tela e você irá notar que o cursor ficará diferente.</li>
+
+        <li>Clique nas imagens usando a ferramenta e insira as letras <strong>P, M e G</strong> respctivamente.</li>
+
+        <li>Para que a letra fique no meio da imagem, devemos clicar e arrastar a régua na parte superior para baixo, colocando a linha na metade da imagem, e clicar e arratar na régua lateral, colocando a linha também no centro da imagem, clique na ferramenta de movimento coloque a letra no meio da imagem, e para facilitar clique novamente na letra e arraste ela para as outras imagens. Selecione a camada da letra e mude a opacidade das letras para 50%.</li>
+
+        <li>Agora vamos selecionar a cor de fundo da imagem, do lado direito, na parte inferior, é possível selecionar as camadas da imagem, selecione o fundo.</li>
+
+        <li>Após selecionar o fundo da imagem, iremos utilizar a ferramente de preenchimento, localizada na parte superior do lado esquerdo, identificada pelo icone do balde, e ao clicar nela as opções da ferramenta irão aparecer.</li>
+
+        <li>Entre as ferramentas e as opções delas irão aparecer duas cores, clique na cor superior para aparece a apções de cor, e na notação HTML, para a imagem P insira o código <strong>fbe9b1</strong>, para a imagem M o código <stron>f4b9c2</stron>, e na imagem G insira o código <strong>abc7ab</strong>.</li>
+    </ol>
+    <p>Agora iremos utilizar as imagens criadas com o código HTML próprio para que elas sejam carregadas e de acordo com o tamanho da tela do dispositivo em que o site está sendo carregado, ou se o site está sendo carregado em uma janela reduzida.</p>
+
+    <p>Carregue a página aumente e reduza o tamanho para visualizar a imagem abaixo.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem Flexivel">
+    </picture>
+    <p>Almentando e diminuindo a tela você notou que a imagem alterou, pois é, para que isso fosse possível inserimos alguns códigos para carregamento das imagens.</p>
+    <p>Inserimos o código <strong>&lt;img src="imagens/foto-g.png" alt="Imagem Flexivel"&gt;</strong>, e dentro deste código temos as seguintes informações.</p>
+    <p><strong>img src="imagens/foto-g.png"</strong>, carrega o local onde está a imagem, dentro das "" devemos inserir o endereço do local onde está a imagem que queremos carregar.</p>
+    <p><strong>alt="Imagem Flexivel"</strong> é o nome alternativo da imagem.</p>
+    <p>Outro código que devemos inserir é o <strong>&lt;source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"&gt;</strong>, e este deve ser inserido na ordem correta, sempre da menor para a maior imagem e sempre antes de do código para carga da imagem.</p>
+    <p>A parte do código <strong>source media="(max-width: 750px)"</strong> é responsável por ser o limitador do tamanho da imagem para carregamento, por exemplo, ao reduzir ou aumentar o tamanho da tela ele automaticamente aumenta ou reduz a imagem.</p>
+    <p><strong>srcset="imagens/foto-p.png"</strong>, esta parte do código é responsável por carregar a imagem de resulução menor ou maior.</p>
+    <p><strong>type="image/png"</strong> é o tipo da imagem que está sendo carregado.</p>
+    <p>Neste caso o código fica igual ao que está abaixo:</p>
+    <p>
+    <code>
+        &lt;picture&gt;<br>
+            &lt;source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"&gt;<br>
+            &lt;source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"&gt;<br>
+            &lt;img src="imagens/foto-g.png" alt="Imagem Flexivel"&gt;<br>
+        &lt;/picture&gt;
+    </code>
+    </p>
+
+    <h2>Inserindo Áudio</h2>
+    <p>Agora iremos aprender como inserir áudios no nosso site apenas com códigos HTML.</p>
+    <p>A maneira mais simples de incluir um áudio em um site é usando o código <strong>&lt;audio src="" autoplay&gt;</strong>, dessa maneira o áudio, dependendo do navegador irá repoduzir sem a necessidade de constroles.</p>
+    <p>Para adicionar os controles do áudio basta incluir o comando <stro>controls</stro> na tag acima, e ela ficará assim:<strong>&lt;audio src="" controls&gt;</strong>.</p>
+    <audio src="mídia/like_i_want_you.mp3" controls></audio>
+    <p>A outra maneira de inserir o áudio é carregado a tag  audio, entretanto, abrindo-a para inserir o comando src dentro da tag assim como outros comandos.</p>
+    <audio preload="metadata" controls>
+        <source src="mídia/like_i_want_you.mp3" type="audio/mpeg">
+    </audio>
+    <p>O código fica conforme abaixo:</p>
+    <p>
+        <code>
+            &lt;audio preload="metadata" controls loop&gt;<br>
+                &lt;source src="mídia/like_i_want_you.mp3" type="audio/mpeg"&gt;<br>
+            &lt;/audio&gt;
+        </code>
+    </p>
+    <p>Podemos identificar alguns parametros no comando acima, como o parmetro <strong>preload=""</strong> e nele podemos complementar com os comandos <strong>metadata, auto, ou none</strong>.</p>
+    <p>O complemento <strong>auto</strong> irá efetuar o carregamento do audio automaticamente, porém, não é o mais indicado, pois o navegador só entenderá que o carregamento do site foi concluído após ter carregado inclusive todo o arquivo de áudio.</p>
+    <p>O complemento <strong>metadata</strong> carrega junto com a página apenas as informações do audio, entrentano, só carrega e toca o áudio quando o usuário da play nos controles.</p>
+    <p>Além dos dois citados acima, temos também o complemento <strong>none</strong>, que ao colocamos ou se não inserirmos nada pode acontecer do áudio seja carregado juntamente com o site, assim como no parâmetro <strong>auto</strong>.</p>
+</body>
+</html>
