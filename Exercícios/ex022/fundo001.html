@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Imagem de Fundo</title>
+    <style>
+        body {
+            font-family: red rose; arial, sans-serif;
+            background-image: url('imagens/pattern001.png');
+        }
+
+        main {
+            width: 950px;
+            margin: auto;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: white;
+            text-align: justify;
+        }
+        
+        div.quadrado{
+           border: 1px solid black;
+           width: 300px;
+           height: 300px;
+           display: inline-block;
+           background-color: lightgray;
+           border-radius: 10px;
+        }
+
+        div#q1 {
+            background-color: skyblue;
+        }
+
+        div#q2 {
+            background-image: linear-gradient(to right, red, yellow);
+        }
+
+        div#q3 {
+            background-image: url('imagens/pattern003.png');
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <h1>Aplicando imagens de fundo.</h1>
+            <p>Nesta aula tivemos a informação de como aplicar imagens de fundo na página que estamos criando.</p>
+            <p>Primeiramente vamos acessar o GitHub do professor <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/19%20-%20Imagens%20de%20Fundo.pdf" target="_blank">Gustavo Guanabara</a> para baixar o pacote de imagens para trabalharmos com a aplicação delas em nosso plano de fundo do sites.</p>
+            <p>Criamos três <em><code>&lt;div&gt;&lt;/div&gt;</code></em> colocamos bordas e demos a elas a <em><code>class="quadrado"</code></em>.</p>
+            <p>Após ter criado as <em><code>&lt;div&gt;&lt;/div&gt;</code></em> iniciamos a configuração das três da seguinte forma em nossas CSS internas:</p>
+            <pre>
+                div.quadrado{
+                   border: 1px solid black;
+                    width: 300px;
+                   height: 300px;
+                   display: inline-block;
+                   background-color: lightgray;
+                   border-radius: 10px;
+            }
+            </pre>
+            <p>Isso foi feito para que pudéssemos visualizar todos os três quadros em nossa página e assim efetuar a configuração deles.</p>
+            <p>Em seguida criamos a três <em>id's</em> diferentes para cada uma das div's, para que assim pudessemos aplicar imagens de fundo diferentes, e assim ficaram elas:</p>
+            <pre>
+                &lt;div class="quadrado" id="q1"&gt;
+                &lt;/div&gt;
+                &lt;div class="quadrado" id="q2"&gt;
+                &lt;/div&gt;
+        
+                &lt;div class="quadrado" id="q3"&gt;
+        
+                &lt;/div&gt;
+            </pre>
+            <p>Em seguida, aplicamos as seguintes configurações de CSS para cada uma delas:</p>
+            <pre>
+                div#q1 {
+                    background-color: skyblue;
+                }
+
+                div#q2 {
+                    background-image: linear-gradient(to right, red, yellow);
+                }
+
+                div#q3 {
+                    background-image: url('imagens/pattern003.png');
+                }
+            </pre>
+
+            <p>Como podemos notar as configurações das divs 1 e 2 já são meio que conhecidas, pois já usamos o <em>background-image</em> em outras ocasiões e inclusive no nossa página do desasfio 10, entretanto, note que o consorciado a terceira div tem algo diferente, ao invés de usamos um valor como <em>linear-gradient</em> para que a cor variasse de uma para outra, usamos o <em>URL</em> e escolhemos uma das imagens baixadas para nossas aulas, e isso fez com que a imagem virasse o plano de fundo de nossa <em>div</em>.</p>
+            <p>Essa configuração simples faz com que a imagem seja carregada em seu tamanho total, e ainda veremos mais configuração para background neste capítulo.</p>
+
+            <div class="quadrado" id="q1">
+            </div>
+
+            <div class="quadrado" id="q2">
+            </div>
+
+            <div class="quadrado" id="q3">        
+            </div>
+        </article>
+    </main>
+</body>
+</html>
