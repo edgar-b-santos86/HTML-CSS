@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalização dos Fundos</title>
+    <style>
+        body{
+            background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+            background-size: 100px 100px;
+            background-repeat: repeat-x;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de aplicação de fundo.</h1>
+
+    <p>Nesta aula vimos algumas aplicações do background que foram o, <em>background-image</em>, <em>background-size</em> (vamos ver melhor em outra aula), e o <em>background-repeat</em>.</p>
+    <p>O <em>background-image</em> como vimos anteriormente, podemos colocar uma imagem de fundo e inclusive podemos usar uma imagem de uma URL externo como foi o caso do que foi explicado pelo processor Guanabara, neste caso usamos a declaração com a URL abaixo:</p>
+    <pre>
+        <code>background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png')</code>
+    </pre>
+    <p>Neste caso só temos que tomar cuidado pois se por ventura o site onde a imagem estiver hospedado deixar de existir ou se ficar fora do ar por algum motivo a imagem não sera carregada.</p>
+    <p>Nesta declaração, denpendendo do tamanho da imagem, ela será repetida por toda a página, e será sempre partindo do lado superior esquerdo para a direita, porém, podemos mudar o posicionamento inicial da imagem de fundo.</p>
+    <p>Também usamos a declaração <em>background-size</em>, porém, sobre essa teremos uma explicação melhor na próxima aula.</p>
+    <p>Por último, usamos a declaração <em>background-repeat</em>, que como o nome já diz, serve para repetir a imagem de fundo, e nesta declaração podemos utilizar as os valores <em>repeat-x</em>(vai repetir a imagem apenas no eixo x/horizontal), <em>repeat-y</em> (vai repetir a imagem no eixo y/vertical), repeat (vai repetir a imagem por toda a tela), e no-repeat (não vai deixar a imagem ser repetida).</p>
+    <p>Em todos os casos a imagem vai ser repetida, conforme falamos ontem a partir da parte superior esquerda, porém, como foi dito, é possível alterar a posição inicial da imagem.</p>
+</body>
+</html>

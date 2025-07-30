@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posição dos Fundos</title>
+    <style>
+        div.bloco {
+            background-image: url('imagens/wallpaper003.jpg');
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        div#q1 {
+            background-position: top left;
+        }
+
+        div#q2 {
+            background-position: top right;
+        }
+
+        div#q3 {
+            background-position: center center;
+        }
+
+        div#q4 {
+            background-position: bottom left;
+        }
+
+        div#q5 {
+            background-position: bottom right;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bloco" id="q1">
+
+    </div>
+
+    <div class="bloco" id="q2">
+
+    </div>
+
+    <div class="bloco" id="q3">
+
+    </div>
+
+    <div class="bloco" id="q4">
+
+    </div>
+
+    <div class="bloco" id="q5">
+
+    </div>
+    <p>Nesta aula vimos mais sobre a declaração <em>background-position</em>, e vimos que é possível mudar o ponto de ancoragem de uma imágem através desta declaração.</p>
+    <p>Temos que ter em mente que o posicionamento deve ter dois valores em sua declaração.</p>
+    <p>No primeiro podemos lembrar de separar o posicionamento como colunas (eixo x), e no segundo seria o posicionamento por linhas (eixo y), sendo assim podemos colocolar os seguintes valores:</p>
+    <ul>
+        <li>top</li>
+        <li>center</li>
+        <li>bottom</li>
+        <li>left</li>
+        <li>right</li>
+    </ul>
+    <p>Com isso podemos criar combinações como:</p>
+    <ul>
+        <li>top left</li>
+        <li>top right</li>
+        <li>center center</li>
+        <li>bottom left</li>
+        <li>bottom right</li>
+    </ul>
+    <p>Ou seja, podemos criar combinações de posicionamento para a imagem de fundo, e com isso podemos criar efeitos interessantes.</p>
+    <p>Também podemos usar percentuais ou pixels levando em consideração a mesma regra, e assim colocar o ponto de angoragem da imagem, literalmente onde quisermos.</p>
+</body>
+</html>
