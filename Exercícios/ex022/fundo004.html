@@ -12,11 +12,37 @@
             background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
             background-size: 100px;
             background-repeat: no-repeat;
-            background-position: 67% 46%;
+            background-position: 100% 46%;
            }
     </style>
 </head>
 <body>
-    
+    <h1>Utilizando o percentuais no <em>background-position.</em></h1>
+    <p>Nesta pagina tulizamos o seguinte valor para a declaração background-position <em>100% 46%</em>.</p>
+    <p>Nestes valores nós determinamos primeiro o eixo <em>X</em> e o eixo <em>Y</em> a nossas CSS internas ficaram assim:</p>
+    <code>
+        &lt;style&gt;
+            body {
+                height: 98vh;
+                border: 1px dashed black;
+                border-radius: 10px;
+                background-image: url('https://gustavoguanabara.github.io/html-css/imagens/mascote.png');
+                background-size: 100px;
+                background-repeat: no-repeat;
+                background-position: 100% 46%;
+               }
+        &lt;/style&gt;
+    </code>
+    <p>Na primeira declaração que colocamos <em>height (altura)</em> fixamos o tamanho da visualização da viewport com o valor <em>98vh;</em> a visualização dentro do body neste caso será de 98% da tela que estamos abrindo.</p>
+    <p>Na segunda declaração que colocamos <em>border (borda)</em> fixamos os valores de <em>1px</em> para a espessura, e <em>dashed black</em> para que a borda ficasse com a cor preta e pontilhada.</p>
+    <p>Na terceira declaração que colocamos <em>border-radius (borda arredondada)</em> fixamos o valor de <em>10px</em> para que os cantos ficassem arredondados.</p>
+    <p>Na quarta declaração que colocamos <em>background-image (imagem de fundo)</em> fixamos a imagem que queremos utilizar como fundo.</p>
+    <p>Na quinta declaração que colocamos <em>background-size (tamanho do fundo)</em> fixamos o tamanho da imagem que queremos utilizar como fundo, neste caso 100px.</p>
+    <p>Na sexta declaração que colocamos <em>background-repeat (repetição do fundo)</em> fixamos o valor <em>no-repeat</em> para que a imagem não se repetisse.</p>
+    <p>Na sétima declaração que colocamos <em>background-position (posição do fundo)</em> fixamos o valor <em>100% 46%</em> para que a imagem ficasse posicionada no canto direito da tela (100% do eixo X) e um pouco abaixo do centro (46% do eixo Y).</p>
+    <p>Com isso conseguimos posicionar a imagem exatamente onde queremos, e podemos utilizar qualquer valor em percentual ou em pixels.</p>
+    <p>Podemos também utilizar valores negativos, como por exemplo -10% -10 para colocar a imagem um pouco para fora da tela.</p>
+    <p>Também podemos utilizar valores maiores que 100%, como por exemplo 150% 150% para colocar a imagem um pouco para fora da tela, mas do lado oposto.</p>
+    <p>Com isso podemos criar efeitos interessantes, e colocar a imagem exatamente onde queremos.</p>
 </body>
 </html>
