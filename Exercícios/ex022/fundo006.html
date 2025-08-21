@@ -7,15 +7,12 @@
     <style>
         body {
             height: 100vh;
-            background-color: black;
-            background-image: url('imagens/wallpaper002.jpg');
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover; 
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat fixed;
+            background-size: cover;
         }
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 20px;
             margin: auto;
             border: 1px solid darkblue;
@@ -32,6 +29,28 @@
         <p>Mas neste caso aqui iremos falar sobre o background-size, onde neste caso podemos utilizar percentuais ou pixels para aumentar o tamanho da nossa imagem de fundo, entretanto, ao aumentar ou diminuir o tamanho do nosso navegador, a imagem fica destorcida, porém, existem dois valores para esta declaração que são melhores de serem utilizados que são o <em>contain</em> ou  o <em>cover</em></p>
         <p>O <em>contain</em> é um comando que vai dar ordem para que a imagem seja 100% exibida sem cortes, entretanto, no nosso exemplo não e o que precisasmos neste momento.</p>
         <p>Já o <em>cover</em> ele cobre toda a tela com a imagem, mesmo que a imagem seja picotada nas laterias ou no topo ou abaixo, e ai ele vai adaptar o fundo de acordo com o tamanho da viewport.</p>
+        <p>Agora vamos falar sobre a declaração background-attachment.</p>
+        <p>O background-attachment é o vinculo da imagem, e por ela nós conseguimos determinar se a imagem está vinculada ao nosso conteúdo ou ao corpo do nosso site.</p>
+        <p>Na background-attachment temos duas propriedades para definir como a imagem de fundo irá se comportar, podendo rolar junto com o conteúdo ou se ele ficará fixo enquanto o conteúdo se movimenta.</p>
+        <p>O valor <em>scroll</em> é o valor padrão, ou seja, a imagem de fundo rola junto com o conteúdo.</p>
+        <p>Já o valor <em>fixed</em> é o valor que fixa a imagem de fundo, ou seja, a imagem não se movimenta, apenas o conteúdo rola por cima dela.</p>
+        <p>Vamos aplicar o background-attachment: fixed; no nosso exemplo.</p>
+        
+        <h2>Shorthand para a declaração background</h2>
+        <p>Existe a possibilidade de utilizar shorthand background é utilizada na seguinte ordem:</p>
+        <ol>
+            <li>color</li>
+            <li>image (colocamos a url da imagem)</li>
+            <li>position</li>
+            <li>repeat</li>
+            <li><em>size</em></li>
+            <li>attachment</li>
+        </ol>
+        <p>Então, se quisermos utilizar a shorthand background, podemos fazer da seguinte forma:</p>
+        <code>
+            background: black url('imagens/wallpaper002.jpg') center center no-repeat cover fixed;
+        </code>
+        <p>Uma observação para a shorthand <em>size</em> é que até o lançamento do vídeo do <a href="">Curso em Vídeo</a> do professor <a href="">Gustavo Guanabara</a>, a propriedade ainda não estava funcionando, também testei aqui em nosso exemplo e página de explicação e ela não funcionou, sendo necessário efetuar aplicar a declaração completa <em>background-size: cover</em></p>
     </main>
 </body>
 </html>
