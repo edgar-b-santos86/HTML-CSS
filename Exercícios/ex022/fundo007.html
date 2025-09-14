@@ -69,6 +69,21 @@
                 }
             &lt;/style&gt;
         </code>
+        <p>Normalmente as imagens ou "caixas" tem sua ancoragem no ponto superior esquerdo, como já vimos antes, o que faz com que ao solicitarmos que a imagem fique no meio de alguma outra "caixa" (div), ela não seja colocada com seu ponto de refência a partir da parte superior esquerda, e não centralizada com a referencia no meio dela, para corrigir isso primeiro vamos dar <em>id</em> para as divs que vamos usar.</p>
+        <p>Depois vamos colocar a div que vai ser a caixa maior com a propriedade <em>position: relative;</em>, e a div que vai ser a caixa menor com a propriedade <em>position: absolute;</em>, isso faz com que a div menor tenha como ponto de refência a div maior.</p>
+        <p>Depois vamos colocar na div menor as propriedades <em>left: 50%;</em> e <em>top: 50%;</em>, isso faz com que o ponto superior esquerdo da div menor fique exatamente no meio da div maior.</p>
+        <p>Por último vamos colocar a propriedade <em>transform: translate(-50%, -50%);</em>, isso faz com que a div menor seja deslocada para cima e para a esquerda, exatamente metade do seu tamanho, fazendo com que ela fique centralizada na div maior.</p>
+        <p>Com isso conseguimos centralizar a div menor na div maior, tanto na vertical quanto na horizontal.</p>
+        <p>A declaração translate funciona da seguinte forma:</p>
+        <ul>
+            <li>O primeiro valor é o deslocamento no eixo X (horizontal)</li>
+            <li>O segundo valor é o deslocamento no eixo Y (vertical)</li>
+        </ul>
+        <p>Podemos colocar valores positivos ou negativos, e também podemos colocar valores em pixels ou em percentuais.</p>
+        <p>No nosso caso colocamos valores negativos em percentuais, para que a div menor fosse deslocada exatamente metade do seu tamanho, para cima e para a esquerda.</p>
+        <p>Se colocássemos valores positivos, a div menor seria deslocada para baixo e para a direita.</p>
+        <p>Se colocássemos valores em pixels, a div menor seria deslocada exatamente o valor em pixels que colocássemos.</p>
+        <p>Com isso conseguimos centralizar a div menor na div maior, tanto na vertical quanto na horizontal.</p>
     </article>
     <nav><a href="fundo006.html" target="_self">Aula Anterior</a></nav>
 </body>
