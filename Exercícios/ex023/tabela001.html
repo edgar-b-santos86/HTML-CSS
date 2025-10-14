@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: red rose, sans-serif;
+        }
+
+        table {
+            width: 300px;
+            border-collapse: collapse;
+            border: 3px solid black;
+        }
+
+        tr.linha {
+            background-color: aqua;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 5px
+        }
+
+        td.dado {
+            background-color: lightslategray;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Minha primeira Tabela</h1>
+    <h2>Hierarquia de Tabelas (Simples)</h2>
+    <p>A Hierarquia de tabelas simples é designada da seginte forma:</p>
+    <ul>
+        <li><strong>&lt;table&gt;&lt;/table&gt;</strong> - Define a tabela</li>
+        <li><strong>&lt;tr&gt;&lt;/tr&gt;</strong> - Define uma linha na tabela (table row), que vai dentro do table.</li>
+        <li><strong>&lt;th&gt;&lt;/th&gt;</strong> - Define um cabeçalho na tabela (table header)</li>
+        <li><strong>&lt;td&gt;&lt;/td&gt;</strong> - Define uma célula na tabela (table data)</li>
+    </ul>
+    <p>Vamos começar trabalhando com os dados de tabela.</em>.</p>
+    
+    <table>
+            <tr>
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr>
+            <tr class="linha">
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+            <tr>
+                <td>A3</td>
+                <td class="dado">B3</td>
+                <td>C3</td>
+            </tr>
+            <tr>
+                <td>A4</td>
+                <td>B4</td>
+                <td>C4</td>
+            </tr>
+    </table>
+    <p>Para criar o resultado acima fizemos o seguinte código:</p>
+
+    <p>
+        <pre>
+            <code>
+                &lt;table&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;A1&lt;/td&gt;
+                        &lt;td&gt;B1&lt;/td&gt;
+                        &lt;td&gt;C1&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr class="linha"&gt;
+                        &lt;td&gt;A2&lt;/td&gt;
+                        &lt;td&gt;B2&lt;/td&gt;
+                        &lt;td&gt;C2&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;A3&lt;/td&gt;
+                        &lt;td class="dado"&gt;B3&lt;/td&gt;
+                        &lt;td&gt;C3&lt;/td&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                        &lt;td&gt;A4&lt;/td&gt;
+                        &lt;td&gt;B4&lt;/td&gt;
+                        &lt;td&gt;C4&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            </code>
+        </pre>
+    </p>
+
+    <p>Já o estilo utilizado foi esse:</p>
+    <p>
+        <pre>
+            <code>
+                table {
+                    width: 300px;
+                    border-collapse: collapse;
+                    border: 3px solid black;
+                }
+
+                tr.linha {
+                    background-color: aqua;
+                }
+
+                td {
+                    border: 1px solid black;
+                    padding: 5px
+                }
+
+                td.dado {
+                    background-color: lightslategray;
+                }
+            </code>
+        </pre>
+    </p>
+    <p>Dentro do HTML5 e CSS3 tem um novo recurso que é a propriedade de estilo <strong><em>table-collapse</em></strong>, que por padrão tem o valor <strong><em>separate</em></strong>, o que deixa as bordas das linhas separadas mas, para que possamos deixar a tabela com uma configuração de estilo mais "convencional", usamos o valor <strong><em>collapse</em></strong> que vai fazer com que os dados fiquem juntos, pois neste caso o que fizemos foi criar as bordas nos dados, e fizemos com que as bordas ficassem juntas.</p>
+    <p> O <a href="https://www.w3.org/" target="_blank">W3C</a> diz que para o HTML 5 não é necessário o fechamento das tags <strong><em>tr, th, td</em></strong>, entretanto, temos que tomar muito cuidado para não miturarmos as informações nas celulas, linhas ou cabeçalhos que inserimos em nossas tabelas.</p>
+    <p>Apenas de não precisar fechar as tags, o indicado é fechar as tags para que os erros sejam minimizados.</p>
+    <h3>ATENÇÃO!</h3>
+    <p>Se não colocarmos os elementos na hierarquia correta, os dados inseridos podem aparecer ou antes ou depois de sua tabela, ou simplesmente linhas ou células podem não aparecer.</p>
+</body>
+</html>
