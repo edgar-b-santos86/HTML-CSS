@@ -11,6 +11,7 @@
 
         table {
             width: 300px;
+            height: 300px;
             border-collapse: collapse;
             border: 3px solid black;
         }
@@ -21,7 +22,9 @@
 
         td {
             border: 1px solid black;
-            padding: 5px
+            padding: 5px;
+            text-align: center;
+            vertical-align: middle;
         }
 
         td.dado {
@@ -125,5 +128,45 @@
     <p>Apenas de não precisar fechar as tags, o indicado é fechar as tags para que os erros sejam minimizados.</p>
     <h3>ATENÇÃO!</h3>
     <p>Se não colocarmos os elementos na hierarquia correta, os dados inseridos podem aparecer ou antes ou depois de sua tabela, ou simplesmente linhas ou células podem não aparecer.</p>
+
+    <h2>Alinhando o conteúdo em tabelas.</h2>
+
+    <p>Vamos refazer nossa Tabela, porém, vamos pegar nosso modelo apenas como tabela sem alterações.</p>
+    <p>O que vamos fazer agora é o alinhamento horizontal e vertical.</p>
+    <p>O alinhamento horizontal do &lt;td&gt; por padrão é a esquerda, e para configurarmos ele de forma diferente utilização a propriedade <strong><em>text-aling</em></strong> dentro das <strong><em>CSS</em></strong> e incluím os os valores <strong><em>left, center</em></strong> ou <strong><em>right</em></strong>, para assim alinharmos a esquerda, centro ou à direita da celula.</p>
+    <p>Já para o alinhamento vertical, utilizamos a propriedade <strong><em>vertical-aling</em></strong>, e dentro desta utilizamos os valores <strong><em>top, middle</em></strong> ou <strong><em>bottom</em></strong>, para alinhamento dentro da célula em cima, no meio ou embaixo</p>
+    <table>
+            <tr>
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr>
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+            <tr>
+                <td>A3</td>
+                <td>B3</td>
+                <td>C3</td>
+            </tr>
+            <tr>
+                <td>A4</td>
+                <td>B4</td>
+                <td>C4</td>
+            </tr>
+    </table>
+    <p>No exemplo acima e na tabela anterior, a declaração para o <strong><em>&lt;td&gt;</em></strong> ficou assim.</p>
+    <pre>
+        <code>
+            td {
+                border: 1px solid black;
+                padding: 5px;
+                text-align: center;
+                vertical-align: middle;
+            }
+        </code>
+    </pre>
 </body>
 </html>
