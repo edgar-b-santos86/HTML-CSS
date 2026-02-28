@@ -6,10 +6,14 @@
     <link rel="shortcut icon" href="../imagens/favicon_32x32.ico" type="image/x-icon">
     <title>Modelo de Caixas</title>
     <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+        }
         h1 {
             background-color: lightgray;
             height: 40px;
-            width: 400px;
+            width: 450px;
 
             border-width: 10px;
             border-style: solid;
@@ -43,9 +47,35 @@
 <body>
     <h1>Exemplo de Caixa box-level.</h1>
     <p>Como vimos antes, os parágrafos &lt;p&gt; &lt;/p&gt; são um tipo de box-level, e os <a href="../ex020/pseudoclasse.html">links</a>, são um tipo de inline-level. vamos ver como tudo isso funciona.</p>
+    <p>Abaixo veremos alguns exemplos e tags que são to tipo box-level</p>
+    <ul>
+        <li>&lt;h1&gt; - &lt;h6&gt;</li>
+        <li>&lt;p&gt;</li>
+        <li>&lt;div&gt;</li>
+        <li>&lt;section&gt;</li>
+        <li>&lt;article&gt;</li>
+        <li>&lt;header&gt;</li>
+        <li>&lt;footer&gt;</li>
+        <li>&lt;nav&gt;</li>
+        <li>&lt;aside&gt;</li>
+        <li>&lt;video&gt;</li>
+        <li>&lt;form&gt;</li>
+    </ul>
+    <p> E aqui alguns exemplos de inline-level</p>
+    <ul>
+        <li>&lt;span&gt;</li>
+        <li>&lt;strong&gt;</li>
+        <li>&lt;em&gt;</li>
+        <li>&lt;a&gt;</li>
+        <li>&lt;input&gt;</li>
+        <li>&lt;label&gt;</li>
+        <li>&lt;select&gt;</li>
+        <li>&lt;button&gt;</li>
+        <li>&lt;sup&gt; - &lt;sub&gt;</li>
+    </ul>
     <p>Neste momento vamos abrir essa mesma página no nosso navegador, clicar com o botão direito do mouse e clicar na opção "Inspecionar". Podemos apertar a tecla esc do nosso teclado para fechar o console e neste momento o navegador vai abrir as ferramentas de desenvolvedor. Lá já irá mostrar a caixa que que foi feita com as configurações padrões do navegador, pois apesar de não termo incluído nenhuma linha de CSS, automáticamente o user agent <em>(navegador)</em> carrega um estilo padrão para o site.</p>
-    <p>Vimos como as caixas fazem parte de tudo dentro do nosso site e inclusive conseguimos configuar e também simplificar o border, margin, e padding.</p>
-    <a href="../ex020/links.html" target="_self" rel="prev">Exercício 020</a><br>
-    <a href="../ex022/fundo001.html" target="_self" rel="next">Exercício 022</a>
+    <p>Vimos como as caixas fazem parte de tudo dentro do nosso site e inclusive conseguimos configuar e também simplificar o border, margin, e padding. vejamos o <a href="caixa02.html" target="_self" rel="next">exemplo de site</a> que foi criado para endenremos melhor o conceito de caixas.</p>
+    <p><a href="../ex020/links.html" target="_self" rel="prev">Exercício 020</a></p>
+    <p><a href="../ex022/fundo001.html" target="_self" rel="next">Exercício 022</a></p>
 </body>
 </html>
