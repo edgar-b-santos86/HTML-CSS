@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bordas Personalizadas</title>
+    <style>
+        h1 {
+            border: 9px solid black;
+            padding: 10px;
+            border-image-source: url('borda.png');
+            border-image-slice: 27;
+            border-image-repeat: repeat;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Borda Personalizada</h1>
+    <p>Nesta aula verificamos como criar bordas personalizadas em elementos HTML, utilizando as CSS.</p>
+    <p>A primeira coisa que foi ensinada foi como criar a imagem que vai servir como borda.</p>
+    <p>Abrimos o GIMP e criamos uma imagem de borda personalizada.</p>
+    <p>Vamos agora aplicar essa imagem criando uma borda em um elemento HTML, para isso vamos primeiro criar um seletor em CSS para o nosso H1.</p>
+    <p>Como podemos ver já criamos nossa borda personalizada no H1 utilizando as seguintes propriedades via CSS:</p>
+    <ul>
+        <li><strong>border:</strong> 9px solid black</li>
+        <li><strong>border-image-source:</strong> url('borda.png')</li>
+        <li><strong>border-image-slice:</strong> 27</li>
+        <li><strong>border-image-repeat:</strong> repeat</li>
+    </ul>
+    <p>Sempre que vamos fazer uma borda personalizada, precisamos primeiro incluir a propriedade <strong>border</strong> pois ela é que fixa a borda no elemento desejado.</p>
+    <p>Em seguida, utilizamos a propriedade <strong>border-image-source</strong> para especificar a imagem que será usada como borda.</p>
+    <p>A proxima propriedade que utilizamos é <strong>border-image-slice</strong>, que define como a imagem de borda será cortada/fatiada.</p>
+    <p>Por fim, utilizamos a propriedade <strong>border-image-repeat</strong> para definir como a imagem de borda será repetida ao redor do elemento. No nosso caso, utilizamos o valor "repeat" para que a imagem seja repetida tanto horizontalmente quanto verticalmente.</p>
+    <p>Com essas propriedades, conseguimos criar uma borda personalizada para o nosso elemento H1 utilizando a imagem que criamos no GIMP.</p>
+    <p>Agora clique <a href="caixa02.html" target="_self" rel="next">aqui</a> para ver o exemplo de site criado para entender melhor o conceito de caixas.</p>
+</body>
+</html>
