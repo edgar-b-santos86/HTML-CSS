@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABELAS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 300px;
+        }
+
+        td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mesclagem de celular</h1>
+    <p>Vamos observara tabela abaixo:</p>
+    <table>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>E</td>
+            <td>F</td>
+        </tr>
+        <tr>
+            <td>H</td>
+            <td>I</td>
+        </tr>
+        <tr>
+            <td>K</td>
+            <td>L</td>
+        </tr>
+    </table>
+    <p>A tabela parece que está bem bagunçada não é mesmo? Para isso vamos usar a mesclagem de células com as declaração em HTML mesmo, ou seja, nem vamos mexer com CSS.</p>
+    <p>Os atributos que usaremos na tags &lt;td&gt; serão: <code>rowspan</code> e <code>colspan</code>.</p>
+    <table>
+        <tr>
+            <td>A</td>
+            <td colspan="2">B</td>
+        </tr>
+        <tr>
+            <td rowspan="3">D</td>
+            <td>E</td>
+            <td rowspan="2">F</td>
+        </tr>
+        <tr>
+            <td>H</td>
+            
+        </tr>
+        <tr>
+            <td colspan="2">K</td>            
+        </tr>
+    </table>
+    <p>Utilizamos os atributos <code>rowspan</code> e <code>colspan</code> para mesclar células na tabela, onde o rowspan especifica o número de linhas que a célula deve abranger (posição vertical) e o colspan especifica o número de colunas que a célula deve abranger (posição horizontal).</p>
+    <p>O código ficou da seguinte maneira:</p>
+    <p>
+        <pre>
+            &lt;table&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;A&lt;/td&gt;
+                    &lt;td colspan="2"&gt;B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td rowspan="3"&gt;D&lt;/td&gt;
+                    &lt;td&gt;E&lt;/td&gt;
+                    &lt;td rowspan="2"&gt;F&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;H&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td colspan="2"&gt;K&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+        </pre>
+    </p>
+</body>
+</html>
