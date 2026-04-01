@@ -4,8 +4,336 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formatação de tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            border: solid 2px #000;
+            border-collapse: collapse;
+            width: 500px;
+        }
+
+        caption {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        thead {
+            border: solid 2px #000;
+            background-color: gray;
+            color: white;
+        }
+        tbody {
+            border: solid 2px #000;
+        }
+
+        td, th {
+            border: solid 1px #000;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .linha1 {
+            background-color: #b4b1d6;
+        }
+
+        .linha2 {
+            background-color: #c1f34d;
+        }
+
+        .coluna1 {
+            background-color: #80c6ff;
+        }
+
+        .coluna2 {
+            background-color: #9fa6a8;
+        }
+    </style>
 </head>
 <body>
+    <h1>Trabalhando com formatação de linhas e colunas.</h1>
+    <table>
+        <caption>Informações Pessoais</caption>
+        <colgroup>
+        <col>
+        <col>
+        <col>
+        <col>
+        </colgroup>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>25</td>
+            <td>Feminino</td>
+            <td>Engenheira</td> 
+        </tr>
+        <tr>
+            <td>Bruno</td>
+            <td>30</td>
+            <td>Masculino</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td>Carla</td>
+            <td>28</td>
+            <td>Feminino</td>
+            <td>Advogada</td>
+        </tr>
+        <tr>
+            <td>Diego</td>
+            <td>35</td>
+            <td>Masculino</td>
+            <td>Médico</td>
+        </tr>
+    </table>
+    <p>Nesta aula tivemos a explicação sobre como fazer a formatação de tabelas com as CSSs, e fizemos a configuração para linhas, que é muito fácil de implementar, basta criar uma classe para cada linha e aplicar os estilos desejados.</p>
+
+    <p>Porém, o mesmo não se aplica para as colunas, entretanto, temos uma nova tag em HTML5 chamada <code>&lt;colgroup&gt;</code>, e para cada coluna que queremos aplicar os estilos, devemos colocar dentro da tag <code>&lt;colgroup&gt;</code> a tag <code>&lt;col&gt;</code>.</p>
+
+    <h2>Aplicando o estilo nas linhas de uma tabela</h2>
+
+    <p>Para aplicar estilos a linhas específicas de uma tabela, dar uma classe à tag <code>&lt;tr&gt;</code> e em seguida definir os estilos no CSS, é algo simples assim como no exemplo abaixo.</p>
+    <pre>
+        &lt;table&gt;
+            &lt;tr class="linha1"&gt;
+                &lt;th scope="col"&gt;Nome&lt;/th&gt;
+                &lt;th scope="col"&gt;Idade&lt;/th&gt;
+                &lt;th scope="col"&gt;Sexo&lt;/th&gt;
+                &lt;th scope="col"&gt;Profissão&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr class="linha2"&gt;
+                &lt;td&gt;Ana&lt;/td&gt;
+                &lt;td&gt;25&lt;/td&gt;
+                &lt;td&gt;Feminino&lt;/td&gt;
+                &lt;td&gt;Engenheira&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="linha1"&gt;
+                &lt;td&gt;Bruno&lt;/td&gt;
+                &lt;td&gt;30&lt;/td&gt;
+                &lt;td&gt;Masculino&lt;/td&gt;
+                &lt;td&gt;Professor&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="linha2"&gt;
+                &lt;td&gt;Carla&lt;/td&gt;
+                &lt;td&gt;28&lt;/td&gt;
+                &lt;td&gt;Feminino&lt;/td&gt;
+                &lt;td&gt;Advogada&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr class="linha1"&gt;
+                &lt;td&gt;Diego&lt;/td&gt;
+                &lt;td&gt;35&lt;/td&gt;
+                &lt;td&gt;Masculino&lt;/td&gt;
+                &lt;td&gt;Médico&lt;/td&gt;
+            &lt;/tr&gt;
+    </pre>
+    <p>O resultado da aplicação do estilo para as linhas da tabela é o seguinte:</p>
+    <table>
+        <caption>Informações Pessoais</caption>
+        <tr class="linha1">
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr class="linha2">
+            <td>Ana</td>
+            <td>25</td>
+            <td>Feminino</td>
+            <td>Engenheira</td> 
+        </tr>
+        <tr class="linha1">
+            <td>Bruno</td>
+            <td>30</td>
+            <td>Masculino</td>
+            <td>Professor</td>
+        </tr>
+        <tr class="linha2">
+            <td>Carla</td>
+            <td>28</td>
+            <td>Feminino</td>
+            <td>Advogada</td>
+        </tr>
+        <tr class="linha1">
+            <td>Diego</td>
+            <td>35</td>
+            <td>Masculino</td>
+            <td>Médico</td>
+        </tr>
+    </table>
+
+    <h2>Aplicando o estilo nas colunas de uma tabela</h2>
+    <p>Para aplicar estilos a colunas específicas de uma tabela, utilizamos a tag <code>&lt;colgroup&gt;</code> e a tag <code>&lt;col&gt;</code>. Cada <code>&lt;col&gt;</code> representa uma coluna e pode ter uma classe associada para aplicar estilos.</p>
+
+    <p>Vejamos o exemplo abaixo:</p>
+    <pre>
+        &lt;table&gt;
+            &lt;caption&gt;Informações Pessoais&lt;/caption&gt;
+            &lt;colgroup&gt;
+                &lt;col class="coluna1"&gt;
+                &lt;col class="coluna2"&gt;
+                &lt;col class="coluna1"&gt;
+                &lt;col class="coluna2"&gt;
+            &lt;/colgroup&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;Nome&lt;/th&gt;
+                &lt;th scope="col"&gt;Idade&lt;/th&gt;
+                &lt;th scope="col"&gt;Sexo&lt;/th&gt;
+                &lt;th scope="col"&gt;Profissão&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Ana&lt;/td&gt;
+                &lt;td&gt;25&lt;/td&gt;
+                &lt;td&gt;Feminino&lt;/td&gt;
+                &lt;td&gt;Engenheira&lt;/td&gt; 
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Bruno&lt;/td&gt;
+                &lt;td&gt;30&lt;/td&gt;
+                &lt;td&gt;Masculino&lt;/td&gt;
+                &lt;td&gt;Professor&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Carla&lt;/td&gt;
+                &lt;td&gt;28&lt;/td&gt;
+                &lt;td&gt;Feminino&lt;/td&gt;
+                &lt;td&gt;Advogada&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Diego&lt;/td&gt;
+                &lt;td&gt;35&lt;/td&gt;
+                &lt;td&gt;Masculino&lt;/td&gt;
+                &lt;td&gt;Médico&lt;/td&gt;
+            &lt;/tr&gt;
+    </pre>
+    <p>O resultado da aplicação do estilo para as colunas da tabela é o seguinte:</p>
+    <table>
+        <caption>Informações Pessoais</caption>
+        <colgroup>
+            <col class="coluna1">
+            <col class="coluna2">
+            <col class="coluna1">
+            <col class="coluna2">
+        </colgroup>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>25</td>
+            <td>Feminino</td>
+            <td>Engenheira</td> 
+        </tr>
+        <tr>
+            <td>Bruno</td>
+            <td>30</td>
+            <td>Masculino</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td>Carla</td>
+            <td>28</td>
+            <td>Feminino</td>
+            <td>Advogada</td>
+        </tr>
+        <tr>
+            <td>Diego</td>
+            <td>35</td>
+            <td>Masculino</td>
+            <td>Médico</td>
+        </tr>
+    </table>
+    <p>Também podemos utilizar o parametro <strong>span</strong> para especificar quantas colunas que deve ser aplicado o estilo.</p>
+
+    <p>Neste caso aplicaremos o estilo a duas colunas conforme o exemplo abaixo:</p>
+    <pre>
+        &lt;table&gt;
+            &lt;caption&gt;Informações Pessoais&lt;/caption&gt;
+            &lt;colgroup&gt;
+                &lt;col class="coluna1" span="2"&gt;
+                &lt;col class="coluna2" span="2"&gt;
+            &lt;/colgroup&gt;
+            &lt;tr&gt;
+                &lt;th scope="col"&gt;Nome&lt;/th&gt;
+                &lt;th scope="col"&gt;Idade&lt;/th&gt;
+                &lt;th scope="col"&gt;Sexo&lt;/th&gt;
+                &lt;th scope="col"&gt;Profissão&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Ana&lt;/td&gt;
+                &lt;td&gt;25&lt;/td&gt;
+                &lt;td&gt;Feminino&lt;/td&gt;
+                &lt;td&gt;Engenheira&lt;/td&gt; 
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Bruno&lt;/td&gt;
+                &lt;td&gt;30&lt;/td&gt;
+                &lt;td&gt;Masculino&lt;/td&gt;
+                &lt;td&gt;Professor&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Carla&lt;/td&gt;
+                &lt;td&gt;28&lt;/td&gt;
+                &lt;td&gt;Feminino&lt;/td&gt;
+                &lt;td&gt;Advogada&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;Diego&lt;/td&gt;
+                &lt;td&gt;35&lt;/td&gt;
+                &lt;td&gt;Masculino&lt;/td&gt;
+                &lt;td&gt;Médico&lt;/td&gt;
+            &lt;/tr&gt;
+    &lt;/table&gt;
+    </pre>
+
+    <p>O resultado da aplicação do estilo para as colunas da tabela utilizando o parametro <strong>span</strong> é o seguinte:</p>
     
+    <table>
+        <caption>Informações Pessoais</caption>
+        <colgroup>
+            <col class="coluna1" span="2">
+            <col class="coluna2" span="2">
+        </colgroup>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>25</td>
+            <td>Feminino</td>
+            <td>Engenheira</td> 
+        </tr>
+        <tr>
+            <td>Bruno</td>
+            <td>30</td>
+            <td>Masculino</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td>Carla</td>
+            <td>28</td>
+            <td>Feminino</td>
+            <td>Advogada</td>
+        </tr>
+        <tr>
+            <td>Diego</td>
+            <td>35</td>
+            <td>Masculino</td>
+            <td>Médico</td>
+        </tr>
+    </table>
 </body>
 </html>
