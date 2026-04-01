@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabelas Responsivas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            border: solid 2px #000;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        caption {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        thead {
+            border: solid 2px #000;
+            background-color: gray;
+            color: white;
+        }
+        tbody {
+            border: solid 2px #000;
+        }
+        td, th {
+            border: solid 1px #000;
+            padding: 8px;
+        }
+
+        div#container {
+            overflow-x: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tabelas Responsivas</h1>
+    <p>As tabelas responsivas são aquelas que se adaptam ao tamanho da tela do dispositivo em que são exibidas, proporcionando uma melhor experiência ao usuário em diferentes dispositivos.</p>
+
+    <p>Vamos criar uma tabela com dados de vários produtos diferentes e a quantidade de vendas desses produtos de janeiro a dezembro.</p>
+    <table>
+        <caption>Vendas de Produtos</caption>
+        <thead>
+            <tr>
+                <th scope="col">Produto</th>
+                <th scope="col">Janeiro</th>
+                <th scope="col">Fevereiro</th>
+                <th scope="col">Março</th>
+                <th scope="col">Abril</th>
+                <th scope="col">Maio</th>
+                <th scope="col">Junho</th>
+                <th scope="col">Julho</th>
+                <th scope="col">Agosto</th>
+                <th scope="col">Setembro</th>
+                <th scope="col">Outubro</th>
+                <th scope="col">Novembro</th>
+                <th scope="col">Dezembro</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="linha1">
+                <td>Produto A</td>
+                <td>100</td>
+                <td>120</td>
+                <td>150</td>
+                <td>130</td>
+                <td>110</td>
+                <td>140</td>
+                <td>160</td>
+                <td>170</td>
+                <td>180</td>
+                <td>190</td>
+                <td>200</td>
+                <td>200</td>
+            </tr>
+            <tr class="linha2">
+                <td>Produto B</td>
+                <td>80</td>
+                <td>90</td>
+                <td>100</td>
+                <td>110</td>
+                <td>120</td>
+                <td>130</td>
+                <td>140</td>
+                <td>150</td>
+                <td>160</td>
+                <td>170</td>
+                <td>180</td>
+                <td>190</td>
+            </tr>
+            <tr class="linha1">
+                <td>Produto C</td>
+                <td>60</td>
+                <td>70</td>
+                <td>80</td>
+                <td>90</td>
+                <td>100</td>
+                <td>110</td>
+                <td>120</td>
+                <td>130</td>
+                <td>140</td>
+                <td>150</td>
+                <td>160</td>
+                <td>170</td>
+            </tr>
+            <tr class="linha2">
+                <td>Produto D</td>
+                <td>40</td>
+                <td>50</td>
+                <td>60</td>
+                <td>70</td>
+                <td>80</td>
+                <td>90</td>
+                <td>100</td>
+                <td>110</td>
+                <td>120</td>
+                <td>130</td>
+                <td>140</td>
+                <td>150</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>O "macete" que faremos agora para deixar essa tabela responsiva e colocala dentro de uma &lt;div&gt; para que consigamos configurar ela através das CSSs.</p>
+
+    <p>Para isso daremos uma classe para a &lt;div&gt; que contém a tabela e utilizaremos a declaração de estilo <strong>overflow</strong>, que pode ser nas opções de parametros <strong>overflow</strong>, <strong>overflow-x</strong> ou <strong>overflow-y</strong>.</p>
+
+    <p>Sendo apenas o parametro <strong>overflow</strong> utilizado, ela ira adaptar ao tamanho da tela tanto no eixo horizontal quanto no vertical.</p>
+
+    <p>O <strong>overflow-x</strong> controla o comportamento do overflow no eixo horizontal, enquanto o <strong>overflow-y</strong> controla o comportamento do overflow no eixo vertical.</p>
+
+    <p>Além disso no parametro <strong>overflow</strong> podemos especificar valores como <strong>visible</strong>, <strong>hidden</strong>, <strong>scroll</strong> ou <strong>auto</strong>.</p>
+
+    <p>Neste caso vamos usar o <strong>overflow-x</strong> com o valor <strong>auto</strong> o que para nós já será o suficiente.</p>
+
+    <div id="container">
+        <table>
+            <caption>Vendas de Produtos</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Janeiro</th>
+                    <th scope="col">Fevereiro</th>
+                    <th scope="col">Março</th>
+                    <th scope="col">Abril</th>
+                    <th scope="col">Maio</th>
+                    <th scope="col">Junho</th>
+                    <th scope="col">Julho</th>
+                    <th scope="col">Agosto</th>
+                    <th scope="col">Setembro</th>
+                    <th scope="col">Outubro</th>
+                    <th scope="col">Novembro</th>
+                    <th scope="col">Dezembro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="linha1">
+                    <td>Produto A</td>
+                    <td>100</td>
+                    <td>120</td>
+                    <td>150</td>
+                    <td>130</td>
+                    <td>110</td>
+                    <td>140</td>
+                    <td>160</td>
+                    <td>170</td>
+                    <td>180</td>
+                    <td>190</td>
+                    <td>200</td>
+                    <td>200</td>
+                </tr>
+                <tr class="linha2">
+                    <td>Produto B</td>
+                    <td>80</td>
+                    <td>90</td>
+                    <td>100</td>
+                    <td>110</td>
+                    <td>120</td>
+                    <td>130</td>
+                    <td>140</td>
+                    <td>150</td>
+                    <td>160</td>
+                    <td>170</td>
+                    <td>180</td>
+                    <td>190</td>
+                </tr>
+                <tr class="linha1">
+                    <td>Produto C</td>
+                    <td>60</td>
+                    <td>70</td>
+                    <td>80</td>
+                    <td>90</td>
+                    <td>100</td>
+                    <td>110</td>
+                    <td>120</td>
+                    <td>130</td>
+                    <td>140</td>
+                    <td>150</td>
+                    <td>160</td>
+                    <td>170</td>
+                </tr>
+                <tr class="linha2">
+                    <td>Produto D</td>
+                    <td>40</td>
+                    <td>50</td>
+                    <td>60</td>
+                    <td>70</td>
+                    <td>80</td>
+                    <td>90</td>
+                    <td>100</td>
+                    <td>110</td>
+                    <td>120</td>
+                    <td>130</td>
+                    <td>140</td>
+                    <td>150</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
