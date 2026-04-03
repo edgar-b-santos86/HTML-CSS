@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdos próprios em iframe</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe{
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Conteúdos próprios em iframe.</h1>
+    <p>Nesta aula vamos ver como criar iframes para incorporar conteúdo próprio em nossa página.</p>
+    <p>Até agora vimos como incorporar conteúdo de outros sites utilizando a tag <strong>&lt;iframe&gt;</strong>, entretanto, também é possível criar um conteúdo próprio e incorporá-lo em nossa página utilizando a mesma tag.</p>
+    <p>Vamos criar um arquivo HTML simples para ser incorporado em nossa página, e esse arquivo terá o seguinte conteúdo:</p>
+    <p>
+        <iframe src="../../Desafios/des010/index.html" frameborder="0" height="500px" width="600px"></iframe>
+    </p>
+    <p>No exemplo acima, criamos um iframe que incorpora o conteúdo do arquivo <strong>index.html</strong> localizado na pasta <strong>des010</strong>, que está dentro da pasta <strong>Desafios</strong>. Assim mostramos que é bem simples fazer a incorporação de conteúdo próprio em nossa página.</p>
+    <p>Se o conteúdo for uma tabela a melhor saída é incluir ela no código html e utilizar os parâmetros <strong>overflow</strong>, pois isso permite controlar como o conteúdo é exibido quando ele ultrapassa os limites definidos, pois dentro da página atual não temos controle sobre o comportamento do conteúdo de outras páginas quando incorporamos através da tag <strong>&lt;iframe&gt;</strong>.</p>
+    <p>O exemplo acima ficou da seguinte forma:</p>
+
+    <pre>
+        &lt;iframe src="../../Desafios/des010/index.html" frameborder="0" height="500px" width="600px"&gt;&lt;/iframe&gt;
+    </pre>
+
+    <p>Além disso usamos a CSS para configurar o estilo do iframe, com as declarações <strong>display: block;</strong> e <strong>margin: auto;</strong> para que o conteúdo fique sempre centralizado.</p>
+</body>
+</html>

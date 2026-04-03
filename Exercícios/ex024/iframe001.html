@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de iframe</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testanto o uso de iframe.</h1>
+
+    <p>Neste capítulo vamos estuidar e aprender a fazer o uso de iframes nos nossos códigos HTML.</p>
+    <p>Vamos acessar o site do <a href="https://www.cursoemvideo.com" target="_blank">Curso em Vídeo</a>.</p>
+    <p>No paragráfo acima, criamos um link para acessar o site do Curso em Vídeo, e usamos nossa velha conhecida tag <strong>&lt;a href=""&gt;</strong>, entretanto, é possível fazer o uso de iframes para incorporar conteúdo de outros sites diretamente em nossa página.</p>
+    <p>Veja como ficou o exemplos acima:</p>
+    <pre>
+        &lt;p&gt;Vamos acessar o site do &lt;a href="https://www.cursoemvideo.com" target="_blank"&gt;Curso em Vídeo&lt;/a&gt;.&lt;/p&gt;
+    </pre>
+    <p>Agora vamos primeiro ver uma dar maneiras de criar a tag <strong>&lt;iframe&gt;</strong>.</p>
+    <p>para começar digitamos a tag <strong>&lt;iframe&gt; &lt;/iframe&gt;</strong>, quando fazemos isso automaticamente criamos um quadro seja dentro do paragráfo ou em qualquer outra parte da página. Veja o exemplo abaixo:</p>
+    <p>
+        Vamos acessar o site do <iframe src="" frameborder="1"></iframe>
+    </p>
+    <p>Fazendo isso a tag já criou um quandro para que o conteúdo de outro site seja exibido dentro no navegado, e a confirguração básica da tag é definida pelos atributos <strong>src</strong> e <strong>frameborder</strong>.</p>
+    <p>A tag ficou da seguinte forma: <strong>&lt;iframe src="" frameborder="1"&gt;&lt;/iframe&gt;</strong>e com isso conseguimos incorporar o conteúdo de outros sites em nossa página.</p>
+    <p>Vamos colocar o mesmo exemplo agora com um site incorporado:</p>
+    <p>
+        Vamos acessar o site do 
+        <iframe src="https://www.cursoemvideo.com" frameborder="0">
+            <a href="https://www.cursoemvideo.com" target="_blank">Curso em Vídeo</a>
+        </iframe>
+    </p>
+
+    <h3>Atenção!</h3>
+
+    <p>Alguns sites não permitem que seu conteúdo seja incorporado em iframes, entretanto, em HTML5 já é possível prever e fazer com que esses conteúdos sejam exibidos corretamente.</p>
+    <p>Esse bloqueio na verdade é uma segurança para que o conteúdo de outros sites não seja incorporado sem permissão, e também devemos entender e como funcionam essas polícitas para que não ocorram problemas, para que não haja falta de segurança em nosso próprio conteúdo.</p>
+
+    <h2>Configuração inicial de iframes.</h2>
+
+    <p>Agora vamos ver como fazer as configurações iniciais dos iframes.</p>
+    
+    <p>
+        Acessando o site do 
+        <iframe src="https://www.cursoemvideo.com" frameborder="0" width="600" height="400" scrolling="no">
+            <a href="https://www.cursoemvideo.com" target="_blank">Curso em Vídeo</a>
+        </iframe>
+    </p>
+
+    <p>No exemplo acima nós definimos as dimensões do iframe com os atributos <abbr title="Largura"><strong>width</strong></abbr> e <abbr title="Altura"><strong>height</strong></abbr>, e isso diretamente na tag, porém, é possível fazer isso de forma mais flexível utilizando CSS.</p>
+    <p>O exemplo acima ficou da seguinte maneira:</p>
+    <pre>
+        &lt;iframe src="https://www.cursoemvideo.com" frameborder="0" width="600" height="400" scrolling="no"&gt;
+            &lt;a href="https://www.cursoemvideo.com" target="_blank"&gt;Curso em Vídeo&lt;/a&gt;
+        &gt;&lt;/iframe&gt;
+    </pre>
+    <p>Caso não façamos nenhuma configuração de largura ou altura no iframe, por padrão ele assumira a a largura de 300 pixels e a altura de 150 pixels.</p>
+    <p>Vale lembrar também que se fizermos uma configuração via CSS, o que vai valer e o estilo definido na CSS, pois ela tem prioridade de hierarquia sobre o HTML.</p>
+
+    <h3>Dica:</h3>
+    <p>Em poucos casos de navegadores desatualizados, pode ser que o iframe não apareça e para isso podemos colocar dentro da tag um link para acesso direto ao site, assim como foi feito no exemplo acima.</p>
+
+    <h2>Parâmetros da tag iframe.</h2>
+    <p>Dentro da tag <strong>&lt;iframe&gt;</strong> podemos utilizar diversos atributos para configurar seu comportamento e aparência. Alguns dos principais atributos são:</p>
+    <ul>
+        <li><strong>src</strong>: Especifica o URL do conteúdo a ser incorporado.</li>
+        <li><strong>frameborder</strong>: Controla a exibição da borda do iframe (0 para sem borda, 1 para com borda).</li>
+        <li><strong>width</strong> e <strong>height</strong>: Definem a largura e altura do iframe.</li>
+        <li><strong>allowfullscreen</strong>: Permite que o conteúdo do iframe seja exibido em tela cheia.</li>
+        <li><strong>loading</strong>: Controla o carregamento do iframe, podendo ser "<abbr title="Carregamento preguiçoso"><strong>lazy</strong></abbr>" para carregamento mais lento, o que pode melhorar o desempenho da página.</li>
+        <li><strong>sandbox</strong>: Aplica restrições de segurança ao conteúdo do iframe, como desabilitar scripts ou impedir a navegação para outras páginas.</li>
+        <li><strong>scrolling</strong>: Controla a exibição das barras de rolagem do iframe (yes, no, auto).</li>
+    </ul>
+    <p>Dos atributos mencionados, utilizamos principalmente os atributos <strong>src</strong>, <strong>frameborder</strong>, <strong>width</strong> e <strong>height</strong>, e vimos informações sobre o paramâmetro <strong>scrolling</strong>, que no momento da gravação dos vídeos do curso, em alguns navegadores não era suportado, porém, no nosso exemplo, ele está funcionando corretamente.</p>
+</body>
+</html>
