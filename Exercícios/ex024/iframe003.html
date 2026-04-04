@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navegando no inframe</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightgray;
+        }
+
+        main {
+            border-radius: 10px;
+            padding: 10px;
+            max-width: 1000px;
+            min-width: 400px;
+            margin: auto;
+            background-color: white;
+        }
+
+        iframe{
+            width: 95%;
+            height: 500px;
+            display: block;
+            margin: auto;
+            border: solid black 2px;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+            padding: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            font-weight: bold;
+        }
+
+        a:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Navegando no iframe</h1>
+    <p>Em algum momento pode acontecer de você querer colocar mais de uma página dentro dos <strong>iframe</strong>, entretanto, as vezes você não quer ficar criando vários <strong>iframes</strong> na mesma página, e para isso vamos fazer o exemplo abaixo com links e um iframe apenas.</p>
+
+    <h3>Exemplo:</h3>
+
+        <a href="../../Desafios/des010/index.html" target="frame">Desafio 10</a>
+        <a href="../../Desafios/des011/index.html" target="frame">Desafio 11</a>
+        <a href="../../Desafios/des012/index.html" target="frame">Desafio 12</a>
+        <a href="../../Desafios/des013/desafio13_1.html" target="frame">Desafio 13.1</a>
+        <a href="../../Desafios/des013/desafio13_2.html" target="frame">Desafio 13.2</a>
+    
+    <p>Abaixo colocaremos o iframe:</p>
+
+    <iframe src="" name="frame" ></iframe>
+
+    <h3>Explicação:</h3>
+    <p>Inseresante né?! Pois bem para fazer com que os links fossem carregados no mesmo iframe, primeiro apenas criamos os links como o de costume, também criamos um iframe, demos alguns atributos a ele em CSS.</p>
+    <p>O que muda para que isso funcione é que incluimos o atributo <strong>name=""</strong> no iframe, e obviamente damos um nome a ele, e nos links no atributo <strong>target=""</strong> nós indicamos o nome que foi dado ao iframe, com isso o iframe vai carregar o conteúdo que forma atribuido ao link selecionado.</p>
+
+    <h3>Conteúdo no iframe por código</h3>
+    <p>É possível também inserir conteúdo diretamente no iframe usando o atributo <strong>srcdoc</strong>.</p>
+    <p>Com ele é possível inserir html diretamente no iframe, entretanto, sempre utilizando o código um em seguida do outro.</p>
+    <p>Vamos ao exemplo?!</p>
+
+    <h3>Exemplo</h3>
+
+    
+        <a href="../../Desafios/des010/index.html" target="frame">Desafio 10</a>
+        <a href="../../Desafios/des011/index.html" target="frame">Desafio 11</a>
+        <a href="../../Desafios/des012/index.html" target="frame">Desafio 12</a>
+        <a href="../../Desafios/des013/desafio13_1.html" target="frame">Desafio 13.1</a>
+        <a href="../../Desafios/des013/desafio13_2.html" target="frame">Desafio 13.2</a>
+    
+    <p>Abaixo colocaremos o iframe:</p>
+
+    <iframe srcdoc="<img src='logo_ed.png' alt='Logo'>" name="frame"></iframe>
+    </main>
+</body>
+</html>
