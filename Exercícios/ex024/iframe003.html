@@ -63,6 +63,22 @@
     <p>Inseresante né?! Pois bem para fazer com que os links fossem carregados no mesmo iframe, primeiro apenas criamos os links como o de costume, também criamos um iframe, demos alguns atributos a ele em CSS.</p>
     <p>O que muda para que isso funcione é que incluimos o atributo <strong>name=""</strong> no iframe, e obviamente damos um nome a ele, e nos links no atributo <strong>target=""</strong> nós indicamos o nome que foi dado ao iframe, com isso o iframe vai carregar o conteúdo que forma atribuido ao link selecionado.</p>
 
+    <p>O código ficou da seguinte forma:</p>
+
+    <pre>
+        &lt;a href="../../Desafios/des010/index.html" target="frame"&gt;Desafio 10&lt;/a&gt;
+        &lt;a href="../../Desafios/des011/index.html" target="frame"&gt;Desafio 11&lt;/a&gt;
+        &lt;a href="../../Desafios/des012/index.html" target="frame"&gt;Desafio 12&lt;/a&gt;
+        &lt;a href="../../Desafios/des013/desafio13_1.html" target="frame"&gt;Desafio 13.1&lt;/a&gt;
+        &lt;a href="../../Desafios/des013/desafio13_2.html" target="frame"&gt;Desafio 13.2&lt;/a&gt;
+    </pre>
+    
+    <p>Abaixo colocaremos o iframe:</p>
+
+    <pre>
+        &lt;iframe src="" name="frame" &gt;&lt;/iframe &gt; 
+    </pre>  
+
     <h3>Conteúdo no iframe por código</h3>
     <p>É possível também inserir conteúdo diretamente no iframe usando o atributo <strong>srcdoc</strong>.</p>
     <p>Com ele é possível inserir html diretamente no iframe, entretanto, sempre utilizando o código um em seguida do outro.</p>
@@ -80,6 +96,9 @@
     <p>Abaixo colocaremos o iframe:</p>
 
     <iframe srcdoc="<h1>Bem vindo ao meu iframe</h1><img src='logo_ed.png' alt='Logo'>" name="frame"></iframe>
+
+    <h3>Explicação</h3>
+    <p>Para que aparecesse na página o có</p>
     </main>
 </body>
 </html>
