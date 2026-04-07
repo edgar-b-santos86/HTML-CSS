@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes seguros</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iframes seguros</h1>
+    <p>Iframes são elementos HTML que permitem incorporar conteúdo de outra página web dentro da página atual. Eles podem ser úteis para exibir conteúdo externo, mas também podem representar riscos de segurança se não forem usados com cautela.</p>
+    <p>Nesta aula vamos aprender a como deixar nossa página um pouco mais segura fazendo a utilização dos iframes.</p>
+
+    <h3>Exemplo:</h3>
+    <p>Vamos criar um arquivo chamado <strong>pag001.html</strong> dentro da pasta <strong>paginas</strong>, e dentro desse arquivo vamos colocar o seguinte código de um formulário simples e vamos aplicá-lo no <strong>iframe</strong>:</p>
+
+    <iframe src="paginas/pag001.html" width="400px" height="150px"></iframe>
+
+    <p>O código do iframe acima ficou assim:</p>
+    <pre><code>&lt;iframe src="paginas/pag001.html" width="400px" height="150px"&gt;&lt;/iframe&gt;</code></pre>
+
+    <p> Como podemos ver acima colocamos um iframe com um formulário simples de cadastro do nome, entretanto, como foi explicado pelo professor Gustavo Guanabara, isso pode representar um risco de segurança pois ao colocarmos um iframe para um site do qual não conhecimos, podemos estar sujeitos a ataques e também a deixar que dados dos usuários dos nossos sites sejam comprometidos.</p>
+    <p>Neste momento, como você pode perceber é possível colocar nosso nome e enviar o formulário clicando no botão cadastrar.</p>
+    <p>Para evitar que isso aconteça, podemos colocar o atributo <strong>sandbox</strong> com o valor <strong>sandbox</strong> dentro do iframe, e com isso, o formulário não irá funcionar, ou seja, não será possível enviar os dados do formulário para o servidor, e isso é uma medida de segurança importante para proteger os usuários de possíveis ataques.</p>
+    <p>Abaixo faremos a confirguração de segurança <strong>sandbox</strong> para ver o resultado:</p>
+
+    <iframe src="paginas/pag001.html" width="400px" height="150px" sandbox="sandbox" referrerpolicy="no-referrer"></iframe>
+
+    <p>O código acima ficou assim:</p>
+    <pre><code>&lt;iframe src="paginas/pag001.html" width="400px" height="150px" sandbox="sandbox" referrerpolicy="no-referrer"&gt;&lt;/iframe&gt;</code></pre>
+
+    <p>Se o site for confiável ou mesmo for um site de nossa propriedade, podemos considerar algumas exceções e utilizar configurações dentro do atributo <strong>sandbox</strong> para permitir que certas funcionalidades sejam habilitadas.</p>
+    <p>Por exemplo, se quisermos permitir que o formulário funcione normalmente, podemos usar a configuração <strong>allow-forms</strong> dentro do atributo <strong>sandbox</strong>, e com isso, o formulário irá funcionar normalmente, mas ainda assim, outras funcionalidades que possam representar riscos de segurança estarão desabilitadas.</p>
+    <p>Existem as seguintes opções para o atributo <strong>sandbox</strong>:</p>
+    <ul>
+        <li><strong>allow-forms</strong>: Permite que o formulário funcione normalmente.</li>
+        <li><strong>allow-same-origin</strong>: Permite que o iframe acesse recursos do mesmo origin.</li>
+        <li><strong>allow-scripts</strong>: Permite que scripts sejam executados dentro do iframe.</li>
+        <li><strong>allow-top-navigation</strong>: Permite que o iframe navegue para o topo da página.</li>
+        <li><strong>allow-popups</strong>: Permite que o iframe abra pop-ups.</li>
+        <li><strong>allow-downloads</strong>: Permite que o iframe inicie downloads.</li>
+        <li><strong>allow-orientation-lock</strong>: Permite que o iframe bloqueie a orientação da tela.</li>
+        <li><strong>allow-pointer-lock</strong>: Permite que o iframe bloqueie o ponteiro do mouse.</li>
+        <li><strong>allow-popups-to-escape-sandbox</strong>: Permite que pop-ups abertos pelo iframe escapem das restrições do sandbox.</li>
+        <li><strong>allow-top-navigation-by-user-activation</strong>: Permite que o iframe navegue para o topo da página apenas quando o usuário interagir com o conteúdo do iframe.</li>
+        <li><strong>allow-storage-access-by-user-activation</strong>: Permite que o iframe acesse o armazenamento apenas quando o usuário interagir com o conteúdo do iframe.</li>
+        <li><strong>allow-credentials</strong>: Permite que o iframe acesse credenciais de autenticação.</li>
+        <li><strong>sandbox</strong>: Aplica as restrições do sandbox ao iframe.</li>
+    </ul>
+
+    <p>Além disso podemos configurar o atributo <strong>referrerpolicy</strong>, com isso controlar as informações que são coletadas/enviadas pela nossa página.</p>
+    <p>O valor padrão para o atributo <strong>referrerpolicy</strong> é <strong>no-referrer</strong>, o que significa que nenhuma informação de referência será enviada ao acessar o conteúdo do iframe.</p>
+    <p>Existem as seguintes opções para o atributo <strong>referrerpolicy</strong>:</p>
+    <ul>
+        <li><strong>no-referrer</strong>: Nenhuma informação de referência será enviada.</li>
+        <li><strong>no-referrer-when-downgrade</strong>: A informação de referência será enviada apenas para conexões seguras (HTTPS).</li>
+        <li><strong>origin</strong>: Apenas a origem da página será enviada como referência.</li>
+        <li><strong>origin-when-cross-origin</strong>: A origem da página será enviada como referência apenas para conexões seguras (HTTPS).</li>
+        <li><strong>same-origin</strong>: A informação de referência será enviada apenas para conexões do mesmo origin.</li>
+        <li><strong>strict-origin</strong>: A origem da página será enviada como referência apenas para conexões seguras (HTTPS) e do mesmo origin.</li>
+        <li><strong>strict-origin-when-cross-origin</strong>: A origem da página será enviada como referência apenas para conexões seguras (HTTPS) e do mesmo origin, e nenhuma informação de referência será enviada para conexões inseguras (HTTP).</li>
+        <li><strong>unsafe-url</strong>: A informação de referência será enviada para todas as conexões, independentemente do protocolo de segurança.</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes seguros</title>
+</head>
+<body>
+    <h1>Iframes seguros</h1>
+    <p>Agora nós usaremos no exemplo um ifram com execução de scripts.</p>
+
+    <iframe src="paginas/pag002.html" width="400px" height="200px"></iframe>
+
+    <p>Como podemos ver acima, o iframe tem um link que quando clicado, exibe uma mensagem abaixo do link, e isso acontece porque o iframe tem permissão para executar scripts, e isso pode representar um risco de segurança, pois se o conteúdo do iframe for malicioso, ele pode executar scripts que podem comprometer a segurança dos usuários do nosso site.</p>
+
+    <p>O código acima ficou assim:</p>
+    <pre><code>&lt;iframe src="paginas/pag002.html" width="400px" height="200px"&gt;&lt;/iframe&gt;</code></pre>
+
+    <p>Agora tente clicar no link do exemplo abaixo para ver o resultado:</p>
+
+    <iframe src="paginas/pag002.html" width="400px" height="200px" sandbox="sandbox" referrerpolicy="no-referrer"></iframe>
+
+    <p>Viu?! Totalmente bloqueado.</p>
+    <p>Isso aconteceu porque usamos o atributo <strong>sandbox</strong> com o valor <strong>sandbox</strong> para bloquear o conteúdo do iframe, além do atributo <strong>referrerpolicy</strong> com o valor <strong>no-referrer</strong>.</p>
+
+    <p>Já o código acima ficou assim:</p>
+    <pre><code>&lt;iframe src="paginas/pag002.html" width="400px" height="200px" sandbox="sandbox" referrerpolicy="no-referrer"&gt;&lt;/iframe&gt;</code></pre>
+</body>
+</html>
