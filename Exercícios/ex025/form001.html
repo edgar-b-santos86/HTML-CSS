@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu Primeiro Formulário</h1>
+    <p>Todo formulário deve estar entre as tags &lt;form&gt; e &lt;/form&gt;, e assim vamos começar nosso primeiro formulário da maneira mais básica possível.</p>
+    <p>Lembrando, como o professor Guanabara gosta de dizer, nem sempre quando uma <strong>tag</strong> funciona quer dizer que é a maneira correta de se utilizar ou fazer um código.</p>
+    <form>
+        <p>Nome: <input type="text" name="nome" id="nome"></p>
+        <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+
+    <p>O código para o formulário acima ficou da seguinte forma:</p>
+    <pre>&lt;form&gt;
+        &lt;p&gt;Nome: &lt;input type=&quot;text&quot; name=&quot;nome&quot; id=&quot;nome&quot;&gt;&lt;/p&gt;
+        &lt;p&gt;Sobrenome: &lt;input type=&quot;text&quot; name=&quot;sobrenome&quot; id=&quot;sobrenome&quot;&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;Enviar&quot;&gt;&lt;/p&gt;
+    &lt;/form&gt;
+    </pre>
+
+    <p>O parágrafo onde colocamos <strong>Nome</strong> e o campo para preenchimento do texto tem a tag &lt;input&gt; com os atributos type="text", name e id.</p>
+    <p>O atributo <strong>name</strong> é usado para identificar o campo quando o formulário é enviado ao servidor, enquanto o atributo <strong>id</strong> é usado para identificar o campo no documento HTML.</p>
+    <p>O tipo <strong>text</strong> indica que o campo é para entrada de texto. O botão de envio é criado com um input do tipo <strong>submit</strong>, que envia os dados do formulário para o servidor quando clicado.</p>
+    <p>O formulário acima ainda não está completo, pois primeiro temos que especificar para onde serão enviados os dados quando o formulário for submetido, e também não temos ligação ou associação definida entre o controle, que neste caso são os campos do formulário e o botão de envio, e o texto ao qual nomeamos o campo, essa ligação é muito importante para que além do formulario ter o ser devido funcionamento, os mecanismos de busca possam identificar os elementos corretamente, e também o navegador do usuário faça com que o campos funcionem corretamente.</p>
+    <p>Nos próximos vídeos, vamos aprender mais sobre isso e essa parte do curso é muito importante para quando iniciarmos o curso de JavaScript.</p>
+    <p>Aqui também podemos tirar preenchimento automatico de dados utilizando o atributo <strong>autocomplete</strong> com o valor "off", e o código ficaria assim:</p>
+    <pre>
+        &lt;form autocomplete=&quot;off&quot;&gt;
+    </pre>
+
+    <h2>Para onde são enviados os dados?</h2>
+    <p>Os dados do formulário são enviados sempre para um servidor por meio de uma outra linguagem de programação com PHP, Java, Asp.NET, entre outras.</p>
+    <p>Para isso vamos colocar o atributo <strong>action</strong> na tag &lt;form&gt;.</p>
+    <p>No nosso exemplo, vamos colocar o valor do atributo action como "formulario.php", que é o nome do arquivo que irá processar os dados do formulário. O código do formulário ficaria assim:</p>
+    <pre>
+        &lt;form action=&quot;formulario.php&quot;&gt;
+    </pre>
+    <p>A ação do envio do formulário sempre será executada quando o usuário clicar no botão de enviar.</p>
+
+    <h2>Configurando o Formulário com o Label</h2>
+    <p>Para criar a ligação/associação da palavra <strong>Nome</strong> com o campo onde será preenchido este dado, vamos usar a tag &lt;label&gt;.</p>
+    <p>Importante, para que os fomulários funcionem direito, é necessário que todo <strong>input</strong> tenha um atributo <strong>name</strong> e um atributo <strong>id</strong> associado.</p>
+    <p>O atributo <strong>name</strong> é muito útil para a linguagem PHP, e o atributo <strong>id</strong> é usado para linguagem JavaScript.</p>
+    <p>Aqui vamos refazer nosso código e criar a associação entre os labels e os campos de input:</p>
+
+    <form autocomplete="off" action="formulario.php">
+        <p>
+            <label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome">
+        </p>
+        <p>
+            <label for="isobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+
+    <p>Para nossa tag &lt;label&gt; utilizaremos no atributo <strong>for</strong>, mesmo o valor que colamos no atributo <strong>id</strong>, e o código ficaria assim:</p>
+    <pre>
+        &lt;label for=&quot;inome&quot;&gt;Nome:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; name=&quot;nome&quot; id=&quot;inome&quot;&gt;
+        &lt;label for=&quot;isobrenome&quot;&gt;Sobrenome:&lt;/label&gt;
+        &lt;input type=&quot;text&quot; name=&quot;sobrenome&quot;&gt;id=&quot;isobrenome&quot;&gt;
+    </pre>
+
+    <p>Isso é muito importante para que seja feita a ligação/associação entre o texto e o campo de preenchimento, e também para que os mecanismos de busca possam identificar os elementos corretamente, e também o navegador do usuário faça com que o campo funcione corretamente, além disso para telas portateis, se a pessoa cliente em cima da palavra o campo já será acionado para preenchimento dos dados.</p>
+
+    <h3>Importante!</h3>
+    <p>Sempre devemos utilizar a tag &lt;label&gt; para criar a ligação/associação entre o texto e o campo de preenchimento.</p>
+
+</body>
+</html>
