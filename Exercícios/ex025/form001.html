@@ -80,5 +80,26 @@
     <h3>Importante!</h3>
     <p>Sempre devemos utilizar a tag &lt;label&gt; para criar a ligação/associação entre o texto e o campo de preenchimento.</p>
 
+    <h2>Metodos de envio.</h2>
+    <p>Vimos no vídeo anterior que ao enviar o formulário, os dados que são enviados para o servidor aparecem no endereço URL, entretanto, isso pode ser evitado utilizando dentro do atributo <strong>method</strong> da tag &lt;form&gt;, colocando os valores <strong>get</strong> ou <strong>post</strong>.</p>
+    <p>O método <strong>get</strong> é o padrão caso não seja especificado um valor para o atributo <strong>method</strong>. Este valor faz com que os dados digitados no formulário apareçam no endereço URL, e ele é o mais indicado para as seguintes tipos de dados para formulários:</p>
+    <ul>
+        <li>Dados públicos e não sensíveis</li>
+        <li>Buscas em motores de busca</li>
+        <li>Links para compartilhamento</li>
+        <li>Dados que não utrapassem o limite de 3.000 caracteres/bytes</li>
+    </ul>
+    <p>O método <strong>post</strong> é o mais indicado para dados sensíveis ou quando é necessário enviar grandes quantidades de informações, pois esses dados não aparecem no endereço URL.</p>
+    <p>Abaixo alguns exemplos de onde e quando utilizar o valor <strong>post</strong>:</p>
+    <ul>
+        <li>Formulários de login</li>
+        <li>Formulários de cadastro</li>
+        <li>Formulários de contato</li>
+        <li>Formulários de pagamento</li>
+    </ul>
+
+    <h3>Importante!</h3>
+    <p>O método <strong>post</strong> não é o específicamente o mais seguro, para isso devemos aprender mais sobre https e outros recursos de segurança para programação web.</p>
+
 </body>
 </html>

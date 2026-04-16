@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulário de Cadastro</h1>
+    <form action="formulario.php" method="post">
+        <p>
+            <label for="isu">Usuário:</label>
+            <input type="text" name="usu" id="isu">
+        </p>
+        <p>
+            <label for="isen">Senha:</label>
+            <input type="password" name="sen" id="isen">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <p>Acabamos de criar um formulário de envio de login e senha, entretanto, mesmo que não coloquemos nenhum dado nos campos, o formulário será enviado ao servidor.</p>
+    <p>O código que criamos ficou da seguinte forma:</p>
+    <pre>
+        &lt;form action=&quot;formulario.php&quot; method=&quot;post&quot;&gt;
+            &lt;p&gt;
+                &lt;label for=&quot;isu&quot;&gt;Usuário:&lt;/label&gt;
+                &lt;input type=&quot;text&quot; name=&quot;usu&quot; id=&quot;isu&quot;&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;label for=&quot;isen&quot;&gt;Senha:&lt;/label&gt;
+                &lt;input type=&quot;password&quot; name=&quot;sen&quot; id=&quot;isen&quot;&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;input type=&quot;submit&quot; value=&quot;Enviar&quot;&gt;
+                &lt;input type=&quot;reset&quot; value=&quot;Limpar&quot;&gt;
+            &lt;/p&gt;
+        &lt;/form&gt;
+    </pre>
+    <p>Agora vamos aprender mais um atributo importante para que o formulário não seja enviado sem o preenchimento obrigatório de dados.</p>
+    <p>O atributo <strong>required</strong> é usado para indicar que um campo de formulário é obrigatório e deve ser preenchido antes de o formulário ser enviado. Se um campo com o atributo required não for preenchido, o navegador exibirá uma mensagem de erro e impedirá o envio do formulário até que o campo seja preenchido corretamente.</p>
+    <p>O atributo <strong>required</strong> deve ser inserido no elemento <code>&lt;input&gt;</code> que deseja tornar obrigatório.</p>
+
+    <p>O codigo acima ficou da seguinte forma:</p>
+    <pre>
+        &lt;form action=&quot;formulario.php&quot; method=&quot;post&quot;&gt;
+            &lt;p&gt;
+                &lt;label for=&quot;isu&quot;&gt;Usuário:&lt;/label&gt;
+                &lt;input type=&quot;text&quot; name=&quot;usu&quot; id=&quot;isu&quot; required&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;label for=&quot;isen&quot;&gt;Senha:&lt;/label&gt;
+                &lt;input type=&quot;password&quot; name=&quot;sen&quot; id=&quot;isen&quot; required&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;input type=&quot;submit&quot; value=&quot;Enviar&quot;&gt;
+                &lt;input type=&quot;reset&quot; value=&quot;Limpar&quot;&gt;
+            &lt;/p&gt;
+        &lt;/form&gt;
+    </pre>
+
+    <h2>Mais atributos para formulários.</h2>
+    <p>Podemos também determinar o tamanho mínimo e máximo de caracteres para os campos do formulário, para isso utilizamos os atributos <strong>minlength</strong> e <strong>maxlength</strong>, e da mesma forma o atributo deve ser inserido no elemento <code>&lt;input&gt;</code>.</p>
+    <p>O código do formulário com os atributos de tamanho mínimo e máximo ficou da seguinte forma:</p>
+    <p>O código do formulário acima ficou da seguinte forma:</p>
+    <pre>
+        &lt;form action=&quot;formulario.php&quot; method=&quot;post&quot;&gt;
+            &lt;p&gt;
+                &lt;label for=&quot;isu&quot;&gt;Usuário:&lt;/label&gt;
+                &lt;input type=&quot;text&quot; name=&quot;usu&quot; id=&quot;isu&quot; required minlength=&quot;6&quot; maxlength=&quot;12&quot;&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;label for=&quot;isen&quot;&gt;Senha:&lt;/label&gt;
+                &lt;input type=&quot;password&quot; name=&quot;sen&quot; id=&quot;isen&quot; required minlength=&quot;8&quot; maxlength=&quot;15&quot;&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;input type=&quot;submit&quot; value=&quot;Enviar&quot;&gt;
+                &lt;input type=&quot;reset&quot; value=&quot;Limpar&quot;&gt;
+            &lt;/p&gt;
+        &lt;/form&gt;
+    </pre>
+
+    <h2>Tamanho dos campos de entrada.</h2>
+    <p>O atributo <strong>size</strong> é usado para especificar a largura de um campo de entrada em caracteres. Ele determina quantos caracteres podem ser exibidos no campo de entrada ao mesmo tempo, mas não limita a quantidade de caracteres que o usuário pode digitar.</p>
+    <p>O código do formulário com o atributo size ficou da seguinte forma:</p>
+    <pre>
+        &lt;form action=&quot;formulario.php&quot; method=&quot;post&quot;&gt;
+            &lt;p&gt;
+                &lt;label for=&quot;isu&quot;&gt;Usuário:&lt;/label&gt;
+                &lt;input type=&quot;text&quot; name=&quot;usu&quot; id=&quot;isu&quot; required minlength=&quot;6&quot; maxlength=&quot;12&quot; size=&quot;12&quot;&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;label for=&quot;isen&quot;&gt;Senha:&lt;/label&gt;
+                &lt;input type=&quot;password&quot; name=&quot;sen&quot; id=&quot;isen&quot; required minlength=&quot;8&quot; maxlength=&quot;15&quot; size=&quot;15&quot;&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;input type=&quot;submit&quot; value=&quot;Enviar&quot;&gt;
+                &lt;input type=&quot;reset&quot; value=&quot;Limpar&quot;&gt;
+            &lt;/p&gt;
+        &lt;/form&gt;
+    </pre>
+
+    <h2>Inclusão de dica do que deve ser preenchido</h2>
+    <p>O atributo <strong>placeholder</strong> é usado para fornecer uma dica ao usuário sobre o que deve ser preenchido no campo de entrada. Ele é exibido dentro do campo de entrada e desaparece quando o usuário começa a digitar.</p>
+    <p>O código do formulário com o atributo placeholder ficou da seguinte forma:</p>
+    <pre>
+        &lt;form action=&quot;formulario.php&quot; method=&quot;post&quot;&gt;
+            &lt;p&gt;
+                &lt;label for=&quot;isu&quot;&gt;Usuário:&lt;/label&gt;
+                &lt;input type=&quot;text&quot; name=&quot;usu&quot; id=&quot;isu&quot; required minlength=&quot;6&quot; maxlength=&quot;12&quot; size=&quot;12&quot; placeholder=&quot;Digite seu nome de usuário&quot;&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;label for=&quot;isen&quot;&gt;Senha:&lt;/label&gt;
+                &lt;input type=&quot;password&quot; name=&quot;sen&quot; id=&quot;isen&quot; required minlength=&quot;8&quot; maxlength=&quot;15&quot; size=&quot;15&quot; placeholder=&quot;Digite sua senha&quot;&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;input type=&quot;submit&quot; value=&quot;Enviar&quot;&gt;
+                &lt;input type=&quot;reset&quot; value=&quot;Limpar&quot;&gt;
+            &lt;/p&gt;
+        &lt;/form&gt;
+    </pre>
+
+    <h2>Opções de autocompletar</h2>
+    <p>O atributo <strong>autocomplete</strong> é usado para controlar se o navegador deve ou não preencher automaticamente os campos de um formulário com base em entradas anteriores do usuário. Ele pode ser definido como "on" para permitir o preenchimento automático ou "off" para desativá-lo.</p>
+    <p>Além disso podemos colocar o autocomplete dentro do parametro <strong>input</strong>. Diferente do que acontece quando colocamos apenas na tag <strong>form</strong>, quando inserimos esse atributo no <strong>input</strong>, ele tem diversos valores possíveis.</p>
+    <p>Os valores de autocomplete dentro do atributo <strong>input</strong> são:</p>
+    <ul>
+        <li><strong>on</strong>: Permite o preenchimento automático.</li>
+        <li><strong>off</strong>: Desativa o preenchimento automático.</li>
+        <li><strong>name</strong>: Indica que o campo é para o nome do usuário.</li>
+        <li><strong>email</strong>: Indica que o campo é para o endereço de e-mail do usuário.</li>
+        <li><strong>username</strong>: Indica que o campo é para o nome de usuário do usuário.</li>
+        <li><strong>current-password</strong>: Indica que o campo é para a senha atual do usuário.</li>
+        <li><strong>new-password</strong>: Indica que o campo é para a nova senha do usuário.</li>
+        <li><strong>tel</strong>: Indica que o campo é para o número de telefone do usuário.</li>
+        <li><strong>address-line1</strong>: Indica que o campo é para a primeira linha do endereço do usuário.</li>
+        <li><strong>address-line2</strong>: Indica que o campo é para a segunda linha do endereço do usuário.</li>
+        <li><strong>country</strong>: Indica que o campo é para o país do usuário.</li>
+        <li><strong>postal-code</strong>: Indica que o campo é para o código postal do usuário.</li>
+        <li><strong>street-address</strong>: Indica que o campo é para o endereço completo do usuário.</li>
+        <li><strong>tel</strong>: Indica que o campo é para o número de telefone do usuário.</li>
+        <li><strong>tel-national</strong>: Indica que o campo é para o número de telefone nacional do usuário.</li>
+    </ul>
+    <p>Esses são apenas alguns dos valores disponíveis para o atributo autocomplete dentro do elemento <strong>input</strong>.</p>
+    <p>No nosso caso o código ficaria assim:</p>
+    <pre>
+        &lt;form action=&quot;formulario.php&quot; method=&quot;post&quot; autocomplete=&quot;on&quot;&gt;
+            &lt;p&gt;
+                &lt;label for=&quot;isu&quot;&gt;Usuário:&lt;/label&gt;
+                &lt;input type=&quot;text&quot; name=&quot;usu&quot; id=&quot;isu&quot; required minlength=&quot;6&quot; maxlength=&quot;12&quot; size=&quot;12&quot; placeholder=&quot;Digite seu nome de usuário&quot; autocomplete=&quot;username&quot; autocomplete=&quot;username&quot;&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;label for=&quot;isen&quot;&gt;Senha:&lt;/label&gt;
+                &lt;input type=&quot;password&quot; name=&quot;sen&quot; id=&quot;isen&quot; required minlength=&quot;8&quot; maxlength=&quot;15&quot; size=&quot;15&quot; placeholder=&quot;Digite sua senha&quot; autocomplete=&quot;current-password&quot;&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;input type=&quot;submit&quot; value=&quot;Enviar&quot;&gt;
+                &lt;input type=&quot;reset&quot; value=&quot;Limpar&quot;&gt;
+            &lt;/p&gt;
+        &lt;/form&gt;
+    </pre>
+    <p>Agora observe como ficou esse formulário com relação ao primeiro:</p>
+    <form action="formulario.php" method="post" autocomplete="on">
+        <p>
+            <label for="isu">Usuário:</label>
+            <input type="text" name="usu" id="isu" required minlength="6" maxlength="12" size="12" placeholder="Nome de usuário" autocomplete="username">
+        </p>
+        <p>
+            <label for="isen">Senha:</label>
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="15" size="15" placeholder="Digite sua senha" autocomplete="current-password">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
