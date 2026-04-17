@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Formularios com datas e horas.</h1>
+    <p>Primeiro vamos criar um formulário simples.</p>
+    <form action="formulario.php" method="get" autocomplete="on">
+        <p>
+            <label for="inome">Nome</label>
+            <input type="text" name="nome" id="inome" required maxlength="30" minlength="15" placeholder="Nome completo" autocomplete="name">
+        </p>
+        <p>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" required min="0" max="10"step="0.5" placeholder="0 à 10">
+        </p>
+        <p>
+            <label for="imes">Mes letivo</label>
+            <input type="month" name="mes" id="imes" required>
+        </p>
+        <p>
+            <label for="idia">Dia da prova</label>
+            <input type="date" name="dia" id="idia" required>
+        </p>
+        <p>
+            <label for="ihora">Hora da prova</label>
+            <input type="time" name="hora" id="ihora" required>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <p>Como pudemos ver acima, criamos um formulário com o campos média, mês, dia e hora, cada um deles foi um atributo inserido no elemento &lt;input&gt;.</p>
+    <p>Para o campo de média utilizamos os atributos <strong>"min"</strong>, <strong>"max"</strong> e <strong>"step"</strong>, e além deles utilizamos o valor <strong>number</strong> para o atributo <strong>type</strong>.</p>
+    <p>O atributo <strong>type</strong> define o tipo de entrada que será exibida para o usuário e qual o tipo de dado ele pode inserir no campo, e neste caso escolhemos o tipo <strong>number</strong>. Além dele colocamos o atributo <strong>required</strong> para tornar o campo obrigatório, o atributo <strong>placeholder</strong> para fornecer um exemplo de valor esperado, o atributo <strong>min</strong> para definir o valor mínimo,o atributo <strong>max</strong> para definir o valor máximo, e o atributo <strong>step</strong> para definir o intervalo do valor a ser preenchido, como por exemplo de 0,5 em 0,5.</p>
+
+    <p>Para o campo de mês utilizamos o valor <strong>month</strong> para o atributo <strong>type</strong>, e com ele podemos incluir o mês e o ano desejados para o que está sendo solicitado.</p>
+
+    <p>Para o campo dia utilizamos o valor <strong>date</strong> para o atributo <strong>type</strong>, e com ele podemos incluir a data desejada para o que está sendo solicitado.</p>
+
+    <p>Para o campo hora utilizamos o valor <strong>time</strong> para o atributo <strong>type</strong>, e com ele podemos incluir a hora desejada para o que está sendo solicitado.</p>
+
+    <p>Existem muitos outros tipos de valores que podemos incluir no atributo <strong>type</strong> para definir qual o tipo de dado de entrada deve ser solicitado.</p>
+
+</body>
+</html>
