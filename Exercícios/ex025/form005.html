@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com checkbox e radio buttons</title>
+</head>
+<body>
+    <h1>Formulário com checkbox e radio buttons</h1>
+    <p>Nesta aula vamos ver como criar e configurar campos de opções, os famosos checkbox e radio buttons.</p>
+    <p>Vamos ao nosso formulário:</p>
+    <p>
+        <form action="formulario.php" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <p>
+                    <label for="inome">Nome:</label>
+                    <input type="text" name="nome" id="inome" required maxlength="15" placeholder="Primeiro Nome" autocomplete="name">
+                </p>
+                <p>
+                    <label for="isobrenome">Sobrenome:</label>
+                    <input type="text" name="sobrenome" id="isobrenome" required minlength="7" placeholder="Sobrenome" autocomplete="family-name">
+                </p>
+                <p>
+                    <label for="iemail">E-mail:</label>
+                    <input type="email" name="email" id="iemail" required placeholder="E-mail" autocomplete="email">
+                </p>
+                <p>
+                    <label for="ifone">Telefone:</label>
+                    <input type="tel" name="fone" id="tel" required placeholder="(xx)xxxxx-xxxx" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$">
+                </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Sexo</legend>
+                    <p>
+                        <input type="radio" name="sexo" id="Marculino" value="Masculino">
+                        <label for="Masculino">Masculino</label><br>
+                        <input type="radio" name="sexo" id="Feminino" value="Feminino">
+                        <label for="Feminino">Feminino</label>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Esportes Preferidos</legend>
+                    <p>
+                        <input type="checkbox" name="esfut" id="iesfut" value="Futebol">
+                        <label for="iesfut">Futebol</label><br>
+                        <input type="checkbox" name="esfut" id="iesbas" value="Basquete">
+                        <label for="iesbas">Basquete</label><br>
+                        <input type="checkbox" name="esfut" id="iesvole" value="Vôlei">
+                        <label for="iesvole">Vôlei</label><br>
+                        <input type="checkbox" name="esfut" id="iesnat" value="Natação">
+                        <label for="iesnat">Natação</label><br>
+                    </p>
+                </fieldset>
+                    <p>
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpar">
+                    </p>       
+        </form>
+    </p>
+    <p>Como vimos criamos primeiro campos onde podemos selecionar apenas uma opção das disponíveis e para isso criamos utilizamos o controle <strong>&lt;type="radio"&gt;</strong>.</p>
+    <p>Devemos tomar um cuidado ao utilizar o radio pois para que não seja possível selecionar as todas as opções e não conseguir retirar depois o que foi selecionado, devemos no atributo <strong>name=""</strong>, colocar o mesmo nome para todas as opções disponíveis, assim ao selecionar uma, quando clicarmos na outra a seleção será alterada e a anterior será desmarcada.</p>
+    <p>Já no controle <strong>&lt;type="checkbox"&gt;</strong>, podemos selecionar várias opções ao mesmo tempo sem o problema de não conseguir desmarcar novamente a selecionada.</p>
+    <p>Nosso código ficou assim:</p>
+    <pre>
+        &lt;form action=&quot;formulario.php&quot; method=&quot;post&quot; autocomplete=&quot;on&quot;&gt;
+                &lt;fieldset&gt;
+                    &lt;legend&gt;Dados Pessoais&lt;/legend&gt;
+                    &lt;p&gt;
+                    &lt;label for=&quot;inome&quot;&gt;Nome:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;nome&quot; id=&quot;inome&quot; required maxlength=&quot;15&quot; placeholder=&quot;Primeiro Nome&quot; autocomplete=&quot;name&quot;&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;label for=&quot;isobrenome&quot;&gt;Sobrenome:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;sobrenome&quot; id=&quot;isobrenome&quot; required minlength=&quot;7&quot; placeholder=&quot;Sobrenome&quot; autocomplete=&quot;family-name&quot;&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;label for=&quot;iemail&quot;&gt;E-mail:&lt;/label&gt;
+                    &lt;input type=&quot;email&quot; name=&quot;email&quot; id=&quot;iemail&quot; required placeholder=&quot;E-mail&quot; autocomplete=&quot;email&quot;&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;label for=&quot;ifone&quot;&gt;Telefone:&lt;/label&gt;
+                    &lt;input type=&quot;tel&quot; name=&quot;fone&quot; id=&quot;tell&quot; required placeholder=&quot;(xx)xxxxx-xxxx&quot; autocomplete=&quot;tell&quot pattern=&#39;&#94;\(\d{2}\)\d{4,5}-\d{4}$&#39;&gt;
+                &lt;/p&gt;
+                &lt;/fieldset&gt;
+                &lt;fieldset&gt;
+                    &lt;legend&gtSexo&lt;/legend&gt;
+                    &lt;p&gt;
+                        &lt;input type=&quot;radiu&quot;; name=&quotsexo&quot;; id=&quotMarculino&quot;; value=&quotMasculino&quot;&gt;
+                        &lt;label for=&quot;Masculino&quot;&gt;Masculino&lt;/label&gt;&lt;br&gt;
+                        &lt;input type=&quot;radio&quot;; name=&quot;sexo&quot;; id=&quot;Feminino&quot;; value=&quot;Feminino&quot;&gt;
+                        &lt;label for=&quot;Feminino&quot;&gt;Feminino&lt;/label&gt;&lt;br&gt;
+                    &lt;/p&gt;
+                &lt;/fieldset&gt;
+                &lt;fieldset&gt;
+                    &lt;legend&gt;Esportes Preferidos&lt;/legend&gt;
+                    &lt;p&gt;
+                        &lt;input type=&quot;checkbox&quot;; name=&quot;esfut&quot;; id=&quot;iesfut&quot;; value=&quot;Futebol&quot;&gt;
+                        &lt;label for=&quot;iesfut&quot;&gt;Futebol&lt;/label&gt;&lt;br&gt;
+                        &lt;input type=&quot;checkbox&quot;; name=&quot;esfut&quot;; id=&quot;iesbas&quot;; value=&quot;Basquete&quot;&gt;
+                        &lt;label for=&quot;iesbas&quot;&gt;Basquete&lt;/label&gt;&lt;br&gt;
+                        &lt;input type=&quot;checkbox&quot;; name=&quot;esfut&quot;; id=&quot;iesvole&quot;; value=&quot;Vôlei&quot;&gt;
+                        &lt;label for=&quot;iesvole&quot;&gt;Vôlei&lt;/label&gt;&lt;br&gt;
+                        &lt;input type=&quot;checkbox&quot;; name=&quot;esfut&quot;; id=&quot;iesnat&quot;; value=&quot;Natação&quot;&gt;
+                        &lt;label for=&quot;iesnat&quot;&gtNatação&lt;/label&gt;&lt;br&gt;
+                    &lt;/p&gt;
+                &lt;/fieldset&gt;
+                    &lt;p&gt;
+                        &lt;input type=&quot;submit&quot;&gt;
+                        &lt;input type=&quot;reset&quot;&gt;
+                    &lt;/p&gt;       
+        &lt;/form&gt;
+    </pre>
+</body>
+</html>

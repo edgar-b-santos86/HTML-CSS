@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Caixas de e-mail e telefone</h1>
+    <p>Nesta aula veremos como criar e configurar caixas de e-mail e telefone para nossos formulários.</p>
+    <p>Vamos criar um novo formulário?</p>
+
+    <p>
+        <form action="formulario.php" method="post">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <p>
+                    <label for="inome">Nome:</label>
+                    <input type="text" name="nome" id="inome" required maxlength="15" placeholder="Primeiro Nome" autocomplete="name">
+                </p>
+                <p>
+                    <label for="isobrenome">Sobrenome:</label>
+                    <input type="text" name="sobrenome" id="isobrenome" required minlength="7" placeholder="Sobrenome" autocomplete="family-name">
+                </p>
+                <p>
+                    <label for="iemail">E-mail:</label>
+                    <input type="email" name="email" id="iemail" required placeholder="E-mail" autocomplete="email">
+                </p>
+                <p>
+                    <label for="ifone">Telefone:</label>
+                    <input type="tel" name="fone" id="tel" required placeholder="(xx)xxxxx-xxxx" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$">
+                </p>
+                <p>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </p>
+            </fieldset>
+        </form>
+    </p>
+    <p>Nosso novo formulário tem mais campos que o anterior. Esses novos controles que colocamos permitem que o usuário coloque as informações de e-mail e telefone e para isso incluímos os atributos <strong>type="email"</strong> e <strong>type="tel"</strong> dentro do elemento <strong>&lt;input&gt;</strong>.</p>
+    <p>O atributo <strong>type="email"</strong> garante que o usuário insira um endereço de e-mail válido, enquanto o atributo <strong>type="tel"</strong> permite que o usuário insira um número de telefone no formato especificado.</p>
+    <p>Apenas devemos ter atenção pois o controle <strong>type="email"</strong> não trava completamente ou faz a verificação se o e-mail é válido, ela apenas pede a inclusão de um @ dentro do campo, o que pode acontecer de o usuário digitar o e-mail incompleto e este ser aceito pelo formulário.</p>
+    <p>Mais travas e verificações de fato para isso veremos nas aulas de programação em JavaScript e PHP.</p>
+    <p>Já o controle <strong>type="tel"</strong> oferece algumas configurações a mais para tentarmos fazer com que o usuário ao menos insira o número completo de caracteres necessários no campo antes de enviar o formulário, e para isso inserimos a expressão regular no atributo <strong>pattern</strong>, e ela define o padrão de formatação esperado para o número de telefone.</p>
+    <p>Inclusive algo que deveremos estudar a partes são as Expressões Regulares ou RegExp.</p>
+    <p>Nosso código ficou da seguinte forma:</p>
+    <pre>
+        &lt;form action=&quot;formulario.php&quot; method=&quot;post&quot;&gt;
+            &lt;fieldset&gt;
+                &lt;legend&gt;Dados Pessoais&lt;/legend&gt;
+                &lt;p&gt;
+                    &lt;label for=&quot;inome&quot;&gt;Nome:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;nome&quot; id=&quot;inome&quot; required maxlength=&quot;15&quot; placeholder=&quot;Primeiro Nome&quot; autocomplete=&quot;name&quot;&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;label for=&quot;isobrenome&quot;&gt;Sobrenome:&lt;/label&gt;
+                    &lt;input type=&quot;text&quot; name=&quot;sobrenome&quot; id=&quot;isobrenome&quot; required minlength=&quot;7&quot; placeholder=&quot;Sobrenome&quot; autocomplete=&quot;family-name&quot;&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;label for=&quot;iemail&quot;&gt;E-mail:&lt;/label&gt;
+                    &lt;input type=&quot;email&quot; name=&quot;email&quot; id=&quot;iemail&quot; required placeholder=&quot;E-mail&quot; autocomplete=&quot;email&quot;&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;label for=&quot;ifone&quot;&gt;Telefone:&lt;/label&gt;
+                    &lt;input type=&quot;tel&quot; name=&quot;fone&quot; id=&quot;tell&quot; required placeholder=&quot;(xx)xxxxx-xxxx&quot; autocomplete=&quot;tell&quot pattern=&#39;&#94;\(\d{2}\)\d{4,5}-\d{4}$&#39;&gt;
+                &lt;/p&gt;
+                &lt;p&gt;
+                    &lt;input type=&quot;submit&quot; value=&quotEnviar&quot;&gt;
+                    &ltinput type="reset" value="Limpar"&gt;
+                &lt;/p&gt;
+            &lt;/fieldset&gt;
+        &lt;/form&gt;
+    </pre>
+
+    <p>Uma tag que usamos e deu ao nosso formulário uma aparência mais organizada e profissional foi a <strong>&lt;fieldset&gt;</strong>. Com ela conseguirmos inclusive colocar a tag <strong>&lt;legend&gt;</strong> para definir o título do grupo de campos como fizemos com este pequeno formulário.</p>
+</body>
+</html>
