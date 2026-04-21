@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        fieldset {
+            font-weight: bold;
+            border: solid 3px #00000070;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 2px 2px 5px #00000073;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Formulários</h1>
+    <p>Nesta aula vamos ver alguns elementos de formulários fora da tag &lt;input&gt;.</p>
+    <p>Primeiro vamos criar nosso formulário de exemplo:</p>
+
+    <form action="formulario.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend><em>Formulário de Opções e Caixa de Texto</em></legend>
+            <p>
+                <label for="iest"> Estado:</label>
+                <select name="estado" id="iest" required>
+                    
+                    <option value="" selected>--- Escolha ---</option>
+
+                    <optgroup label="Região Norte">
+                        <option value="AC">Acre</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="PA">Pará</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="TO">Tocantins</option>
+                    </optgroup>
+                    <optgroup label="Região Nordeste">
+                        <option value="AL">Alagoas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="SE">Sergipe</option>
+                    </optgroup>
+                    <optgroup label="Região Centro-Oeste">
+                        <option value="GO">Goiás</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="DF">Distrito Federal</option>
+                    </optgroup>
+                    <optgroup label="Região Sudeste">
+                        <option value="ES">Espírito Santo</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+                    <optgroup label="Região Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                    </optgroup>                  
+                </select>
+            </p>
+
+            <p>
+                <label for="iprof">Profissão:</label>
+                <input type="text" name="prof" id="iprof" list="proflist" placeholder="Selecione a profissão" required>
+                <datalist id="proflist">
+                    <option value="Desenvolvedor">
+                    <option value="Designer">
+                    <option value="Analista de Dados">
+                    <option value="Gerente de Projetos">
+                    <option value="Engenheiro de Software">
+                    <option value="Especialista em Segurança da Informação">
+                    <option value="Administrador de Banco de Dados">
+                    <option value="Cientista de Dados">
+                    <option value="Arquiteto de Software">
+                </datalist>
+            </p>
+
+            <p>
+                <label for="imsg">Mensagem:</label><br>
+                <textarea name="msg" id="imsg" cols="50" rows="10" placeholder="Digite uma mensagem"></textarea>
+            </p>
+
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    <h2>Seletc, Option e Optgroup:</h2>
+    <p>O primeiro exemplo do nosso formulário foi utilizando o controle <strong>&lt;select&gt;&lt;/select&gt;</strong>, com ela é possível criar uma lista de opções a serem selecionadas pelo usuário, e dentro dela cada opção a ser selecionada deve ser colocada dentro de uma tag <strong>&lt;option&gt;</strong>.</p>
+    <p>Além disso dentro da tag <strong>&lt;select&gt;&lt;/select&gt;</strong> podemos separar as opções da lista que colocaremos dentro do elemento <strong>&lt;option&gt;</strong> utilizando a tag <strong>&lt;optgroup&gt;</strong>, nela devemos especificar um rótulo para agrupar as opções relacionadas com um <strong>label</strong> (atributo não elemento) e com isso conseguimos colocar grupos separados dentro da lista que criamos.</p>
+
+    <h2>Datalist</h2>
+    <p>O segundo elemento que usamos para este formulário foi a tag <strong>&lt;datalist&gt;</strong>, que permite criar uma lista de opções pré-definidas para um campo de entrada de texto. Nesta opção podemos ainda usamos um elemento <strong>input</strong>, entretanto, as opções da nossa lista vão dentro da tag <strong>&lt;datalist&gt;</strong> e cada opçao dentro de uma <strong>option</strong> onde especificamos o valor da opção no atributo <strong>value</strong>.</p>
+
+    <h2>Textarea</h2>
+    <p>O terceiro campo de nosso formulário foi com o elemento <strong>&lt;textarea&gt;</strong>, que permite criar um campo de texto multilinha para a entrada de dados. Nela determinamos o número de colunas e linhas do campo que serão viziveis ao usuário, entretanto, pelo menos aqui, não delimitamos o tamanho máximo do texto.</p>
+
+    <p>Nosso código apra criar o formulário acima ficou assim:</p>
+    <pre>
+        &lt;form action="formulario.php" method="post"&gt;
+        &lt;fieldset&gt;
+            &lt;legend&gt;&lt;em&gt;Formulário de Opções e Caixa de Texto&lt;/em&gt;&lt;/legend&gt;
+            &lt;p>
+                &lt;label for="iest"&gt; Estado:&lt;/label&gt;
+                &lt;select name="estado" id="iest"&gt;
+                    
+                    &lt;option value="" selected>--- Escolha ---&lt;/option>
+
+                    &lt;optgroup label="Região Norte"&gt;
+                        &lt;option value="AC"&gt;Acre&lt;/option&gt;
+                        &lt;option value="AP"&gt;Amapá&lt;/option&gt;
+                        &lt;option value="AM"&gt;Amazonas&lt;/option&gt;
+                        &lt;option value="PA"&gt;Pará&lt;/option&gt;
+                        &lt;option value="RO"&gt;Rondônia&lt;/option&gt;
+                        &lt;option value="RR"&gt;Roraima&lt;/option&gt;
+                        &lt;option value="TO"&gt;Tocantins&lt;/option&gt;
+                    &lt;/optgroup&gt;
+                    &lt;optgroup label="Região Nordeste"&gt;
+                        &lt;option value="AL"&gt;Alagoas&lt;/option&gt;
+                        &lt;option value="BA"&gt;Bahia&lt;/option&gt;
+                        &lt;option value="CE"&gt;Ceará&lt;/option&gt;
+                        &lt;option value="MA"&gt;Maranhão&lt;/option&gt;
+                        &lt;option value="PB"&gt;Paraíba&lt;/option&gt;
+                        &lt;option value="PE"&gt;Pernambuco&lt;/option&gt;
+                        &lt;option value="PI"&gt;Piauí&lt;/option&gt;
+                        &lt;option value="RN"&gt;Rio Grande do Norte&lt;/option&gt;
+                        &lt;option value="SE"&gt;Sergipe&lt;/option&gt;
+                    &lt;/optgroup&gt;
+                    &lt;optgroup label="Região Centro-Oeste"&gt;
+                        &lt;option value="GO"&gt;Goiás&lt;/option&gt;
+                        &lt;option value="MT"&gt;Mato Grosso&lt;/option&gt;
+                        &lt;option value="MS"&gt;Mato Grosso do Sul&lt;/option&gt;
+                        &lt;option value="DF"&gt;Distrito Federal&lt;/option&gt;
+                    &lt;/optgroup&gt;
+                    &lt;optgroup label="Região Sudeste"&gt;
+                        &lt;option value="ES"&gt;Espírito Santo&lt;/option&gt;
+                        &lt;option value="MG"&gt;Minas Gerais&lt;/option&gt;
+                        &lt;option value="RJ"&gt;Rio de Janeiro&lt;/option&gt;
+                        &lt;option value="SP"&gt;São Paulo&lt;/option&gt;
+                    &lt;/optgroup&gt;
+                    &lt;optgroup label="Região Sul"&gt;
+                        &lt;option value="PR"&gt;Paraná&lt;/option&gt;
+                        &lt;option value="RS"&gt;Rio Grande do Sul&lt;/option&gt;
+                        &lt;option value="SC"&gt;Santa Catarina&lt;/option&gt;
+                    &lt;/optgroup&gt;                  
+                &lt;/select&gt;
+            &lt;/p&gt;
+
+            &lt;p&gt;
+                &lt;label for="iprof"&gt;Profissão:&lt;/label&gt;
+                &lt;input type="text" name="prof" id="iprof" list="proflist" placeholder="Selecione a profissão"&gt;
+                &lt;datalist id="proflist"&gt;
+                    &lt;option value="Desenvolvedor"&gt;
+                    &lt;option value="Designer"&gt;
+                    &lt;option value="Analista de Dados"&gt;
+                    &lt;option value="Gerente de Projetos"&gt;
+                    &lt;option value="Engenheiro de Software"&gt;
+                    &lt;option value="Especialista em Segurança da Informação"&gt;
+                    &lt;option value="Administrador de Banco de Dados"&gt;
+                    &lt;option value="Cientista de Dados"&gt;
+                    &lt;option value="Arquiteto de Software"&gt;
+                &lt;/datalist&gt;
+            &lt;/p&gt;
+
+            &lt;p&gt;
+                &lt;label for="imsg"&gt;Mensagem:&lt;/label&gt;&lt;br&gt;
+                &lt;textarea name="msg" id="imsg" cols="50" rows="10" placeholder="Digite mensagem"&gt;&lt;/textarea&gt;
+            &lt;/p&gt;
+
+        &lt;/fieldset&gt;
+        &lt;p&gt;
+            &lt;input type="submit" value="Enviar"&gt;
+            &lt;input type="reset" value="Limpar"&gt;
+        &lt;/p&gt;
+    &lt;/form&gt;
+    </pre>
+
+    <h3>Importante</h3>
+    <p>Na tag &lt;optgroup&gt;, o atributo <strong>label</strong> define o nome do grupo de opções, que é diferente do elemento <strong>label</strong> que está associado a um campo de entrada específico, ou seja, o <strong>label</strong> de &lt;optgroup&gt; é apenas para fins de organização visual, enquanto o <strong>label</strong> de um campo de entrada é usado para rotular o próprio campo.</p>
+</body>
+</html>
