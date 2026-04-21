@@ -29,6 +29,65 @@
             <input type="reset" value="Limpar">
         </p>
     </form>
+    <p><a href="form009.html">Formulário 009</a></p>
+    <p><a href="form010.html">Formulário 010</a></p>
 
-</body>
+    <p>Nesta aula criamos as páginas form008, form009 e form010, e todas elas com a funcionalinalidade do elemento &lt;output&gt;.</p>
+    <p>Neste momento estamos apenas arranhando a superficie e bem de leve mesmo do javascript com essa função.</p>
+    <p>Nossos códigos ficaram assim:</p>
+    <pre>
+        &lt;form action="formulario.php" method="post" autocomplete="on"&gt;
+            &lt;p&gt;
+                &lt;label for="in1"&gt;Número 1:&lt;/label&gt;
+                &lt;input type="number" name="n1" id="in1" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)"&gt;
+            &lt;/p&gt;
+
+            &lt;p&gt;
+                &lt;label for="in2"&gt;Número 2:&lt;/label&gt;
+                &lt;input type="number" name="n2" id="in2" min="0" max="50" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)"&gt;
+            &lt;/p&gt;
+
+            &lt;p&gt;
+                &lt;label for="isoma"&gt;Soma:&lt;/label&gt;
+                &lt;output name="soma" id="isoma"&gt;0&lt;/output&gt;
+            &lt;/p&gt;
+
+            &lt;p&gt;
+                &lt;input type="submit" value="Enviar"&gt;
+                &lt;input type="reset" value="Limpar"&gt;
+            &lt;/p&gt;
+        &lt;/form&gt;
+    </pre>
+    
+    <p>Com esse código podemos ver que o elemento &lt;output&gt; foi utilizado para exibir a soma dos valores selecionados na primeira e na segunga caixa de opções de forma automática.</p>
+
+    <p>O código da página form009 ficou assim:</p>
+    <pre>
+        
+        &lt;form action="formulario.php" method="post" autocomplete="on"&gt;
+            &lt;label for="inum"&gt;Número&lt;/label&gt;
+            &lt;input type="range" name="num" id="inum" min="0" max="10" value="5" oninput="ival.innerHTML = Number(inum.value)"&gt;
+            &lt;output id="ival"&gt;5&lt;/output&gt;
+            &lt;p&gt;
+                &lt;input type="submit" value="Enviar"&gt;
+                &lt;input type="reset" value="Limpar"&gt;
+            &lt;/p&gt;
+        &lt;/form&gt;
+    </pre>
+    <p>No código acima o código JavaScript é utilizado para atualizar o valor do elemento &lt;output&gt; com o valor selecionado no controle de faixa <strong>(range)</strong>.</p>
+
+    <p>O código da página form010 ficou assim:</p>
+    <pre>
+        
+        &lt;form action="formulario.php" method="post" autocomplete="on"&gt;
+            &lt;label for="iano"&gt;Em que ano você nasceu?&lt;/label&gt;
+            &lt;input type="number" name="ano" id="iano" min="1900" max="2026" oninput="calcIdade()"&gt;
+            &lt;output id="iidade"&gt;0&lt;/output&gt;
+            &lt;p&gt;
+                &lt;input type="submit" value="Enviar"&gt;
+                &lt;input type="reset" value="Limpar"&gt;
+            &lt;/p&gt;
+        &lt;/form&gt;
+    </pre>
+    <p>No código acima o código JavaScript é utilizado para calcular e exibir a idade com base no ano de nascimento selecionado.</p></body>
 </html>
