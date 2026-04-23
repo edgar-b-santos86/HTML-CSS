@@ -9,9 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>Iniciando com Media Query</h1>
-    </header>
-    <menu>
+        <h1>Iniciando com Media Query</h1>    
         <ul>
             <li><a href="#">Segundo Exercício</a></li>
             <li><a href="#">Terceiro Exercício</a></li>
@@ -19,10 +17,131 @@
             <li><a href="#">Quinto Exercício</a></li>
             <li><a href="#">Sexto Exercício</a></li>
         </ul>
-    </menu>
+    </header>
     <main>
         <article>
+            <h1>Media Query</h1>
+            <p>O que é uma Media Query?</p>
+            <p>Uma media query ou medias queries, é uma técnica em CSS que primite aplicar estilos diferentes para a mesma página, entretanto, de modo que cada um seja aberta em dispositivos diferentes, ou em diferentes tamanhos de tela, e até uma versão para impressão.</p>
+            <p>Com media query, é possível criar designs responsivos que se adaptam automaticamente ao tamanho da tela do dispositivo em que a página é exibida.</p>
+            <p>Neste nosso exemplo criamos esta página e nela teremos um estilo para telas e outro para impressão.</p>
+            <p>Neste caso criaremos estilos esternos para que possamos aplicá-los conforme o tipo de dispositivo.</p>
+            <p>A diferença é que no link da CSS, especificamos o tipo de mídia com o atributo "media", que define quando o estilo deve ser aplicado.</p>
+            <p>Nosso exemplo da media query está sendo utilizado aqui, ficou da seguinte forma.</p>
+            <p>Primeiro o link para a CSS de tela:</p>
+            <pre><code>&lt;link rel="stylesheet" href="estilos/tela.css" media="screen"&gt;</code></pre>
+            
+            <p>E abaixo o link para a CSS de impressão:</p>
+            <pre><code>&lt;link rel="stylesheet" href="estilos/impressora.css" media="print"&gt;</code></pre>
 
+            <p>Agora o CSS apra tela:</p>
+            <pre>
+            <code>
+    @charset "UTF-8";
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(179, 179, 179);
+    }
+
+    html {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+    }
+
+    header {
+        background-image: linear-gradient(to bottom, rgb(179, 179, 179), rgb(66, 65, 65));
+        color: white;
+        text-align: center;
+        padding: 30px;
+        padding-bottom: 0px;
+        box-shadow: 2px 2px 5px black;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+        padding-bottom: 30px;
+    }
+
+    header ul {
+        list-style: none;
+    }
+
+    header li {
+        display: inline-block;
+        margin: 10px;
+        text-align: left;
+    }   
+
+    a {
+        padding: 2px;   
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        color: rgb(5, 5, 5);
+        border-radius: 5px;
+        background-color: white;
+        transition-duration: 0.5s;
+    }
+
+    main {
+        max-width: 650px;
+        min-width: 350px;
+        background-color: white;
+        margin: auto;
+        padding: 20px;
+    }
+
+    article {
+        padding: 20px;
+        line-height: 2em;
+    }
+
+    article h1 {
+        margin: 20px;
+    }
+            </code>
+            </pre>
+
+            <p>Agora vamos ver o estilo para impressão:</p>
+            <pre>
+            <code>
+    @charset "UTF-8";
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    html {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    }
+
+    menu {
+    display: none;
+    }
+            </code>
+            </pre>
+            
+            <p>Os valores existentes para o atributo <strong>media</strong> que se chamam <strong>media types</strong>, são elas:</p>
+            <ul>
+                <li><code>screen</code>: para telas de computador e dispositivos móveis</li>
+                <li><code>print</code>: para impressão</li>
+                <li><code>all</code>: para todos os tipos de dispositivos</li>
+                <li><code>speech</code>: para leitores de tela</li>
+                <li><code>braille</code>: para dispositivos de braille</li>
+                <li><code>projection</code>: para projetores</li>
+                <li><code>handheld</code>: para dispositivos móveis</li>
+                <li><code>embossed</code>: para dispositivos de impressão em braille</li>
+            </ul>
+
+            <p>Media Query é o conjunto de Media Types e Media Features.</p>
         </article>
     </main>
 </body>

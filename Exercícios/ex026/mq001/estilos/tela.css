@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+body {
+    background-color: rgb(179, 179, 179);
+}
+
 html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
@@ -15,23 +19,52 @@ header {
     color: white;
     text-align: center;
     padding: 30px;
+    padding-bottom: 0px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.562);
 }
 
-menu {
-    background-color: rgb(66, 65, 65);
-    padding: 10px;
+header h1 {
+    font-size: 2.5em;
+    padding-bottom: 30px;
 }
 
-menu ul {
+header ul {
     list-style: none;
-
 }
-menu li {
+
+header li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 10px;
+    text-align: left;
 }   
 
 a {
+    padding: 2px;   
     text-decoration: none;
     color: white;
+}
+
+a:hover {
+    color: rgb(5, 5, 5);
+    border-radius: 5px;
+    background-color: white;
+    transition-duration: 0.5s;
+}
+
+main {
+    max-width: 650px;
+    min-width: 350px;
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.411);
+}
+
+article {
+    padding: 20px;
+    line-height: 2em;
+}
+
+article h1 {
+    margin: 20px;
 }
