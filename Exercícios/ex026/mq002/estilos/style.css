@@ -23,6 +23,7 @@ h1 {
 
 main {
     color: #000000;
+    text-align: justify;
     line-height: 1.5em;
     font-weight: bold;
     max-width: 1000px;
