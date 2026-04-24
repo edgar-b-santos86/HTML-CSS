@@ -23,11 +23,11 @@ h1 {
 
 main {
     color: #000000;
+    text-shadow: 1px 1px 2px #ffffffa9;
     text-align: justify;
     line-height: 1.5em;
     font-weight: bold;
     max-width: 1000px;
     margin: auto;
     padding: 20px;
-    background-color: #ffffff48;
 }
