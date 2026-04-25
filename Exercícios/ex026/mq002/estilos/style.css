@@ -11,7 +11,8 @@ html, body {
     width: 100vw;
     height: 100vh;
     background-color: #233eff;
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 h1 {
@@ -22,12 +23,12 @@ h1 {
 }
 
 main {
+    background-color: #ffffff52;
     color: #000000;
-    text-shadow: 1px 1px 2px #ffffffa9;
     text-align: justify;
     line-height: 1.5em;
-    font-weight: bold;
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     padding: 20px;
+    border-radius: 10px;
 }
