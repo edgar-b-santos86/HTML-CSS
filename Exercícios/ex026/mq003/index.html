@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <link rel="stylesheet" href="estilo/style.css">
+</head>
+<body>
+    <h1>Aplicação de Media Query em uma única CSS local</h1>
+        <main>
+            <p>Nesta aula vimos que em projetos menores, é possível colocar todos os seletores de CSS com media queries de maneira local, ou em um único arquivo CSS externo, porém, assim como o professor Guanabara disse, eu també acho melhor colocar em arquivos separados pois fica tudo muito bagunçado.</p>
+            <p>Para que tudo funcione no mesmo arquivo CSS ou no CSS local, nós colocamos o seletor <strong>@media</strong> com o type <strong>screen</strong> e a feature <strong>orientation</strong>.</p>
+            <p>Quando fazemos isso, dentro deste seletor colocamos o seletor desejado que neste caso foi o <strong>body</strong> com as declarações necessárias para sua configuração, nossa CSS ficou assim:</p>
+            <pre><code>
+                <strong>
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #233eff;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 3px #00000098;
+    padding-top: 20px;
+}
+
+main {
+    background-color: #ffffff52;
+    color: #000000;
+    text-align: justify;
+    line-height: 1.5em;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@media screen and (orientation: portrait) {
+    body {
+        background-image: url(../imagens/cev-portrait.jpg);
+        background-position: center bottom;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    body {
+        background-image: url(../imagens/cev-landscape.jpg);
+        background-position: left bottom;
+    }
+}
+                </strong>
+            </code></pre>
+        </main>
+    </body>
+</html>
