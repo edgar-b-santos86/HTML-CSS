@@ -28,11 +28,11 @@ header h1 {
     padding-bottom: 30px;
 }
 
-header ul {
+menu ul {
     list-style: none;
 }
 
-header li {
+menu li {
     display: inline-block;
     margin: 10px;
     text-align: left;
