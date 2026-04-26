@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/mediaquery.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
         <h1>Menu Responsivo com Media Query</h1>
         <i id="burger" class="material-symbols-outlined" onclick="clickMenu()">menu</i>
@@ -18,7 +19,6 @@
                 <li><a href="#">Opção 3</a></li>
                 <li><a href="#">Opção 4</a></li>
                 <li><a href="#">Opção 5</a></li>
-                <li><a href="#">Opção 6</a></li>
             </ul>
         </menu>
     </header>
@@ -41,7 +41,6 @@
                     &lt;li&gt;&lt;a href="#">Opção 3&lt;/a&gt;&lt;/li&gt;
                     &lt;li&gt;&lt;a href="#">Opção 4&lt;/a&gt;&lt;/li&gt;
                     &lt;li&gt;&lt;a href="#">Opção 5&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="#">Opção 6&lt;/a&gt;&lt;/li&gt;
                 &lt;/ul&gt;
             &lt;/menu&gt;
         &lt;/header&gt;
@@ -193,6 +192,16 @@
         </aside>
     </main>
     <script>
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                opcoes.style.display = 'block'
+            }
+            else {
+                opcoes.style.display = 'none'
+            }
+        }
+
         function clickMenu() {
             if (opcoes.style.display == 'block') {
                 opcoes.style.display = 'none'
