@@ -83,7 +83,88 @@
         }
             </code>
         </pre>
-        <p>Agora vamos criar dentro do arquivo mediaquery.css os estilos para os demais tamanhos de tela</p>
+        <p>Agora vamos criar dentro do arquivo mediaquery.css os estilos para os demais tamanhos de tela e vamos falar sobre <strong>Typical Device Breakpoints</strong></p>
+        <h2>Typical Device Breakpoints</h2>
+        <p>Os pontos de quebra típicos para dispositivos ou Typical Device Breakpoints é o tamanho padrão de telas de acordo com os modelos mais comuns de dispositivos móveis com base no conceito mobile first, e essas medidas são passadas pelo consórcio W3C, e com o passar dos anos e avanço da tecnologia, esses valores têm sido ajustados para se adaptar às novas realidades dos dispositivos digitais.</p>
+        <p>Hoje em dia, os breakpoints típicos são:</p>
+        <ul>
+            <li><strong>320px | 480px</strong> - para celulares;</li>
+            <li><strong>768px | 1024px</strong> - para tablets;</li>
+            <li><strong>1024px | 1200px</strong> - para desktops;</li>
+            <li><strong>1200px +</strong> - para desktops com telas maiores ou tvs.</li>
+        </ul>
+
+        <p>Utilizando desses breakponts, nos criamos nossos estilos para que fiquem responsivos para cada dispositivo, a partir de um site criado com o conceito mobile first.</p>
+        <p>Nos conseguimos notar as diferanças no navegador no nosso pc pois conseguimos ajustar o tamanho da janela.</p>
+        <p>Nosso novo arquivo CSS, que está nomeado de mediaquery.css, ficou assim:</p>
+
+        <pre>
+            <code>
+                @charset "UTF-8";
+
+@media print{
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-image: url(../imagens/back-print.jpg);
+    }
+
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+
+    main h1 {
+        color: black;
+        text-shadow: none;
+    }
+
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: block;}
+    img#pc {display: none;}
+    img#tv {display: none;}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+        img#phone {display: none;}
+        img#tablet {display: block;}
+        img#print {display: none;}
+        img#pc {display: none;}
+        img#tv {display: none;}
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+        img#phone {display: none;}
+        img#tablet {display: none;}
+        img#print {display: none;}
+        img#pc {display: block;}
+        img#tv {display: none;}
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+        img#phone {display: none;}
+        img#tablet {display: none;}
+        img#print {display: none;}
+        img#pc {display: none;}
+        img#tv {display: block;}
+    }
+}
+            </code>
+        </pre>
+        <p>Ficou vísivel que criamos um media screen para cada tamanho de tela, chamando os breakpoints correspondentes, e para cada uma delas aplicamos uma imagem de fundo correspondente ao tamanho do dispositivo que irá utilizar o site.</p>
+        <p>Criamos inclusive a versão apra impressão desta página.</p>
     </main>
 </body>
 </html>

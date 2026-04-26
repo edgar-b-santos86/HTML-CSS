@@ -34,36 +34,28 @@ h1 {
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.726);
 }
 
+h2 {
+    text-align: center;
+    color: whitesmoke;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.726);
+    padding: 10px;
+}
+
 main ul {
    text-indent: 10px;
    list-style-position: inside;
-   list-style-type: lower-roman;
+   list-style-type: upper-roman;
 }
 
-pre {
-    text-wrap: inherit;
-}
+pre {text-wrap: inherit;}
 
 img {
     display: block;
     margin: auto;
 }
 
-img#phone {
-    display: block;
-}
-img#tablet {
-    display: none;
-}
-
-img#print {
-    display: none;
-}
-
-img#pc {
-    display: none;
-}
-
-img#tv {
-    display: none;
-}
+img#phone {display: block;}
+img#tablet {display: none;}
+img#print {display: none;}
+img#pc {display: none;}
+img#tv {display: none;}
