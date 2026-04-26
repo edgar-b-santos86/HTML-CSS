@@ -52,8 +52,7 @@ a:hover {
 }
 
 main {
-    max-width: 650px;
-    min-width: 350px;
+    width: 80vw;
     background-color: white;
     margin: auto;
     padding: 20px;
@@ -67,4 +66,8 @@ article {
 
 article h1 {
     margin: 20px;
+}
+
+article pre {
+    text-wrap: inherit;
 }
