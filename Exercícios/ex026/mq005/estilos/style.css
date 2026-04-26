@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    background-color:rgb(255, 255, 255);
+    line-height: 1.3em;
+}
+
+header {
+    background-color: #727272;
+}
+
+header h1 {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.61);
+}
+
+i#burger {
+    background-color: #272727;   
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+i#burger:hover {
+    background-color: #888888;
+    color: black;
+    transition-duration: 0.5s;
+}
+
+menu {
+    display: none;
+}
+
+menu > ul {
+    list-style-type: none;
+}
+
+menu > ul > li > a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #888888;
+    color: white;
+    border-top: 2px solid #727272;
+}
+
+menu > ul > li > a:hover {
+    background-color: #9c9c9c;
+    color: black;
+    transition-duration: 0.5s;
+}
+
+
+main {
+    width: 90vw;
+    background-color: gray;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+article > h2 {
+    padding-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.521);
+}
+
+article > p {
+    text-align: justify;
+    margin-bottom: 20px;
+    text-indent: 20px;
+}
+
+article > p > a {
+    color: white;
+    text-decoration: none;
+}
+
+article > p > a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+    padding: 2px;
+}
+
+article > pre {
+    text-wrap: inherit;
+}
+
+aside {
+    background-color: #303030;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: justify;
+    text-indent: 10px;
+}
+
+aside a {
+    color: white;
+    text-decoration: none;
+}
+
+aside ul {
+    list-style-position: inside;
+}
+
+aside a:hover {
+    color: rgb(32, 11, 11);
+    transition-duration: 0.5s;
+    padding: 2px;
+    background-color: white;
+    border-radius: 5px;
+}
