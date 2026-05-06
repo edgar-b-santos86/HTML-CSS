@@ -4,10 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex Box</title>
+    <style>
+        div.conteiner {
+            background-color: lightgray;
+
+            display: flex;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+
+            flex: auto;
+        }
+    </style>
 </head>
 <body>
     <h1>Trabalhando com Flex Box</h1>
-    
-    
+    <p>Neste capitulo falaremos sobre CSS Flexible Boxes Module Level 1 ou Flex Box.</p>
+    <p>Flex Box é um módulo de CSS que trata de caixas flexiveis, ou seja, trata da responsividade que antes ficavam limitadas apenas as Medias Queries.</p>
+    <p>No CSS 3 surgiram varias coisas que ajudaram em muito na responsividade dos sites. o Flex Box foi apenas um dos módulos que sugiram, além dele foi implementada também o CSS Grid Layout Module Level 1/2, mais conhecido como Grid Layout.</p>
+    <p>Devemos ter em mente o surgimento do CSS 3 com os módulos de Flex Box e Grid Layout, não tornam as demais técnincas de responsividade, e métodos, alinhamento, posicionamento e de organização de conteúdo do CSS 2.1 erradas ou inutilizáveis, bem pelo contrário, ainda é super viável válido a utilização para que todas sejam integradas no desenvolvimento do nosso site.</p>
+    <p>Algumas da técnicas do CSS dois são:</p>
+    <ul>
+        <li>Block Layout;</li>
+        <li>Inline Layout;</li>
+        <li>Table Layout;</li>
+        <li>Positioned Layout;</li>
+    </ul>
+    <p>Sempre que pensarmos em FlexBox, devemos pensar, qual é o formato da água?</p>
+    <p>Depende! Isso mesmo, depende de onde eu vou colocar a água. Onde eu a coloco determina o seu formato.</p>
+    <p>O flex box é exatamente isso, dependendo do tamanho do contêiner onde o conteúdo do site é mostrado, o conteúdo será adaptado e isso vai sofrer as mudanças de acordo com o tamanho que o conêiner tiver.</p>
+    <p>Como exemplo se criarmos uma div e dentro dela colocarmos outras divs, para que o conteúdo e adpte devemos, a princípio utilizar para a div "pai" o parâmetro <em><strong>display: flex;</strong></em>, e para a divs "filhos", devemos utilizar os parâmetros <em><strong>flex:auto;</strong></em> com isso dependendo do tamanho que a div externa tomar automáticamente as internas vão se adaptar e tomar forma e tamanhos automáticos, entretanto, podemos determinar qual vai ser o comprotamento de adptação do conteúdo.</p>
+    <h3>Importante!</h3>
+    <p>O elemento "pai" sempre será o contêiner ou <em><strong>flex-container</strong></em> do nosso código, ou seja, seja a caixa em que todas as outras e o conteúdo do site será colocado e apenas ele poderá ter a propriedade <em><strong>flex;</strong></em> os elementos "filho", os itens ou <em><strong>flex-items</strong></em> não podem ter essa propriedade.</p>
+    <p>Vamos criar nosso primeiro exercício:</p>
+    <p>Primeiro vamos criar algumas divs.</p>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+
+    <p>Nosso código ficou assim:</p>
+    <pre>
+        &lt;div class="conteiner"&gt;
+            &lt;div class="item"&gt;A&lt;/div&gt;
+            &lt;div class="item"&gt;B&lt;/div&gt;
+            &lt;div class="item"&gt;C&lt;/div&gt;
+            &lt;div class="item"&gt;D&lt;/div&gt;
+            &lt;div class="item"&gt;E&lt;/div&gt;
+            &lt;div class="item"&gt;F&lt;/div&gt;
+            &lt;div class="item"&gt;G&lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
+
+    <p>Primeiro criamos as divs e como podem ver temos a div "pai" com a <strong>class="conteiner"</strong> e as divs "filho" estão com a <strong>class="item"</strong></p>
+
+    <pre>
+        &lt;style&gt;
+            div.conteiner {
+                background-color: lightgray;
+                display: flex;
+            }
+            div.item {
+                background-color: lightblue;
+                border: 1px solid black;
+                flex: auto;
+            }
+        &lt;/style&gt;
+    </pre>
+
+    <p>Depois criamos a CSS e inticamos os parâmentros <strong>diplay: flex;</strong> para oconteiner ou div pai e com isso já temos flexibilidade da div principal, e após atribuímos o parâmetro <strong>flex: auto;</strong> para que automáticamento os itens ou divs filho tivessem seus tamanhamos adaptados também automaticamente.</p>
 </body>
 </html>
