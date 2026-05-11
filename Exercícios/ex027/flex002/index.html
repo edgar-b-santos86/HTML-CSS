@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div.conteiner {
+            background-color: lightgray;
+
+            display: flex;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Configurações de direção.</h1>
+    <p>Na aula anterior vimos que a configuração <strong>display: flex;</strong>, é aplicada apenas no conteiner ou caixa pai (na maioria dos casos), e nesta aula vimos que existem configurções de direção para as <strong>CSS Flexible Box Module</strong>, e é importante saber que essas configuração devem ser aplicadas também apenas para o conteiner ou caixa pai.</p>
+    <p>A configuração é aplicada pela declaração <strong>flex-direction</strong>, e por meio dela conseguimos fazer configurações de direções diferentes que são:</p>
+    <ol>
+        <li><strong>flex-firecton: row;</strong> - Essa é primeira configuiração e a padrão caso não façamos nenhuma declaração informando a direção que a <strong>display: flex;</strong> ela fara com que a o conteúdo ou caixas filho, sejam "organizadas" em linha da esquerda para a direita;</li>
+        <li><strong>flex-direction: row-reverse;</strong> - A direção das caixas dentro do conteiner será na direção inversa a normal para o idioma configurado para o site;</li>
+        <li><strong>flex-direction: column;</strong> - Essa declaração que normalmente é usada para dispositivos móveis, faz com que as caixas ou conteúdo sejam organizadas em colunas, de cima para baixo;</li>
+        <li><strong>flex-direction: column-reverse;</strong> - Neste caso também teremos as caixas do conteiner configurados em colunas, porém, com a direção inversa, de baixo para cima;</li>
+    </ol>
+
+    <p>Além disso temos também as configurações do eixos de direção do conteúdo no conteiner, que são um pouco mais complexos do que somente eixo "X" e "Y".</p>
+    
+    <h2>Eixos (axis).</h2>
+    <p>Existem básicamente eixos que podemos determinas para as direções das caixas, condiremos para exemplificar a <strong>flex-direction: row;</strong> por base ela terá io seu eixo principal, conhecido como <strong>mains-axis</strong> que possui dois pontos que é o ponto inicial e o ponto final, comumente chamados de <strong>main-start</strong> e <strong>main-end</strong>.</p>
+    <p>O outro eixo criado é o eixo transversal, ou o <strong>cross-axis</strong>, que também gera dois pontos o <strong>cross-start</strong> e o <strong>cross-end</strong>.</p>
+    <p>Quando o site está configurado para qualquer linguagem que é lida da esquerda para a direita o <strong>main-axis</strong> é da esquerda para a a direita, ou seja, o <strong>main-start</strong> terá o ponto incial na esquerda e o <strong>main-end</strong> terá seu ponto na direira, e o <strong>cross-axis</strong> terá seu ponto inicial do <strong>cross-start</strong> em cima, e o <strong>cross-end</strong> terá ser ponto em baixo.</p>
+    <p>Tudo isso levando em consideração que utilização a declaração <strong>flex-direction: row;</strong>.</p>
+    <p>Se levarmos em consideração que o vamos usar a declaração <strong>flex-direction: column;</strong> a informação muda pois o eixo principal o <strong>main-axis</strong> terá o <strong>main-start</strong> com o ponto inicial em cima e o <strong>main-end</strong> terá seu ponto em baixo, já o <strong>cross-axis</strong> fará com que o <strong>cross-start</strong> tenha o ponto inicial do <strong>cross-start</strong> na esquerda e o <strong>cross-end</strong> tenha seu ponto na direita.</p>
+    <p>Se utilizarmos as declarações <strong>flex-direction: row-reverse</strong> e <strong>flex-direction: column-reverse</strong> teremos a alteração do <strong>main-start</strong> em que o ponto inicial (começa como o próprio nome diz) iniciará no inverso do que seria para as declarações <strong>flex-direction: row;</strong> e <strong>flex-direction: column;</strong>.</p>
+
+    <p>Agora vamos a prática do que aprendemos até agora.</p>
+
+    <h2>Exemplo</h2>
+     <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+    </div>
+</body>
+</html>
