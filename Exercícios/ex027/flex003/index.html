@@ -4,8 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex Box</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div.conteiner {
+            background-color: lightgray;
+            
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Empacotamento</h1>
+    <h1>Empacotamento/Encapsulamento</h1>
+    <p>Nesta Aula veremos mais sobre a declaração <strong>flax-wrap</strong>.</p>
+    <p>A declaração <strong>flex-wrap:</strong> é o empacotamento/encapsulamento da nossa caixa/conteiner pai. Essa declaração configura a "quebra", por assim dizer do conteúdo que está dentro da caixa principal, e neta nós temos três valores possíveis para utilização:</p>
+    <ol>
+        <li><em>flex-wrap:</em><strong>nowrap;</strong> - Esse valor na declaração faz com que os blocos/caixas não tenham quebra para a linha de baixo ou coluna ao lado, fazendo com que esses blocos se comprimam, incolher, sempre dependendo do conteúdo que foi inserido no bloco/caixa. Esse valor inclusive é o padrão caso não façamos a inserção da declaração.</li>
+        <li><em>flex-wrap:</em><strong>warp;</strong> - Esse valor determina que o último elemento quebre ele no sentido do eixo transversal, ou seja para o sentido do <strong>cross-axis</strong>, ou seja, o último elemento vai para linha de baixo no caso de estarmos usando a declaração <strong>flex-direction: row;</strong> ou para a coluna ao lado se estivermos usando a declaração <strong>flex-direction: column;</strong>.</li>
+        <li><em>flex-wrap:</em><strong>wrap-reverse;</strong> - Esse valor determina que os blocos ou caixas do último no espaço do conteiner/bloco pai sejam direcionados no sintido oposto do <strong>cross-axis</strong>.</li>
+    </ol>
+
+    <h2>Exemplo</h2>
+     <div class="conteiner">
+        <div class="item">Exemplo de caixa A</div>
+        <div class="item">Exemplo de caixa B</div>
+        <div class="item">Exemplo de caixa C</div>
+        <div class="item">Exemplo de caixa D</div>
+        <div class="item">Exemplo de caixa E</div>
+        <div class="item">Exemplo de caixa F</div>
+        <div class="item">Exemplo de caixa G</div>
+    </div>
+
+    <p>Fazendo o movimento de aumentar ou diminuir a janela do navegador, poderemos notar que no caso do exemplo assima utilizamos o valor <strong>wrap</strong> na declaração, o que faz com que o conteúdo seja "quebrado" no sentido do <strong>cross-axis</strong>.</p>
+
+    <h2>Shorthand flex-flow</h2>
+    <p>A propriedade <strong>flex-flow</strong> é a junção das declaraçãos <strong>flex-direction</strong> e <strong>flex-wrap</strong>, que foi o que usamos nas CSS deste exercício e ficou assim:</p>
+    <pre>
+        &lt;style&gt;
+            * {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            div.conteiner {
+                background-color: lightgray;
+        
+                display: flex;
+                flex-flow: row wrap;
+            }
+            div.item {
+                background-color: lightblue;
+                border: 1px solid black;
+                text-align: center;
+                padding: 10px;
+            }
+        &lt;/style&gt;
+    </pre>
+
+    <h2>Declaração flex</h2>
+    <p>A declaração <strong>flex: auto;</strong> funciona apenas para os conteineres/blocos filhos, e essa declaração vai fazer com que o conteúdo dos blocos filhos sejam ocupem todo o espaço de disponível do bloco pai.</p>
+
+    
 </body>
 </html>
