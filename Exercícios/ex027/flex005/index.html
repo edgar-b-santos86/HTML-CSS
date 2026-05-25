@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5em;
+        }
+
+        div.conteiner {
+            background-color: gray;
+            height: 300px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Centralização de itens em flex box</h1>
+    <p>Nesta aula veremos como centralizar os itens dentro do bloco pai, ou seja, do contêiner.</p>
+    <p>Para isso, basta utilizar as propridades <strong>justify-content</strong> e <strong>align-items</strong>, e utilizamos o valor <strong>center</strong> para ambos.</p>
+    <h2>Exemplo:</h2>
+    <div class="conteiner">
+        <div class="item">Exemplo de caixa A</div>
+    </div> 
+    <p>Com isso, nosso exemplo o nosso CSS ficou da seguinte forma:</p>
+    <pre>
+        div.conteiner {
+            background-color: gray;
+            height: 300px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+    </pre>
+</body>
+</html>

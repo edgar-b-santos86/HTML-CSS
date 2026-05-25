@@ -16,6 +16,7 @@
             display: flex;
             flex-flow: row wrap;
             justify-content: space-around;
+            padding: 10px;
         }
 
         div.item {
@@ -23,6 +24,21 @@
             border: 1px solid black;
             text-align: center;
             padding: 10px;
+        }
+
+        div.conteiner2 {
+            background-color: lightgray;
+            height: 300px;
+            
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: stretch;
+            padding: 10px;
+        }
+
+        ul > li > img {
+            width: 600px;
         }
     </style>
 </head>
@@ -32,12 +48,12 @@
     <p>Para o alinamento do eixo principal, utilizamos a propriedade <strong>justify-content:</strong>, e como acabamos de falar ela serve para o alinhamento apenas do <strong>main-axis</strong> ou eixo principal.</p>
     <p>Essa propriedade pode receber os seguintes valores:</p>
     <ul>
-        <li><strong>flex-start;</strong> - esse valor faz com que o conteúdo tenha seu alinhamento no início do eixo principal, e se houver alguma sobre de espaço disponível, ele será "colocado" no final do eixo principal;</li>
-        <li><strong>flex-end;</strong> - esse valor faz com que o último item do conteúdo seja alinhado no final do eixo principal, e como consequência o espaço em brando do bloco (se houver), é colocado no início do eixo principal;</li>
-        <li><strong>center;</strong> - esse valor faz com que o conteúdo dentro do bloco seja alinhado no centro do eixo principal;</li>
-        <li><strong>space-between;</strong> - esse é um valor de alienhamento de espaçamento, e ele vai distribuir o espaço entre os itens, colocando sempre o primeiro item alinhado no início do eixo principal e o último item alinhado no final do eixo principal, os demais itens serão distribuídos unioformemente;</li>
-        <li><strong>space-evenly;</strong> - esse valor distribui o espaço uniformemente entre todos os itens, inclusive no primeiro e último item do bloco;</li>
-        <li><strong>space-around;</strong> - esse valor distribui o espaço do bloco uniformemente ao redor dos itens que estão dentro dele;</li>
+        <li><strong>flex-start;</strong> - esse valor faz com que o conteúdo tenha seu alinhamento no início do eixo principal, e se houver alguma sobre de espaço disponível, ele será "colocado" no final do eixo principal;<br> <img src="justify-content_flex-start.png" alt="flex-start"></li>
+        <li><strong>flex-end;</strong> - esse valor faz com que o último item do conteúdo seja alinhado no final do eixo principal, e como consequência o espaço em brando do bloco (se houver), é colocado no início do eixo principal;<br> <img src="justify-content_flex-end.png" alt="flex-end"></li>
+        <li><strong>center;</strong> - esse valor faz com que o conteúdo dentro do bloco seja alinhado no centro do eixo principal;<br> <img src="justify-content_center.png" alt="center"></li>
+        <li><strong>space-between;</strong> - esse é um valor de alienhamento de espaçamento, e ele vai distribuir o espaço entre os itens, colocando sempre o primeiro item alinhado no início do eixo principal e o último item alinhado no final do eixo principal, os demais itens serão distribuídos unioformemente;<br> <img src="justify-content_space-between.png" alt="space-between"></li>
+        <li><strong>space-evenly;</strong> - esse valor distribui o espaço uniformemente entre todos os itens, inclusive no primeiro e último item do bloco;<br> <img src="justify-content_space-evenly.png" alt="space-evenly"></li>
+        <li><strong>space-around;</strong> - esse valor distribui o espaço do bloco uniformemente ao redor dos itens que estão dentro dele;<br> <img src="justify-content_space-around.png" alt="space-around"></li>
     </ul>
 
     <p>Os três últimos são alinhamentos de espaçamento.</p>
@@ -48,9 +64,6 @@
         <div class="item">Exemplo de caixa B</div>
         <div class="item">Exemplo de caixa C</div>
         <div class="item">Exemplo de caixa D</div>
-        <div class="item">Exemplo de caixa E</div>
-        <div class="item">Exemplo de caixa F</div>
-        <div class="item">Exemplo de caixa G</div>
     </div>
 
     <p>No exemplo acima utilizamos o valor <strong>space-around</strong> na declaração <strong>justify-content</strong>, o que faz com que o espaço do bloco seja distribuído uniformemente ao redor dos itens que estão dentro dele.</p>
@@ -67,7 +80,37 @@
     </pre>
 
     <h1>Alinhamento no eixo transversal (cross-axis)</h1>
-    <p>O alinhamento no eixo transversal é o alinhamento do <strong>cross-axis</strong>, e para isso utilizamos a propriedade <strong>align-items:</strong>.</p>
+    <p>O alinhamento no eixo transversal é o alinhamento do <strong>cross-axis</strong>, e para isso utilizamos o <strong>align-items:</strong>.</p>
+    <p>Essa alinhamento sempre vai ser feito levando em consideração o eixo transversal, ou seja, <strong>cross-start</strong> e o <strong>cross-end</strong>.</p>
+    <p>Os valores para a declaração <strong>align-items:</strong> são:</p>
+    <ul>
+        <li><strong>stretch;</strong> - esse valor faz com que o conteúdo dentro do bloco se estique para preencher todo o espaço disponível no eixo transversal, que é o padrão caso não seja especificado o valor;</li>
+        <li><strong>flex-start;</strong> - esse valor faz com que o conteúdo tenha seu alinhamento no início do eixo transversal, e se houver alguma sobra de espaço disponível, ele será "colocado" no final do eixo transversal;</li>
+        <li><strong>flex-end;</strong> - esse valor faz com que o último item do conteúdo seja alinhado no final do eixo transversal, e como consequência o espaço em branco do bloco (se houver), é colocado no início do eixo transversal;</li>
+        <li><strong>center;</strong> - esse valor faz com que o conteúdo dentro do bloco seja alinhado no centro do eixo transversal;</li>
+        <li><strong>baseline;</strong> - esse valor faz com que o conteúdo dentro do bloco seja alinhado pela base dos textos;</li>
+    </ul>
+    <p>Para utilizar o alinhamento no eixo transversal, no nosso exemplo precisaremos aumentar o tamanho do bloco.</p>
+    <h2>Exemplo</h2>
+     <div class="conteiner2">
+        <div class="item">Exemplo de caixa A</div>
+        <div class="item">Exemplo de caixa B</div>
+        <div class="item">Exemplo de caixa C</div>
+        <div class="item">Exemplo de caixa D</div>
+    </div>
 
+    <p>O código na CSS do nosso exemplo ficou assim:</p>
+    <pre>
+        div.conteiner2 {
+            background-color: lightgray;
+            height: 300px;
+            
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+            align-items: stretch;
+            padding: 10px;
+        }
+    </pre>
 </body>
 </html>
