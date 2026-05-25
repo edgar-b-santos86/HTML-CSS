@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5em;
+        }
+
+        div.conteiner {
+            background-color: lightgray;
+            
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alinhamento no eixo principal (main-axis)</h1>
+    <p>Nesta aula veremos como efetuar o alinhamento de itens e começaremos com o alinhamento do eixo principal que é o <strong>main-axis</strong>, e como vimos anteriormente, devemos saber sobre o <strong>main-start</strong> e o <strong>main-end</strong>.</p>
+    <p>Para o alinamento do eixo principal, utilizamos a propriedade <strong>justify-content:</strong>, e como acabamos de falar ela serve para o alinhamento apenas do <strong>main-axis</strong> ou eixo principal.</p>
+    <p>Essa propriedade pode receber os seguintes valores:</p>
+    <ul>
+        <li><strong>flex-start;</strong> - esse valor faz com que o conteúdo tenha seu alinhamento no início do eixo principal, e se houver alguma sobre de espaço disponível, ele será "colocado" no final do eixo principal;</li>
+        <li><strong>flex-end;</strong> - esse valor faz com que o último item do conteúdo seja alinhado no final do eixo principal, e como consequência o espaço em brando do bloco (se houver), é colocado no início do eixo principal;</li>
+        <li><strong>center;</strong> - esse valor faz com que o conteúdo dentro do bloco seja alinhado no centro do eixo principal;</li>
+        <li><strong>space-between;</strong> - esse é um valor de alienhamento de espaçamento, e ele vai distribuir o espaço entre os itens, colocando sempre o primeiro item alinhado no início do eixo principal e o último item alinhado no final do eixo principal, os demais itens serão distribuídos unioformemente;</li>
+        <li><strong>space-evenly;</strong> - esse valor distribui o espaço uniformemente entre todos os itens, inclusive no primeiro e último item do bloco;</li>
+        <li><strong>space-around;</strong> - esse valor distribui o espaço do bloco uniformemente ao redor dos itens que estão dentro dele;</li>
+    </ul>
+
+    <p>Os três últimos são alinhamentos de espaçamento.</p>
+
+    <h2>Exemplo</h2>
+     <div class="conteiner">
+        <div class="item">Exemplo de caixa A</div>
+        <div class="item">Exemplo de caixa B</div>
+        <div class="item">Exemplo de caixa C</div>
+        <div class="item">Exemplo de caixa D</div>
+        <div class="item">Exemplo de caixa E</div>
+        <div class="item">Exemplo de caixa F</div>
+        <div class="item">Exemplo de caixa G</div>
+    </div>
+
+    <p>No exemplo acima utilizamos o valor <strong>space-around</strong> na declaração <strong>justify-content</strong>, o que faz com que o espaço do bloco seja distribuído uniformemente ao redor dos itens que estão dentro dele.</p>
+
+    <p>O código na CSS ficou assim:</p>
+    <pre>
+        div.conteiner {
+            background-color: lightgray;
+            
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+    </pre>
+
+    <h1>Alinhamento no eixo transversal (cross-axis)</h1>
+    <p>O alinhamento no eixo transversal é o alinhamento do <strong>cross-axis</strong>, e para isso utilizamos a propriedade <strong>align-items:</strong>.</p>
+
+</body>
+</html>

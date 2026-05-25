@@ -7,6 +7,7 @@
     <style>
         * {
             font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5em;
         }
 
         div.conteiner {
@@ -22,6 +23,10 @@
             text-align: center;
             padding: 10px;
         }
+
+        ol > li > img {
+            width: 600px;
+        }
     </style>
 </head>
 <body>
@@ -30,9 +35,9 @@
     <p>A declaração <strong>flex-wrap:</strong> é o empacotamento/encapsulamento da nossa caixa/conteiner pai. Essa declaração configura a "quebra", por assim dizer do conteúdo que está dentro da caixa principal, e neta nós temos três valores possíveis para utilização:</p>
     <ol>
         <li><em>flex-wrap:</em><strong>nowrap;</strong> - Esse valor na declaração faz com que os blocos/caixas não tenham quebra para a linha de baixo ou coluna ao lado, fazendo com que esses blocos se comprimam, incolher, sempre dependendo do conteúdo que foi inserido no bloco/caixa. Esse valor inclusive é o padrão caso não façamos a inserção da declaração.</li>
-        <li><em>flex-wrap:</em><strong>warp;</strong> - Esse valor determina que o último elemento quebre ele no sentido do eixo transversal, ou seja para o sentido do <strong>cross-axis</strong>, ou seja, o último elemento vai para linha de baixo no caso de estarmos usando a declaração <strong>flex-direction: row;</strong> ou para a coluna ao lado se estivermos usando a declaração <strong>flex-direction: column;</strong>.</li>
-        <li><em>flex-wrap:</em><strong>wrap-reverse;</strong> - Esse valor determina que os blocos ou caixas do último no espaço do conteiner/bloco pai sejam direcionados no sintido oposto do <strong>cross-axis</strong>.</li>
-    </ol>
+        <li><em>flex-wrap:</em><strong>wrap;</strong> - Esse valor determina que o último elemento quebre ele no sentido do eixo transversal, ou seja para o sentido do <strong>cross-axis</strong>, ou seja, o último elemento vai para linha de baixo no caso de estarmos usando a declaração <strong>flex-direction: row;</strong> ou para a coluna ao lado se estivermos usando a declaração <strong>flex-direction: column;</strong><br><img src="Captura de tela 2026-05-20 110317.png" alt="wrap"></li>
+        <li><em>flex-wrap:</em><strong>wrap-reverse;</strong> - Esse valor determina que os blocos ou caixas do último no espaço do conteiner/bloco pai sejam direcionados no sintido oposto do <strong>cross-axis</strong><br><img src="Captura de tela 2026-05-20 110354.png" alt="wrap-reverse">.</li>
+    </ol>    
 
     <h2>Exemplo</h2>
      <div class="conteiner">
