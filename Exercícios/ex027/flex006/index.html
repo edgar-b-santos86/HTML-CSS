@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.5em;
+        }
+        div.conteiner {
+            background-color: lightgray;
+            height: 500px;
+            
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-evenly;
+        }
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            flex: 0 0 100px;
+        }
+
+    </style>        
+</head>
+<body>
+    <h1>Alinhamento do conteúdo empacotado (align-content)</h1>
+    <p>Nesta aula vamos ver as ultimas informações sobre propriedades do flexbox para o contêiner ou caixa pai.</p>
+    <p>Neste caso o alinhamento será dos itens dentro do contêiner quando ele aumentar ou quando o conteúdo dele quebrar os limites em mais de uma linha.</p>
+    <p>O align-content é a propriedade que controla o que acontecerá com o espaço em branco dentro do contêiner, e sempre devemos lembrar como estão conficurados o <strong>cross-start</strong> e o <strong>cross-end</strong> do nosso eixo transversal.</p>
+    <p>Atenção!!! Não podemos confundir o <strong>align-content</strong> com o <strong>align-items</strong>, ou <strong>align-content</strong> com o <strong>justify-content</strong>. Outra coisa, o <strong>align-content</strong> só tem efeito no contêiner quando estiver configorado com o flex-flow: row/column <strong>wrap</strong> ou <strong>wrap-reverse</strong>.</p>
+    <p><strong>justify-content:</strong> vai alinhar os itens ao longo do eixo principal;</p>
+    <p><strong>align-items:</strong> vai alinhar os itens ao longo do eixo transversal;</p>
+    <p><strong>align-content:</strong> vai alinhar o conteúdo do contêiner no eixo transversal quando eles estiverem empacotados.</p>
+    <p>As configurações do <strong>align-content</strong> são:</p>
+    <ul>
+        <li><strong>align-content: flex-start;</strong> - O conteúdo do contêiner será alinhado ao início do eixo transversal, ou seja, o <strong>cross-start</strong>, se conteúdo for dividido e duas linhas ou mais, ele vai dividir o espaço disponível em partes iguais e o conteúdo de cada linha será alinhado ao início;</li>
+        <li><strong>align-content: flex-end;</strong> - O conteúdo do contêiner será alinhado ao final do eixo transversal, ou seja, o <strong>cross-end</strong>. se conteúdo for dividido e duas linhas ou mais, ele vai dividir o espaço disponível em partes iguais e o conteúdo de cada linha será alinhado ao final;</li>
+        <li><strong>align-content: center;</strong> - O conteúdo do contêiner será alinhado ao centro do eixo transversal;</li>
+        <li><strong>align-content: stretch;</strong> - O conteúdo do contêiner será esticado para preencher o espaço disponível no eixo transversal, esse é o padrão quando não determinamos nenhum valor, ele vai dividir o espaço disponível em partes iguais e o conteúdo de cada linha será esticado para preencher o espaço;</li>
+        <li><strong>align-content: space-between;</strong> - O conteúdo do contêiner será distribuído com espaçamento igual entre os itens;</li>
+        <li><strong>align-content: space-around;</strong> - O conteúdo do contêiner será distribuído com espaçamento igual ao redor dos itens;</li>
+    </ul>
+    <p>Vamos a prática do que aprendemos até agora.</p>
+    <div class="conteiner">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+        <div class="item">K</div>
+        <div class="item">L</div>
+    </div>
+
+    <p>Nosso código ficou assim:</p>
+    <pre>
+        div.conteiner {
+            background-color: lightgray;
+            height: 500px;
+            
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-evenly;
+        }
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            flex: 0 0 100px;
+        }
+    </pre>
+    
+</body>
+</html>
