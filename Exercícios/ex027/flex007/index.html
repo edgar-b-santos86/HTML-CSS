@@ -4,12 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flex Box</title>
+    <style>
+        *{
+            font-family: arial, sans-serif;
+        }
+
+        div.conteiner {
+            background-color: lightgray;
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        div#ia {
+            order: 3;
+        }
+
+        div#ib {
+            order: 4;
+        }
+        
+        div#ic {
+            order: 0;
+        }
+        
+        div#id {
+            order: -1;
+        }
+    </style>
 </head>
 <body>
     <h1>Flex-Item ou itens flexiveis.</h1>
     <p>Nesta aula vamos começar a ver as propriedades que se aplicam ao itens que estão dentro do contêiner flexível.</p>
-    <p>Quando criamos um contêiner flexbox, apenas o contêiner, a caixa pai é flexível, os itens não são flexíveis, entretanto, podemos pegar um item e torná-lo outro contêiner flexível.</p>
+    <p>Quando criamos um contêiner flexbox, apenas o contêiner, a caixa pai é flexível, os itens não são flexíveis, entretanto, podemos fazer com que um item dentro do contêiner também se tone outro contêiner flexível, mas não veremos isso nesse momento.</p>
     <p>Primeiro vamos ver duas propriedades para cotrolar os itens filhos, o <strong>order</strong> e o <strong>align-self</strong>.</p>
     <p>Começando, todos os itens tem como valor padrão 0 para a propriedade <strong>order</strong>, porém, podemos alterar a ordem dos itens atribuindo valores nessa propriedade e podemos usar tanto números negativos quanto positivos.</p>
+
+    <h2>Exemplo</h2>
+     <div class="conteiner">
+        <div class="item" id="ia">Exemplo de caixa A</div>
+        <div class="item" id="ib">Exemplo de caixa B</div>
+        <div class="item" id="ic">Exemplo de caixa C</div>
+        <div class="item" id="id">Exemplo de caixa D</div>
+    </div>
+
+    <p>No nosso exemplo o código HTML está editado na ordem correta, conforme abaixo:</p>
+    <pre>
+        &lt;div class="conteiner"&gt;
+            &lt;div class="item" id="ia"&gt;Exemplo de caixa A&lt;/div&gt;
+            &lt;div class="item" id="ib"&gt;Exemplo de caixa B&lt;/div&gt;
+            &lt;div class="item" id="ic"&gt;Exemplo de caixa C&lt;/div&gt;
+            &lt;div class="item" id="id"&gt;Exemplo de caixa D&lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
+    <p>Mas quem determinou a ordem dos itens foi a propriedade <strong>order</strong> na CSS, e a ordem definida foi essa:</p>
+
+    <pre>
+        div#ia {
+                order: 3;
+            }
+            div#ib {
+                order: 4;
+            }
+        
+            div#ic {
+                order: 0;
+            }
+        
+            div#id {
+                order: -1;
+            }
+    </pre>
 </body>
 </html>

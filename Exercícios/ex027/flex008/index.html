@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        *{
+            font-family: arial, sans-serif;
+        }
+
+        div.conteiner {
+            background-color: lightgray;
+            height: 300px;
+            display: flex;
+            align-items: stretch;
+            flex-flow: row wrap;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        div#ia {
+            align-self: flex-start;
+        }
+
+        div#ib {
+            align-self: flex-end;
+        }
+        
+        div#ic {
+            align-self: center;
+        }
+        
+        div#id {
+            align-self: flex-stretch;
+        }
+        
+        div#if {
+            align-self: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex-Item ou itens flexiveis.</h1>
+    <p>Agora vamos ver como funciona o <strong>align-self</strong>, essa propriedade permite controlar o posicionamento dos itens no eixo transversal, ou o cross-axis.</p>
+    <p>Existem 5 valores possíveis para a propriedade <strong>align-self</strong> e são:</p>
+    <ul>
+        <li><strong>stretch;</strong> - esse valor faz com que o item se estique para preencher todo o espaço disponível no eixo transversal, que é o padrão caso não seja especificado o valor;</li>
+        <li><strong>flex-start;</strong> - esse valor faz com que o item tenha seu alinhamento no início do eixo transversal, e se houver alguma sobra de espaço disponível, ele será "colocado" no final do eixo transversal;</li>
+        <li><strong>flex-end;</strong> - esse valor faz com que o último item do conteúdo seja alinhado no final do eixo transversal, e como consequência o espaço em branco do bloco (se houver), é colocado no início do eixo transversal;</li>
+        <li><strong>center;</strong> - esse valor faz com que o item dentro do bloco seja alinhado no centro do eixo transversal;</li>
+        <li><strong>auto;</strong> - esse valor faz com que o item herde o valor da propriedade <strong>align-items;</strong> do contêiner pai, ou seja, do bloco onde ele está inserido;</li>
+    </ul>
+
+    <h2>Exemplo</h2>
+     <div class="conteiner">
+        <div class="item" id="ia">Exemplo A</div>
+        <div class="item" id="ib">Exemplo B</div>
+        <div class="item" id="ic">Exemplo C</div>
+        <div class="item" id="id">Exemplo D</div>        
+        <div class="item" id="if">Exemplo F</div>
+    </div>
+
+    <p>Nosso código HTML está desenvolvido da seguinte forma:</p>
+    <pre>
+        &lt;div class="conteiner"&gt;
+            &lt;div class="item" id="ia"&gt;Exemplo A&lt;/div&gt;
+            &lt;div class="item" id="ib"&gt;Exemplo B&lt;/div&gt;
+            &lt;div class="item" id="ic"&gt;Exemplo C&lt;/div&gt;
+            &lt;div class="item" id="id"&gt;Exemplo D&lt;/div&gt;        
+            &lt;div class="item" id="if"&gt;Exemplo F&lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
+
+    <p>O que determinou o posicionamento dos itens neste exemplo foi a propriedade <strong>align-self</strong> aplicada a cada um deles, conforme configurado na CSS:</p>
+    <pre>
+        div#ia {
+                align-self: flex-start;
+            }
+            div#ib {
+                align-self: flex-end;
+            }
+        
+            div#ic {
+                align-self: center;
+            }
+        
+            div#id {
+                align-self: flex-stretch;
+            }
+        
+            div#if {
+                align-self: auto;
+            }
+    </pre>
+</body>
+</html>
