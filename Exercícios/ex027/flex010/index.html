@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        *{
+            font-family: arial, sans-serif;
+        }
+
+        div.conteiner {
+            background-color: lightgray;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            flex-basis: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex-Item ou itens flexiveis.</h1>
+    <p>Nesta aula vamos falar sobre outros dois valores que temos além do auto e também dos tamanhos fixos que podemos dar aos itens dentro do contêiner, <strong>flex-grow</strong> e <strong>flex-shrink</strong>.</p>
+    <p><strong>flex-grow</strong> define o quanto o item pode crescer em relação ao conteúdo disponível no contêiner.</p>
+    <p><strong>flex-shrink</strong> define o quanto o item pode encolher em relação ao conteúdo disponível no contêiner.</p>
+    <p>Por padrão, o <strong>flex-shrink</strong> tem valor 1, ou seja, os itens podem encolher se necessário. Se o valor for 0, isso determina que os itens não podem encolher.</p>
+    <p>Já no <strong>flex-grow</strong> o valor padrão é 0, ou seja, isso define que os itens não podem crescer. Se o valor for 1, ai os itens podem se necessário crescer.</p>
+    <p>Vamos agora fazer um exercício de exemplo.</p>
+    <p>Se quisermos que os itens dentro de um contêiner cresçam e diminuam ao máximo, neste caso, sempre vamos dar os valores 1 tanto para o <strong>flex-grow</strong> quanto para o <strong>flex-shrink</strong>.</p>
+
+    </ul>
+
+    <h2>Exemplo</h2>
+     <div class="conteiner">
+        <div class="item" id="ia">A</div>
+        <div class="item" id="ib">Ex B</div>
+        <div class="item" id="ic">Exem C</div>
+        <div class="item" id="id">Ex D</div>        
+        <div class="item" id="if">Exemplo F</div>
+    </div>
+
+    <p>Nosso código HTML está desenvolvido da seguinte forma:</p>
+    <pre>
+        &lt;div class="conteiner"&gt;
+            &lt;div class="item" id="ia"&gt;A&lt;/div&gt;
+            &lt;div class="item" id="ib"&gt;Ex B&lt;/div&gt;
+            &lt;div class="item" id="ic"&gt;Exem C&lt;/div&gt;
+            &lt;div class="item" id="id"&gt;Ex D&lt;/div&gt;        
+            &lt;div class="item" id="if"&gt;Exemplo F&lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
+
+    <p>Na CSS os comando ficaram assim:</p>
+    <pre>
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            flex-basis: auto;
+        }
+    </pre>
+    
+</body>
+</html>
