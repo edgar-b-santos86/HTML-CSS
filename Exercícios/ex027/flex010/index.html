@@ -20,7 +20,33 @@
             border: 1px solid black;
             text-align: center;
             padding: 10px;
-            flex-basis: auto;
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+
+        div.item1 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            flex-basis: 250px;
+            
+        }
+
+        div#ia1 {
+            flex-shrink: 3;
+            flex-grow: 1;
+        }
+
+        div#ib1 {
+            flex-shrink: 0;
+            flex-grow: 2;
+        }
+
+        div#ic1 {
+            flex-shrink: 1;
+            flex-grow: 0;
         }
     </style>
 </head>
@@ -34,15 +60,11 @@
     <p>Vamos agora fazer um exercício de exemplo.</p>
     <p>Se quisermos que os itens dentro de um contêiner cresçam e diminuam ao máximo, neste caso, sempre vamos dar os valores 1 tanto para o <strong>flex-grow</strong> quanto para o <strong>flex-shrink</strong>.</p>
 
-    </ul>
-
     <h2>Exemplo</h2>
      <div class="conteiner">
-        <div class="item" id="ia">A</div>
-        <div class="item" id="ib">Ex B</div>
-        <div class="item" id="ic">Exem C</div>
-        <div class="item" id="id">Ex D</div>        
-        <div class="item" id="if">Exemplo F</div>
+        <div class="item1" id="ia">A</div>
+        <div class="item1" id="ib">Ex B</div>
+        <div class="item1" id="ic">Exem C</div>
     </div>
 
     <p>Nosso código HTML está desenvolvido da seguinte forma:</p>
@@ -51,8 +73,6 @@
             &lt;div class="item" id="ia"&gt;A&lt;/div&gt;
             &lt;div class="item" id="ib"&gt;Ex B&lt;/div&gt;
             &lt;div class="item" id="ic"&gt;Exem C&lt;/div&gt;
-            &lt;div class="item" id="id"&gt;Ex D&lt;/div&gt;        
-            &lt;div class="item" id="if"&gt;Exemplo F&lt;/div&gt;
         &lt;/div&gt;
     </pre>
 
@@ -63,9 +83,57 @@
             border: 1px solid black;
             text-align: center;
             padding: 10px;
-            flex-basis: auto;
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 1;
         }
     </pre>
-    
+    <p>No nosso exemplo, colocamos um tamanho fixo no flex-basis de 250px, e os valores 1 para flex-shrink e flex-grow. Com isso os itens vão crescer e encolher conforme necessário.</p>
+    <p>O flex-grow e flex-shrink podem ter valores diferente de 0 e 1, e podemos definir valores para cada um dos itens. A depender o valor, se por exemplo temos três itens e colocaremos os valores de flex-grow com 0, 1 e 2, por exemplo. Neste caso o primeiro elemento não vai crescer, o segundo elemento vai crescer e o terceiro elemento vai crescer o dobro em relação ao segundo elemento proporcionalmente.</p>
+    <p>A mesma lógica se aplica ao flex-shrink, onde podemos definir valores diferentes para controlar o quanto cada item pode encolher. Digamos que temos três e o primeiro item terá o valor 1, o segundo terá o valor 0, e o terceiro terá o valor 2. O primeiro vai encolher, o segundo não vai encolher e o terceiro vai encolher o dobro com relação ao primeiro.</p>
+
+    <h2>Exemplo</h2>
+     <div class="conteiner">
+        <div class="item" id="ia1">A</div>
+        <div class="item" id="ib1">Ex B</div>
+        <div class="item" id="ic1">Exem C</div>
+    </div>
+
+    <p>Nosso código HTML está desenvolvido da seguinte forma:</p>
+    <pre>
+        &lt;div class="conteiner"&gt;
+            &lt;div class="item1" id="ia1"&gt;A&lt;/div&gt;
+            &lt;div class="item1" id="ib1"&gt;Ex B&lt;/div&gt;
+            &lt;div class="item1" id="ic1"&gt;Exem C&lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
+
+    <p>A CSS os comando ficaram assim:</p>
+    <pre>
+        div.item1 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }        
+
+        div#ia1 {
+            flex-shrink: 3;
+            flex-grow: 1;
+        }
+
+        div#ib1 {
+            flex-shrink: 0;
+            flex-grow: 2;
+        }
+
+        div#ic1 {
+            flex-shrink: 1;
+            flex-grow: 0;
+        }
+    </pre>
 </body>
 </html>
