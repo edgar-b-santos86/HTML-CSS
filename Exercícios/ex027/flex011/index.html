@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        *{
+            font-family: arial, sans-serif;
+        }
+
+        div.conteiner {
+            background-color: lightgray;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+
+        div.item1 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+
+        div#ia1 {
+            flex: 3 1 250px;
+        }
+
+        div#ib1 {
+            flex: 0 2 250px;
+        }
+
+        div#ic1 {
+            flex: 1 0 250px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex-Item ou itens flexiveis.</h1>
+    <p>Nesta aula vamos ver como utilizar a shorhand <strong>flex</strong>. Através dela podemos definir os valores de <strong>flex-grow</strong>, <strong>flex-shrink</strong> e <strong>flex-basis</strong> em uma única declaração, e a ordem é exatamente essa para a a shorthand <strong>flex</strong>:</p>
+    <ol>
+        <li><strong>flex-grow;</strong> - define o quanto o item pode crescer em relação ao conteúdo disponível no contêiner;</li>
+        <li><strong>flex-shrink;</strong> - define o quanto o item pode encolher em relação ao conteúdo disponível no contêiner;</li>
+        <li><strong>flex-basis;</strong> - define o tamanho inicial do item antes de ele crescer ou encolher, ou seja, o tamanho base do item;</li>
+    </ol>
+
+    <p>A shorthand fica assim: <strong>flex: <em>flex-grow</em> <em>flex-shrink</em> <em>flex-basis</em></strong>;</p>
+
+    <h2>Exemplo</h2>
+    <div class="conteiner">
+        <div class="item" id="ia1">A</div>
+        <div class="item" id="ib1">Ex B</div>
+        <div class="item" id="ic1">Exem C</div>
+    </div>
+
+    <p>Nosso código HTML está desenvolvido da seguinte forma:</p>
+    <pre>
+        &lt;div class="conteiner"&gt;
+            &lt;div class="item1" id="ia1"&gt;A&lt;/div&gt;
+            &lt;div class="item1" id="ib1"&gt;Ex B&lt;/div&gt;
+            &lt;div class="item1" id="ic1"&gt;Exem C&lt;/div&gt;
+        &lt;/div&gt;
+    </pre>
+
+    <p>A CSS os comando ficaram assim:</p>
+    <pre>
+        div.item1 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            flex-basis: 250px;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }        
+
+        div#ia1 {
+            flex: 3 1 250px;
+        }
+
+        div#ib1 {
+            flex: 0 2 250px;
+        }
+
+        div#ic1 {
+            flex: 1 0 250px;
+        }
+    </pre>
+
+    <p>A recomendação da W3C é utilizar a shorthand <strong>flex</strong> para definir os valores de <strong>flex-grow</strong>, <strong>flex-shrink</strong> e <strong>flex-basis</strong> em uma única declaração, porém, existem mais simplificações da propriedade flex que podem ser utilizadas, e são elas:</p>
+    <ul>
+        <li><strong>flex: none;</strong> - esse valor é equivalente a <strong>flex: 0 0 auto;</strong>, ou seja, os itens não crescem, não encolhem e o tamanho base é definido pelo conteúdo do item;</li>
+        <li><strong>flex: auto;</strong> - esse valor é equivalente a <strong>flex: 1 1 auto;</strong>, ou seja, os itens podem crescer e encolher se necessário, e o tamanho base é definido pelo conteúdo do item;</li>
+        <li><strong>flex: initial;</strong> - esse valor é equivalente a <strong>flex: 0 1 auto;</strong>, ou seja, os itens não crescem, podem encolher se necessário, e o tamanho base é definido pelo conteúdo do item;</li>
+    </ul>
+
+    <p>Podemos ainda definir apenas o valor de <strong>flex-grow</strong> onde o valor de <strong>flex-shrink</strong> e <strong>flex-basis</strong> são assumidos como 1 e 0, respectivamente.</p>
+</body>
+</html>
