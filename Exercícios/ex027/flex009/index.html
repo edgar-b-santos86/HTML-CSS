@@ -11,7 +11,6 @@
 
         div.conteiner {
             background-color: lightgray;
-            height: 300px;
             display: flex;
             flex-flow: row nowrap;
         }
@@ -20,36 +19,51 @@
             background-color: lightblue;
             border: 1px solid black;
             text-align: center;
-            padding: 20px;
+            padding: 10px;
+            flex-basis: auto;
         }
     </style>
 </head>
 <body>
     <h1>Flex-Item ou itens flexiveis.</h1>
-    <p>Vamos falar agora sobre a propriedade <strong>flex-basis</strong></p>
+    <p>Vamos falar agora sobre a propriedade <strong>flex-basis</strong>, essa propriedade também se aplica aos itens dentro de um contêiner flexível.</p>
+    <p>Por padrão, a propriedade <strong>flex-basis</strong> tem o valor auto, ou seja, a largura de cada item vai depender do conteúdo que está nele, e neste caso mesmo que o contêiner tenha espaço sobrando, os itens não vão ocupar o espaço disponível.</p>
+    <p>Caso coloquemos um tamanho específico para essa propriedade, os itens vão respeitar esse tamanho, entretanto, vai depender também do tamanho do contêiner ou seja ele vai diminuir se necessário e todos os itens vão ter o mesmo tamanho.</p>
+    <p>Vamos agora fazer um exercício de exemplo.</p>
 
     </ul>
 
     <h2>Exemplo</h2>
      <div class="conteiner">
-        <div class="item" id="ia">Exemplo A</div>
-        <div class="item" id="ib">Exemplo B</div>
-        <div class="item" id="ic">Exemplo C</div>
-        <div class="item" id="id">Exemplo D</div>        
+        <div class="item" id="ia">A</div>
+        <div class="item" id="ib">Ex B</div>
+        <div class="item" id="ic">Exem C</div>
+        <div class="item" id="id">Ex D</div>        
         <div class="item" id="if">Exemplo F</div>
     </div>
 
     <p>Nosso código HTML está desenvolvido da seguinte forma:</p>
     <pre>
         &lt;div class="conteiner"&gt;
-            &lt;div class="item" id="ia"&gt;Exemplo A&lt;/div&gt;
-            &lt;div class="item" id="ib"&gt;Exemplo B&lt;/div&gt;
-            &lt;div class="item" id="ic"&gt;Exemplo C&lt;/div&gt;
-            &lt;div class="item" id="id"&gt;Exemplo D&lt;/div&gt;        
+            &lt;div class="item" id="ia"&gt;A&lt;/div&gt;
+            &lt;div class="item" id="ib"&gt;Ex B&lt;/div&gt;
+            &lt;div class="item" id="ic"&gt;Exem C&lt;/div&gt;
+            &lt;div class="item" id="id"&gt;Ex D&lt;/div&gt;        
             &lt;div class="item" id="if"&gt;Exemplo F&lt;/div&gt;
         &lt;/div&gt;
     </pre>
 
+    <p>Na CSS os comando ficaram assim:</p>
+    <pre>
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            flex-basis: auto;
+        }
+    </pre>
     
+    <p>A propriedade <strong>flex-basis</strong> no nossso exemplo está como auto e definiu aqui que cada item deveria ter a largura de acordo com o tamanho do conteúdo que estava dentro dele, automaticamente.</p>
 </body>
 </html>
